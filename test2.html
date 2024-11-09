@@ -31,31 +31,16 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/settings.css">
     <link rel='stylesheet' href='css/revolution.addon.particles.css?ver=1.0.3' type='text/css' media='all' />
-    <link rel='stylesheet' href='css/revolution.addon.beforeafter.css?ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/revolution.addon.beforeafter.css?ver=1.0.0' type='text/css'
+        media='all' />
 
 
 </head>
 
-<style>
- 
-        #canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Ensure canvas is behind the content */
-        }
 
-        .container {
-            position: relative;
-            z-index: 1; 
-            color: white; /* Change text color for visibility */
-        }
-</style>
 <body>
 
     <!-- wrapper -->
@@ -70,28 +55,28 @@
         <!-- preloader -->
         <div class="loader-wrap" id="loader">
             <div class="preloader">
-                <div id="handle-preloader" class="handle-preloader">
-                    <div id="container">
-                        <div class="divider" aria-hidden="true"></div>
-                        <p class="loading-text" aria-label="Loading">
-                            <span class="letter" aria-hidden="true">L</span>
-                            <span class="letter" aria-hidden="true">o</span>
-                            <span class="letter" aria-hidden="true">a</span>
-                            <span class="letter" aria-hidden="true">d</span>
-                            <span class="letter" aria-hidden="true">i</span>
-                            <span class="letter" aria-hidden="true">n</span>
-                            <span class="letter" aria-hidden="true">g</span>
-                        </p>
-                    </div>
-                    <div class='tetrominos'>
-                        <div class='tetromino box1'></div>
-                        <div class='tetromino box2'></div>
-                        <div class='tetromino box3'></div>
-                        <div class='tetromino box4'></div>
-                    </div>
+              <div id="handle-preloader" class="handle-preloader">
+                <div id="container">
+                  <div class="divider" aria-hidden="true"></div>
+                  <p class="loading-text" aria-label="Loading">
+                    <span class="letter" aria-hidden="true">L</span>
+                    <span class="letter" aria-hidden="true">o</span>
+                    <span class="letter" aria-hidden="true">a</span>
+                    <span class="letter" aria-hidden="true">d</span>
+                    <span class="letter" aria-hidden="true">i</span>
+                    <span class="letter" aria-hidden="true">n</span>
+                    <span class="letter" aria-hidden="true">g</span>
+                  </p>
                 </div>
+                <div class='tetrominos'>
+                  <div class='tetromino box1'></div>
+                  <div class='tetromino box2'></div>
+                  <div class='tetromino box3'></div>
+                  <div class='tetromino box4'></div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
@@ -100,8 +85,8 @@
         </div>
         <!-- scrollbar progress end -->
 
-        <!-- menu -->
-        <div class="mil-menu-frame">
+         <!-- menu -->
+         <div class="mil-menu-frame">
             <!-- frame clone -->
             <div class="mil-frame-top">
                 <a href="index.html" class="mil-logo">A.</a>
@@ -214,8 +199,9 @@
                                 data-frames='[{"delay":500,"speed":2000,"frame":"0","from":"y:top;rX:-180deg;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="img/object_macscreen_1-2.png"
-                                    alt="" data-ww="['1000px','1000px','1000px','500px']"
+                                data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img
+                                    src="img/object_macscreen_1-2.png" alt=""
+                                    data-ww="['1000px','1000px','1000px','500px']"
                                     data-hh="['1000px','1000px','1000px','500']" width="2000" height="2000"
                                     data-no-retina> </div>
 
@@ -230,8 +216,9 @@
                                 data-frames='[{"delay":600,"speed":2000,"frame":"0","from":"x:left;y:-500px;rZ:90deg;sX:1;sY:1;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 6;"><img src="img/object_plant_1.png"
-                                    alt="" data-ww="['375px','375px','375px','200px']"
+                                data-paddingleft="[0,0,0,0]" style="z-index: 6;"><img
+                                    src="img/object_plant_1.png" alt=""
+                                    data-ww="['375px','375px','375px','200px']"
                                     data-hh="['375px','375px','375px','200px']" width="1500" height="1500"
                                     data-no-retina> </div>
 
@@ -244,8 +231,9 @@
                                 data-frames='[{"delay":700,"speed":2000,"frame":"0","from":"x:-200px;y:bottom;rZ:90deg;sX:1;sY:1;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 7;"><img src="img/keyboard_apple.png"
-                                    alt="" data-ww="['600px','600px','600px','300px']"
+                                data-paddingleft="[0,0,0,0]" style="z-index: 7;"><img
+                                    src="img/keyboard_apple.png" alt=""
+                                    data-ww="['600px','600px','600px','300px']"
                                     data-hh="['600px','600px','600px','300px']" width="1600" height="1600"
                                     data-no-retina> </div>
 
@@ -258,8 +246,9 @@
                                 data-frames='[{"delay":800,"speed":2000,"frame":"0","from":"x:200px;y:bottom;rZ:-180deg;sX:1;sY:1;","to":"o:1;rZ:-20;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 8;"><img src="img/object_macmouse_1.png"
-                                    alt="" data-ww="['250px','250px','250px','125px']"
+                                data-paddingleft="[0,0,0,0]" style="z-index: 8;"><img
+                                    src="img/object_macmouse_1.png" alt=""
+                                    data-ww="['250px','250px','250px','125px']"
                                     data-hh="['250px','250px','250px','125px']" width="1000" height="1000"
                                     data-no-retina> </div>
 
@@ -273,8 +262,9 @@
                                 data-frames='[{"delay":900,"speed":2000,"frame":"0","from":"x:left;y:200px;rZ:180deg;sX:1;sY:1;","to":"o:1;rZ:45;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="img/object_glasses_2.png"
-                                    alt="" data-ww="['250px','250px','250px','125px']"
+                                data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img
+                                    src="img/object_glasses_2.png" alt=""
+                                    data-ww="['250px','250px','250px','125px']"
                                     data-hh="['250px','250px','250px','125px']" width="1000" height="1000"
                                     data-no-retina> </div>
 
@@ -304,7 +294,7 @@
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                 data-paddingleft="[5,5,5,5]"
                                 style="z-index: 11; min-width: 960px; max-width: 960px; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 800; color: #ffffff; letter-spacing: 5px;font-family: 'Raleway', sans-serif;text-transform:uppercase;">
-                            </div>
+                                </div>
 
                             <!-- LAYER NR. 8 -->
                             <div class="tp-caption   tp-resizeme rs-parallaxlevel-4" id="slide-964-layer-46"
@@ -329,8 +319,9 @@
                                 data-frames='[{"delay":2000,"speed":2000,"frame":"0","from":"y:top;rX:-180deg;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13;"><img src="img/object_macscreen_2.png"
-                                    alt="" data-ww="['1000px','1000px','1000px','500px']"
+                                data-paddingleft="[0,0,0,0]" style="z-index: 13;"><img
+                                    src="img/object_macscreen_2.png" alt=""
+                                    data-ww="['1000px','1000px','1000px','500px']"
                                     data-hh="['1000px','1000px','1000px','500']" width="2000" height="2000"
                                     data-no-retina> </div>
 
@@ -344,8 +335,9 @@
                                 data-frames='[{"delay":2100,"speed":2000,"frame":"0","from":"x:right;y:-500px;rZ:-180deg;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 14;"><img src="img/object_coffee_1.png"
-                                    alt="" data-ww="['375px','375px','375px','170px']"
+                                data-paddingleft="[0,0,0,0]" style="z-index: 14;"><img
+                                    src="img/object_coffee_1.png" alt=""
+                                    data-ww="['375px','375px','375px','170px']"
                                     data-hh="['375px','375px','375px','170px']" width="1500" height="1500"
                                     data-no-retina> </div>
 
@@ -358,8 +350,9 @@
                                 data-frames='[{"delay":2200,"speed":2000,"frame":"0","from":"x:-200px;y:bottom;rZ:90deg;sX:1;sY:1;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 15;"><img src="img/keyboard_apple.png"
-                                    alt="" data-ww="['600px','600px','600px','300px']"
+                                data-paddingleft="[0,0,0,0]" style="z-index: 15;"><img
+                                    src="img/keyboard_apple.png" alt=""
+                                    data-ww="['600px','600px','600px','300px']"
                                     data-hh="['600px','600px','600px','300px']" width="1600" height="1600"
                                     data-no-retina> </div>
 
@@ -376,7 +369,7 @@
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                 data-paddingleft="[180,180,180,180]" data-blendmode="overlay"
                                 style="z-index: 16; white-space: nowrap; font-size: 120px; line-height: 120px; font-weight: 800; color: #ffffff; letter-spacing: 52px;font-family: 'Raleway', sans-serif;text-transform:uppercase;">
-                                DEVNDESK </div>
+                                 DEVNDESK </div>
 
                             <!-- LAYER NR. 13 -->
                             <div class="caption   tp-resizeme rs-parallaxlevel-5" id="slide-964-layer-49"
@@ -389,7 +382,7 @@
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                 data-paddingleft="[5,5,5,5]"
                                 style="z-index: 17; min-width: 960px; max-width: 960px; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 400; color: #ffffff; letter-spacing: 5px;font-family: 'Raleway', sans-serif;text-transform:uppercase;">
-                            </div>
+                                </div>
 
                             <!-- LAYER NR. 14 -->
                             <div class="tp-caption   tp-resizeme rs-parallaxlevel-4 " id="slide-964-layer-44"
@@ -420,7 +413,6 @@
 
                 <!-- banner -->
                 <div class="mil-dark-bg">
-                    <canvas id="canvas"></canvas>
                     <div class="mil-inner-banner">
                         <div class="mi-invert-fix">
                             <div class="mil-banner-content mil-up">
@@ -576,28 +568,23 @@
                             <div class="home_wave">
                                 <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                     <defs></defs>
-                                    <path id="wave_img" data-color="#000"
-                                        d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
-                                        fill="#fff"></path>
+                                    <path id="wave_img" data-color="#000" d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z" fill="#fff"></path>
                                 </svg>
                             </div>
                             <div class="container mil-p-120-60">
                                 <div class="row justify-content-between">
                                     <div class="col-md-4 col-lg-4 mil-mb-60">
-
+    
                                         <div class="mil-muted mil-logo mil-up mil-mb-30">Ashley.</div>
                                         <div class="icons-wrapper">
-
-                                            <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn"
-                                                target="_blank">
+                                            
+                                            <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn" target="_blank">
                                                 <span class="ri-linkedin-line icon"></span>
                                             </a>
-                                            <a href="https://wa.me/yourwhatsappnumber" aria-label="WhatsApp"
-                                                target="_blank">
+                                            <a href="https://wa.me/yourwhatsappnumber" aria-label="WhatsApp" target="_blank">
                                                 <span class="ri-whatsapp-line icon"></span>
                                             </a>
-                                            <a href="https://instagram.com/yourprofile" aria-label="Instagram"
-                                                target="_blank">
+                                            <a href="https://instagram.com/yourprofile" aria-label="Instagram" target="_blank">
                                                 <span class="ri-instagram-line icon"></span>
                                             </a>
                                         </div>
@@ -605,7 +592,7 @@
                                     <div class="col-md-7 col-lg-6">
                                         <div class="row justify-content-end">
                                             <div class="col-md-6 col-lg-7">
-
+    
                                                 <nav class="mil-footer-menu mil-mb-60">
                                                     <ul>
                                                         <li class="mil-up mil-active">
@@ -625,144 +612,70 @@
                                                         </li> -->
                                                     </ul>
                                                 </nav>
-
+    
                                             </div>
-
+                                            
                                             <div class="col-md-6 col-lg-5">
-
+    
                                                 <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
-
-                                                <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
-                                                    <span class="mil-no-wrap">+51 174 705 812</span></p>
-
-
+    
+                                                <p class="mil-light-soft mil-up">71 South Los Carneros Road, California <span class="mil-no-wrap">+51 174 705 812</span></p>
+    
+    
                                                 <h6 class="mil-muted mil-up mil-mb-30 cus">Germany</h6>
-
-                                                <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier,
-                                                    Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
+    
+                                                <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier, Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
                                             </div>
-
+                                            
                                         </div>
                                     </div>
                                 </div>
-
-
+    
+                            
                             </div>
                         </div>
                     </div>
                 </footer>
-
+    
                 <!-- footer end -->
 
 
 
 
-
+                
 
 
 
 
 
             </div>
-        </div>
+ <script src="js/plugins/jquery.min.js"></script>
+                <!-- swup js -->
+                <script src="js/plugins/swup.min.js"></script>
+                <!-- swiper js -->
+                <script src="js/plugins/swiper.min.js"></script>
+                <!-- fancybox js -->
+                <script src="js/plugins/fancybox.min.js"></script>
+                <!-- gsap js -->
+                <script src="js/plugins/gsap.min.js"></script>
+                <!-- scroll smoother -->
+                <script src="js/plugins/smooth-scroll.js"></script>
+                <!-- scroll trigger js -->
+                <script src="js/plugins/ScrollTrigger.min.js"></script>
+                <!-- scroll to js -->
+                <script src="js/plugins/ScrollTo.min.js"></script>
+                <script src="js/plugins.js"></script>
+                <script src="js/main.js"></script>
 
+            <script src='js/revolution.addon.beforeafter.min.js?ver=1.0.0'></script>
+            <script src='js/revolution.addon.particles.min.js?ver=1.0.3'></script>
+            <script src="js/services_slider.js"></script>
+            <script src="js/jquery.themepunch.tools.min.js"></script>
+            <script src="js/jquery.themepunch.revolution.min.js"></script>
+            <script src="js/revolution.extension.layeranimation.min.js"></script>
+            <script src="js/revolution.extension.parallax.min.js"></script>
+            <script src="js/revolution.extension.slideanims.min.js"></script>
 
-        
-        <script src="js/plugins/jquery.min.js"></script>
-        <!-- swup js -->
-        <script src="js/plugins/swup.min.js"></script>
-        <!-- swiper js -->
-        <script src="js/plugins/swiper.min.js"></script>
-        <!-- fancybox js -->
-        <script src="js/plugins/fancybox.min.js"></script>
-        <!-- gsap js -->
-        <script src="js/plugins/gsap.min.js"></script>
-        <!-- scroll smoother -->
-        <script src="js/plugins/smooth-scroll.js"></script>
-        <!-- scroll trigger js -->
-        <script src="js/plugins/ScrollTrigger.min.js"></script>
-        <!-- scroll to js -->
-        <script src="js/plugins/ScrollTo.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <script src='js/revolution.addon.beforeafter.min.js?ver=1.0.0'></script>
-        <script src='js/revolution.addon.particles.min.js?ver=1.0.3'></script>
-        <script src="js/services_slider.js"></script>
-        <script src="js/jquery.themepunch.tools.min.js"></script>
-        <script src="js/jquery.themepunch.revolution.min.js"></script>
-        <script src="js/revolution.extension.layeranimation.min.js"></script>
-        <script src="js/revolution.extension.parallax.min.js"></script>
-        <script src="js/revolution.extension.slideanims.min.js"></script>
-
-
-        <script>
-            // Function to generate random number between min and max
-            function rand(min, max) {
-                return Math.random() * (max - min) + min;
-            }
-
-            let canvas = document.getElementById("canvas"),
-                ctx = canvas.getContext("2d"),
-                width = (canvas.width = window.innerWidth),
-                height = (canvas.height = window.innerHeight),
-                cX = width / 2,
-                cY = height / 2;
-
-            let fl = 3,
-                shapes = [],
-                numShapes = 1000;
-
-            for (let i = 0; i < numShapes; i++) {
-                shapes[i] = {
-                    x: rand(-1000, 1000),
-                    y: rand(-1000, 1000),
-                    z: rand(0, 10000)
-                };
-            }
-
-            ctx.translate(cX, cY);
-
-            function resetFrame() {
-                ctx.fillStyle = "#fff";
-                ctx.fillRect(-cX, -cY, width, height);
-            }
-
-            function draw() {
-                resetFrame();
-            }
-
-            function update() {
-                ctx.fillStyle = "purple";
-                for (let i = 0; i < numShapes; i++) {
-                    let shape = shapes[i],
-                        perspective = fl / (fl + shape.z);
-
-                    ctx.save();
-                    ctx.translate(shape.x * perspective, shape.y * perspective);
-                    ctx.scale(perspective, perspective);
-                    ctx.fillRect(-3, -3, 6, 6);
-                    ctx.restore();
-
-                    shape.z += 50;
-                    if (shape.z > 10000) {
-                        shape.z = 0;
-                    }
-                    fl += .01;
-                    if (fl > 5000) {
-                        fl = 3;
-                    }
-                }
-            }
-
-            function loop() {
-                draw();
-                update();
-                window.requestAnimationFrame(loop);
-            }
-
-            loop();
-        </script>
 </body>
 
 </html>

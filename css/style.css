@@ -4640,8 +4640,13 @@ html.is-animating .mil-menu-frame {
 
 
 .handle-preloader{
-  background-color:rgb(0, 0, 0);
+  background-color: #000000;
 }
+
+.handle-preloader-box{
+  background-color: #000000;
+}
+
 
 .handle-preloader {
   align-items: center;
@@ -4654,6 +4659,13 @@ html.is-animating .mil-menu-frame {
   position: fixed;
   left: 0;
   top: 0;
+  width: 100%;
+  z-index: 9999999;
+}
+
+.handle-preloader-box{
+  height: 100%;
+  position: fixed;
   width: 100%;
   z-index: 9999999;
 }
@@ -4679,6 +4691,8 @@ html.is-animating .mil-menu-frame {
   z-index: 100;
 }
 
+
+
 .handle-preloader .animation-preloader .spinner{
   animation: spinner 1s linear;
   border-radius: 50%;
@@ -4686,6 +4700,8 @@ html.is-animating .mil-menu-frame {
   margin: 0 auto 45px auto;
   width: 150px;
 }
+
+
 
 .handle-preloader .animation-preloader .txt-loading {
   text-align: center;
