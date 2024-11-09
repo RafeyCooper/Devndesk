@@ -1,4 +1,4 @@
-
+/* 
 
 
     @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap');
@@ -15,11 +15,16 @@
 
 
 #container {
-  position: relative;
-  transform: scale(0.725);
-  margin-bottom: -330px;
+  transform: scale(0.85);
   line-height: 1.5;
+  position: absolute;
+  bottom: 0px;
+}
 
+.main-loaderBox{
+  height: 276px;
+  position: relative;
+  width: 354px;
 }
 
 .divider {
@@ -162,7 +167,7 @@
   }
 }
 
-@media (min-width: 48rem) {
+/* @media (min-width: 48rem) {
   #container {
     transform: scale(0.725);
   }
@@ -172,13 +177,12 @@
   #container {
     transform: scale(0.85);
   }
-}
+} */
 
-.tetrominos {
+/* .tetrominos {
+  top: 62px;
   position: absolute;
-  top: 50%;
-  left: 44%;
-  transform: translate(-50% , -50%);
+  left: 62px;
 }
 
 .tetromino {
@@ -243,11 +247,8 @@
   90%, 100% {
     transform: translate(0, 0);
   }
-}
+} */ */
 
-@media only screen and (max-width:768px){
-
-    .tetrominos {
-        left: 24%;
-    }
+.top-margin{
+  margin-top: 60px;
 }

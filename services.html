@@ -40,22 +40,24 @@
 </head>
 
 <style>
- 
-        #canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Ensure canvas is behind the content */
-        }
+    #canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* Ensure canvas is behind the content */
+    }
 
-        .container {
-            position: relative;
-            z-index: 1; 
-            color: white; /* Change text color for visibility */
-        }
+    .container {
+        position: relative;
+        z-index: 1;
+        color: white;
+        /* Change text color for visibility */
+    }
 </style>
+
 <body>
 
     <!-- wrapper -->
@@ -71,24 +73,31 @@
         <div class="loader-wrap" id="loader">
             <div class="preloader">
                 <div id="handle-preloader" class="handle-preloader">
-                    <div id="container">
-                        <div class="divider" aria-hidden="true"></div>
-                        <p class="loading-text" aria-label="Loading">
-                            <span class="letter" aria-hidden="true">L</span>
-                            <span class="letter" aria-hidden="true">o</span>
-                            <span class="letter" aria-hidden="true">a</span>
-                            <span class="letter" aria-hidden="true">d</span>
-                            <span class="letter" aria-hidden="true">i</span>
-                            <span class="letter" aria-hidden="true">n</span>
-                            <span class="letter" aria-hidden="true">g</span>
-                        </p>
+
+                    <div class="main-loaderBox">
+                        
+                        <div class='tetrominos'>
+                            <div class='tetromino box1'></div>
+                            <div class='tetromino box2'></div>
+                            <div class='tetromino box3'></div>
+                            <div class='tetromino box4'></div>
+                        </div>
+
+                        <div id="container">
+                            <div class="divider" aria-hidden="true"></div>
+                            <p class="loading-text" aria-label="Loading">
+                                <span class="letter" aria-hidden="true">L</span>
+                                <span class="letter" aria-hidden="true">o</span>
+                                <span class="letter" aria-hidden="true">a</span>
+                                <span class="letter" aria-hidden="true">d</span>
+                                <span class="letter" aria-hidden="true">i</span>
+                                <span class="letter" aria-hidden="true">n</span>
+                                <span class="letter" aria-hidden="true">g</span>
+                            </p>
+                        </div>
+                        
                     </div>
-                    <div class='tetrominos'>
-                        <div class='tetromino box1'></div>
-                        <div class='tetromino box2'></div>
-                        <div class='tetromino box3'></div>
-                        <div class='tetromino box4'></div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -453,14 +462,11 @@
                     <!-- services -->
                     <section id="services">
                         <div class="mi-invert-fix">
-                            <div class="container mil-p-120-60">
+                            <div class="container-fluid mil-p-120-60">
                                 <div class="row">
-                                    <div class="col-lg-5">
+                                    <div class="col-lg-12">
 
-                                        <div class="mil-lines-place mil-light"></div>
-
-                                    </div>
-                                    <div class="col-lg-7">
+                                        <!-- <div class="mil-lines-place mil-light"></div> -->
                                         <div class="row">
                                             <div class="col-md-6 col-lg-6">
                                                 <a href="service.html"
@@ -481,7 +487,8 @@
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div class="col-md-6 col-lg-6">
+
+                                            <div class="col-md-6 col-lg-6 top-margin">
                                                 <a href="service.html"
                                                     class="mil-service-card-lg mil-more mil-accent-cursor">
                                                     <h4 class="mil-muted mil-up mil-mb-30">Website Design <br>and
@@ -500,6 +507,49 @@
                                                     </div>
                                                 </a>
                                             </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="row">
+                                            <!-- <div class="col-md-6 col-lg-6">
+                                                <a href="service.html"
+                                                    class="mil-service-card-lg mil-more mil-accent-cursor mil-offset">
+                                                    <h4 class="mil-muted mil-up mil-mb-30">Branding and <br>Identity
+                                                        Design</h4>
+                                                    <p class="mil-descr mil-light-soft mil-up mil-mb-30">Our creative
+                                                        agency is a team of professionals focused on helping your brand
+                                                        grow.</p>
+                                                    <ul class="mil-service-list mil-light mil-mb-30">
+                                                        <li class="mil-up">UX Audits</li>
+                                                        <li class="mil-up">Design thinking</li>
+                                                        <li class="mil-up">Methodologies</li>
+                                                        <li class="mil-up">Wireframing</li>
+                                                    </ul>
+                                                    <div class="mil-link mil-accent mil-arrow-place mil-up">
+                                                        <span>Read more</span>
+                                                    </div>
+                                                </a>
+                                            </div> -->
+                                            <!-- <div class="col-md-6 col-lg-6">
+                                                <a href="service.html"
+                                                    class="mil-service-card-lg mil-more mil-accent-cursor">
+                                                    <h4 class="mil-muted mil-up mil-mb-30">Website Design <br>and
+                                                        Development</h4>
+                                                    <p class="mil-descr mil-light-soft mil-up mil-mb-30">Our creative
+                                                        agency is a team of professionals focused on helping your brand
+                                                        grow.</p>
+                                                    <ul class="mil-service-list mil-light mil-mb-30">
+                                                        <li class="mil-up">UX Audits</li>
+                                                        <li class="mil-up">Design thinking</li>
+                                                        <li class="mil-up">Methodologies</li>
+                                                        <li class="mil-up">Wireframing</li>
+                                                    </ul>
+                                                    <div class="mil-link mil-accent mil-arrow-place mil-up">
+                                                        <span>Read more</span>
+                                                    </div>
+                                                </a>
+                                            </div> -->
                                             <div class="col-md-6 col-lg-6">
                                                 <a href="service.html"
                                                     class="mil-service-card-lg mil-more mil-accent-cursor mil-offset">
@@ -519,7 +569,7 @@
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div class="col-md-6 col-lg-6">
+                                            <div class="col-md-6 col-lg-6 top-margin">
                                                 <a href="service.html"
                                                     class="mil-service-card-lg mil-more mil-accent-cursor">
                                                     <h4 class="mil-muted mil-up mil-mb-30">Creative Consulting
@@ -633,7 +683,8 @@
                                                 <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
 
                                                 <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
-                                                    <span class="mil-no-wrap">+51 174 705 812</span></p>
+                                                    <span class="mil-no-wrap">+51 174 705 812</span>
+                                                </p>
 
 
                                                 <h6 class="mil-muted mil-up mil-mb-30 cus">Germany</h6>
@@ -667,7 +718,7 @@
         </div>
 
 
-        
+
         <script src="js/plugins/jquery.min.js"></script>
         <!-- swup js -->
         <script src="js/plugins/swup.min.js"></script>
