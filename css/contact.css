@@ -99,3 +99,29 @@ button {
     0% {top: 10px; left: 80px;}
     100% {top: -10000px; left: 10000px; transform: scale(-5);}
   }
+
+
+  .code-container h1 {
+    font-size: 130px;
+    color: rgba(225, 225, 225, .1);
+    background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: cover;
+    -webkit-background-clip: text;
+    animation: animate 15s linear infinite;
+    text-align: center;
+    margin-top: 17%;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+@keyframes animate {
+    0% {
+        background-position: left 0px top 10px;
+    }
+
+    40% {
+        background-position: left 800px top 10px;
+    }
+}

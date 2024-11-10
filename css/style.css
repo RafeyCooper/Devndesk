@@ -1102,7 +1102,7 @@ preloader
 cursor
 
 ------------------------------------------- */
-/* .mil-ball {
+.mil-ball {
   width: 20px;
   height: 20px;
   position: fixed;
@@ -1154,7 +1154,8 @@ cursor
   .mil-ball {
     display: none;
   }
-} */
+}
+
 
 /* -------------------------------------------
 
@@ -1172,7 +1173,7 @@ scrollbar
 ------------------------------------------- */
 ::-webkit-scrollbar {
   display: block;
-  width: 6px;
+  width: 12px;
   background-color:white ;
   transition: height 0.2s ease;
 }
@@ -2638,6 +2639,12 @@ team
 social icons
 
 ------------------------------------------- */
+
+/* .mil-social-icons li a:hover .cursor,
+.mil-social-icons li a:hover .cursor2,
+.mil-social-icons li a:hover .cursor3 {
+  display: none;
+} */
 .mil-social-icons {
   padding: 0;
   margin: 0;
@@ -2671,6 +2678,18 @@ social icons
 }
 .mil-social-icons.mil-dark li a:hover {
   color: #D8FF36;
+}
+
+.footer-icons{
+  font-size: 40px;
+  margin-top: 20px;
+}
+.fa.fa-twitter{
+	font-family:sans-serif;
+}
+.fa.fa-twitter::before{
+	content:"𝕏";
+	font-size:1em;
 }
 
 /* -------------------------------------------
@@ -4816,7 +4835,7 @@ html.is-animating .mil-menu-frame {
 
 /* ==============================================================================FOOTER STYLING ==================================================== */
 
-.icons-wrapper {
+/* .icons-wrapper {
   position: relative;
   margin-top: 90px;
 }
@@ -4837,9 +4856,9 @@ html.is-animating .mil-menu-frame {
   animation: float 4s ease-in-out infinite;
 }
 .ri-instagram-line {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ color: #b6601a;
+ padding-left: 10px;
+
 }
 .ri-linkedin-line {
   color: #1877f2;
@@ -4848,6 +4867,10 @@ html.is-animating .mil-menu-frame {
 .ri-whatsapp-line {
   color: #25d366;
   animation-delay: 2s;
+  padding-left: 10px;
+}
+.ri-gmail-line{
+ color: #fff;
 }
 @keyframes float {
   0% {
@@ -4859,7 +4882,7 @@ html.is-animating .mil-menu-frame {
   100% {
       transform: translateY(0);
   }
-}
+} */
 
 
 /* =======================================load ========================*/
