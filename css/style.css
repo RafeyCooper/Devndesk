@@ -453,6 +453,7 @@ a {
 }
 .mil-suptitle.mil-suptitle-right {
   text-align: right;
+  color: #000;
 }
 .mil-suptitle.mil-suptitle-right:before {
   left: calc(100% + 30px);
@@ -1203,13 +1204,13 @@ frame
 
 ------------------------------------------- */
 .mil-logo {
-  font-size: 42px;
+  font-size: 35px;
   font-weight: 500;
   line-height: 100%;
 }
 @media screen and (max-width: 992px) {
   .mil-logo {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 
@@ -1662,6 +1663,7 @@ menu
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+            margin-top: 40px;
   }
   .mil-main-menu ul li a:before {
     display: none;
@@ -1676,6 +1678,18 @@ menu
     margin-top: 30px;
   }
 }
+
+@media screen and (max-width: 992px) {
+
+  .mil-main-menu ul li a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+            margin-top: 0px;
+  }
+
+}
+
 
 /* -------------------------------------------
 
@@ -2681,7 +2695,7 @@ social icons
 }
 
 .footer-icons{
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 20px;
 }
 .fa.fa-twitter{
@@ -2690,6 +2704,13 @@ social icons
 .fa.fa-twitter::before{
 	content:"𝕏";
 	font-size:1em;
+}
+
+@media screen and (max-width: 992px) {
+
+  .footer-icons{
+    font-size: 25px;
+  }
 }
 
 /* -------------------------------------------
@@ -3565,7 +3586,6 @@ portfolio
 @media screen and (max-width: 992px) {
   .mil-portfolio-item.mil-slider-item .mil-cover-frame {
     height: auto;
-    padding-bottom: 100%;
   }
 }
 .mil-portfolio-item.mil-slider-item .mil-descr {
@@ -3585,7 +3605,7 @@ portfolio
 }
 @media screen and (max-width: 992px) {
   .mil-portfolio-item.mil-slider-item .mil-descr {
-    padding: 30px;
+    padding: 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4748,7 +4768,6 @@ html.is-animating .mil-menu-frame {
   font-family: 'Inter', sans-serif;
   color: transparent;
   -webkit-text-stroke-width: 1px;
-  
   -webkit-text-stroke-color: rgba(255, 12, 12, 0.3) ;
 }
 
