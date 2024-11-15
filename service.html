@@ -21,36 +21,55 @@
     <title>Ashley</title>
 
 </head>
+<style>
+    .custom-column{
+        transform: scale(1.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.f-size-inc{
+    font-size: 1.5rem;
+}
+
+
+
+</style>
 <body>
 
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
 
         <!-- cursor -->
-        <div class="mil-ball">
-            <span class="mil-icon-1">
-                <svg viewBox="0 0 128 128">
-                    <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
-                </svg>
-            </span>
-            <div class="mil-more-text">More</div>
-            <div class="mil-choose-text">Сhoose</div>
-        </div>
+        <div class='cursor' id="cursor"></div>
+        <div class='cursor2' id="cursor2"></div>
+        <div class='cursor3' id="cursor3"></div>
         <!-- cursor end -->
 
         <!-- preloader -->
-        <div class="mil-preloader">
-            <div class="mil-preloader-animation">
-                <div class="mil-pos-abs mil-animation-1">
-                    <p class="mil-h3 mil-muted mil-thin">Pioneering</p>
-                    <p class="mil-h3 mil-muted">Creative</p>
-                    <p class="mil-h3 mil-muted mil-thin">Excellence</p>
-                </div>
-                <div class="mil-pos-abs mil-animation-2">
-                    <div class="mil-reveal-frame">
-                        <p class="mil-reveal-box"></p>
-                        <p class="mil-h3 mil-muted mil-thin">ashley.com</p>
+        <div class="loader-wrap" id="loader">
+            <div class="preloader">
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="main-loaderBox">                   
+                        <div class='tetrominos'>
+                            <div class='tetromino box1'></div>
+                            <div class='tetromino box2'></div>
+                            <div class='tetromino box3'></div>
+                            <div class='tetromino box4'></div>
+                        </div>
+                        <div id="container">
+                            <div class="divider" aria-hidden="true"></div>
+                            <p class="loading-text" aria-label="Loading">
+                                <span class="letter" aria-hidden="true">L</span>
+                                <span class="letter" aria-hidden="true">o</span>
+                                <span class="letter" aria-hidden="true">a</span>
+                                <span class="letter" aria-hidden="true">d</span>
+                                <span class="letter" aria-hidden="true">i</span>
+                                <span class="letter" aria-hidden="true">n</span>
+                                <span class="letter" aria-hidden="true">g</span>
+                            </p>
+                        </div>             
                     </div>
                 </div>
             </div>
@@ -63,129 +82,65 @@
         </div>
         <!-- scrollbar progress end -->
 
-        <!-- menu -->
-        <div class="mil-menu-frame">
-            <!-- frame clone -->
-            <div class="mil-frame-top">
-                <a href="home-1.html" class="mil-logo">A.</a>
-                <div class="mil-menu-btn">
-                    <span></span>
-                </div>
+     <!-- menu -->
+     <div class="mil-menu-frame">
+        <!-- frame clone -->
+        <div class="mil-frame-top">
+            <a href="index.html" class="mil-logo">A.</a>
+            <div class="mil-menu-btn">
+                <span></span>
             </div>
-            <!-- frame clone end -->
-            <div class="container">
-                <div class="mil-menu-content">
-                    <div class="row">
-                        <div class="col-xl-5">
+        </div>
+        <!-- frame clone end -->
+        <div class="container">
+            <div class="mil-menu-content">
+                <div class="row">
+                    <div class="col-12 nav-links-center">
 
-                            <nav class="mil-main-menu" id="swupMenu">
-                                <ul>
-                                    <li class="mil-has-children">
-                                        <a href="#.">Homepage</a>
-                                        <ul>
-                                            <li><a href="home-1.html">Landing page</a></li>
-                                            <li><a href="home-2.html">Personal</a></li>
-                                            <li><a href="portfolio-3.html">Portfolio slider</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mil-has-children">
-                                        <a href="#.">Portfolio</a>
-                                        <ul>
-                                            <li><a href="portfolio-1.html">Grid type 1</a></li>
-                                            <li><a href="portfolio-2.html">Grid type 2</a></li>
-                                            <li><a href="portfolio-3.html">Slider</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mil-has-children mil-active">
-                                        <a href="#.">Services</a>
-                                        <ul>
-                                            <li><a href="services.html">Services List</a></li>
-                                            <li><a href="service.html">Single service</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mil-has-children">
-                                        <a href="#.">Newsletter</a>
-                                        <ul>
-                                            <li><a href="blog.html">Blog List</a></li>
-                                            <li><a href="publication.html">Publication</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mil-has-children">
-                                        <a href="#.">Other pages</a>
-                                        <ul>
-                                            <li><a href="team.html">Team</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="404.html">404</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
-
-                        </div>
-                        <div class="col-xl-7">
-
-                            <div class="mil-menu-right-frame">
-                                <div class="mil-animation-in">
-                                    <div class="mil-animation-frame">
-                                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2" data-value-2="2"></div>
-                                    </div>
-                                </div>
-                                <div class="mil-menu-right">
-                                    <div class="row">
-                                        <div class="col-lg-8 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Projects</h6>
-
-                                            <ul class="mil-menu-list">
-                                                <li><a href="project-1.html" class="mil-light-soft">Interior design studio</a></li>
-                                                <li><a href="project-2.html" class="mil-light-soft">Home Security Camera</a></li>
-                                                <li><a href="project-3.html" class="mil-light-soft">Kemia Honest Skincare</a></li>
-                                                <li><a href="project-4.html" class="mil-light-soft">Cascade of Lava</a></li>
-                                                <li><a href="project-5.html" class="mil-light-soft">Air Pro by Molekule</a></li>
-                                                <li><a href="project-6.html" class="mil-light-soft">Tony's Chocolonely</a></li>
-                                            </ul>
-
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Useful links</h6>
-
-                                            <ul class="mil-menu-list">
-                                                <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
-                                                <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Careers</a></li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                    <div class="mil-divider mil-mb-60"></div>
-                                    <div class="row justify-content-between">
-
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Canada</h6>
-
-                                            <p class="mil-light-soft mil-up">71 South Los Carneros Road, California <span class="mil-no-wrap">+51 174 705 812</span></p>
-
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Germany</h6>
-
-                                            <p class="mil-light-soft">Leehove 40, 2678 MC De Lier, Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        <nav class="mil-main-menu" id="swupMenu">
+                            <ul>
+                                <li class="mil-has-children">
+                                    <a href="index.html">Homepage</a>
+                                    <!-- <ul>
+                                        <li><a href="home-1.html">Landing page</a></li>
+                                        <li><a href="home-2.html">Personal</a></li>
+                                        <li><a href="portfolio-3.html">Portfolio slider</a></li>
+                                    </ul> -->
+                                </li>
+                                <li class="mil-has-children">
+                                    <a href="#.">Portfolio</a>
+                                    <ul>
+                                        <li><a href="portfolio-1.html">Logo</a></li>
+                                        <li><a href="#">Websites</a></li>
+                                        <li><a href="portfolio-3.html">Banners</a></li>
+                                    </ul>
+                                </li>
+                                <li class="mil-has-children">
+                                    <a href="services.html"> Services</a>
+                                </li>
+                                <!-- <li class="mil-has-children">
+                                    <a href="#.">Newsletter</a>
+                                    <ul>
+                                        <li><a href="blog.html">Blog List</a></li>
+                                        <li><a href="publication.html">Publication</a></li>
+                                    </ul>
+                                </li> -->
+                                <li class="mil-has-children">
+                                    <a href="contact.html">Contact Us</a>
+                                    <!-- <ul>
+                                        <li><a href="team.html">Team</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="404.html">404</a></li>
+                                    </ul> -->
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- menu -->
+    </div>
+    <!-- menu -->
 
         <!-- curtain -->
         <div class="mil-curtain"></div>
@@ -239,10 +194,10 @@
                 <section id="service">
                     <div class="container mil-p-120-90">
                         <div class="row justify-content-between">
-                            <div class="col-lg-4 mil-relative mil-mb-90">
+                            <div class="col-lg-4 mil-relative mil-mb-90 custom-column">
 
                                 <h4 class="mil-up mil-mb-30">Your <span class="mil-thin">Approach</span> <br>and <span class="mil-thin">Work Specifics</span></h4>
-                                <p class="mil-up mil-mb-30">At our agency, we have a unique approach to web design and development. We believe in creating websites that not only look great but also perform well in terms of user experience, functionality, and search engine optimization.</p>
+                                <p class="mil-up mil-mb-30 ">At our agency, we have a unique approach to web design and development. We believe in creating websites that not only look great but also perform well in terms of user experience, functionality, and search engine optimization.</p>
                                 <div class="mil-up">
                                     <a href="portfolio-3.html" class="mil-link mil-dark mil-arrow-place">
                                         <span>View works</span>
@@ -457,8 +412,8 @@
                             <div class="col-lg-4">
 
                                 <a href="service.html" class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
-                                    <h4 class="mil-up mil-mb-30">Branding and <br>Identity Design</h4>
-                                    <p class="mil-descr mil-up mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <h4 class="mil-up mil-mb-30 ">Branding and <br>Identity Design</h4>
+                                    <p class="mil-descr mil-up mil-mb-30 f-size-inc">Our creative agency is a team of professionals focused on helping your brand grow.</p>
                                     <ul class="mil-service-list mil-dark mil-mb-30">
                                         <li class="mil-up">UX Audits</li>
                                         <li class="mil-up">Design thinking</li>
@@ -475,7 +430,7 @@
 
                                 <a href="service.html" class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
                                     <h4 class="mil-up mil-mb-30">Advertising <br>and Marketing</h4>
-                                    <p class="mil-descr mil-up mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <p class="mil-descr mil-up mil-mb-30 f-size-inc">Our creative agency is a team of professionals focused on helping your brand grow.</p>
                                     <ul class="mil-service-list mil-dark mil-mb-30">
                                         <li class="mil-up">UX Audits</li>
                                         <li class="mil-up">Design thinking</li>
@@ -492,7 +447,7 @@
 
                                 <a href="service.html" class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
                                     <h4 class="mil-up mil-mb-30">Creative <br>Consulting</h4>
-                                    <p class="mil-descr mil-up mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <p class="mil-descr mil-up mil-mb-30 f-size-inc">Our creative agency is a team of professionals focused on helping your brand grow.</p>
                                     <ul class="mil-service-list mil-dark mil-mb-30">
                                         <li class="mil-up">UX Audits</li>
                                         <li class="mil-up">Design thinking</li>
@@ -511,98 +466,76 @@
                 <!-- other services end -->
 
                 <!-- footer -->
-                <footer class="mil-dark-bg">
-                    <div class="mi-invert-fix">
-                        <div class="container mil-p-120-60">
-                            <div class="row justify-content-between">
-                                <div class="col-md-4 col-lg-4 mil-mb-60">
-
-                                    <div class="mil-muted mil-logo mil-up mil-mb-30">Ashley.</div>
-
-                                    <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
-
-                                    <form class="mil-subscribe-form mil-up">
-                                        <input type="text" placeholder="Enter our email">
-                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
-                                    </form>
-
-                                </div>
-                                <div class="col-md-7 col-lg-6">
-                                    <div class="row justify-content-end">
-                                        <div class="col-md-6 col-lg-7">
-
-                                            <nav class="mil-footer-menu mil-mb-60">
-                                                <ul>
-                                                    <li class="mil-up mil-active">
-                                                        <a href="home-1.html">Home</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="portfolio-1.html">Portfolio</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="services.html">Services</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="contact.html">Contact</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="blog.html">Blog</a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-
-                                        </div>
-                                        <div class="col-md-6 col-lg-5">
-
-                                            <ul class="mil-menu-list mil-up mil-mb-60">
-                                                <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
-                                                <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Careers</a></li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
+                <footer>
+                    <div class="grax_tm_section mil-dark">
+                        <div class="grax_tm_copyright ">
+                            <div class="my_wave">
+                                <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <defs></defs>
+                                    <path id="wave_img" data-color="#000" d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z" fill="#fff"></path>
+                                </svg>
                             </div>
-
-                            <div class="row justify-content-between flex-sm-row-reverse">
-                                <div class="col-md-7 col-lg-6">
-
-                                    <div class="row justify-content-between">
-
-                                        <div class="col-md-6 col-lg-5 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
-
-                                            <p class="mil-light-soft mil-up">71 South Los Carneros Road, California <span class="mil-no-wrap">+51 174 705 812</span></p>
-
-                                        </div>
-                                        <div class="col-md-6 col-lg-5 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
-
-                                            <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier, Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
-
+                            <div class="container mil-p-120-60">
+                                <div class="row justify-content-between">
+                                    <div class="col-md-4 col-lg-4 mil-mb-60">
+    
+                                        <div class="mil-muted mil-logo mil-up mil-mb-30">DEV N DESK.</div>
+                                        <div class="mil-vert-between">
+                                            <div class="mil-mb-30">
+                                                <ul class="mil-social-icons mil-up">
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-instagram footer-icons"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-linkedin footer-icons"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="fa fa-twitter footer-icons"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-facebook footer-icons"></i></a></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                            <p class="mil-light-soft mil-up">© Copyright 2024 - DEVNDESK. All Rights Reserved.</p>
                                         </div>
                                     </div>
-
-                                </div>
-                                <div class="col-md-4 col-lg-6 mil-mb-60">
-
-                                    <div class="mil-vert-between">
-                                        <div class="mil-mb-30">
-                                            <ul class="mil-social-icons mil-up">
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                            </ul>
+                                    <div class="col-md-7 col-lg-6">
+                                        <div class="row justify-content-end">
+                                            <div class="col-md-6 col-lg-7">
+    
+                                                <nav class="mil-footer-menu mil-mb-60">
+                                                    <ul>
+                                                        <li class="mil-up mil-active">
+                                                            <a href="index.html">Home</a>
+                                                        </li>
+                                                        <li class="mil-up">
+                                                            <a href="portfolio-1.html">Portfolio</a>
+                                                        </li>
+                                                        <li class="mil-up">
+                                                            <a href="services.html">Services</a>
+                                                        </li>
+                                                        <li class="mil-up">
+                                                            <a href="contact.html">Contact</a>
+                                                        </li>
+                                                        <!-- <li class="mil-up">
+                                                            <a href="blog.html">Blog</a>
+                                                        </li> -->
+                                                    </ul>
+                                                </nav>
+    
+                                            </div>
+                                            
+                                            <div class="col-md-6 col-lg-5">
+    
+                                                <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
+    
+                                                <p class="mil-light-soft mil-up">71 South Los Carneros Road, California <span class="mil-no-wrap">+51 174 705 812</span></p>
+    
+    
+                                                <h6 class="mil-muted mil-up mil-mb-30 cus">Germany</h6>
+    
+                                                <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier, Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
+                                            </div>
+                                            
                                         </div>
-                                        <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights Reserved.</p>
                                     </div>
-
                                 </div>
+    
+                            
                             </div>
                         </div>
                     </div>
@@ -738,6 +671,8 @@
     <!-- scroll to js -->
     <script src="js/plugins/ScrollTo.min.js"></script>
     <!-- ashley js -->
+    <script src="js/plugins.js"></script>
+
     <script src="js/main.js"></script>
 
 </body>
