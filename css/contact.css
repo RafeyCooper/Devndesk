@@ -1,3 +1,13 @@
+:root {
+  --hue: 53;
+  --bg: #e8e3e3;
+  --fg: #1c1717;
+  --primary: #f20d0d;
+  --trans-dur: 0.3s;
+  --trans-timing1: cubic-bezier(0.65, 0, 0.35, 1);
+  --trans-timing2: cubic-bezier(0.65, 0, 0.35, 1.35);
+}
+
 #contact{
     margin-bottom: 60px;
 }
@@ -12,7 +22,6 @@
 
 .iti__dropdown {
     z-index: 1000;
-    /* Ensure it appears above other elements */
 }
 
 a{
@@ -47,18 +56,14 @@ a{
     border: none;
     border-radius: 3px;
     position: relative;
-    &:hover {
-      background-color: #D8FF36;
-    }
-    &:focus {
-      outline: none;
-      background-color: #D8FF36;
-    }
+    border-radius: 13px;
   }
-  i {
+
+  i{
     margin-left: 12px;
   }
   .plane {
+
     position: absolute;
     right: 18px;
   }
@@ -74,6 +79,7 @@ a{
     display: inline;
   }
   .fly {
+    z-index: 999;
     position: absolute;
     animation-name: a;
     animation-duration: 10s;
@@ -83,9 +89,6 @@ a{
   }
   .done {
     background-color: #D4E157;
-    &:hover {
-      background-color: #D4E157;
-    }
   }
   @keyframes fade {
     0% {
@@ -115,6 +118,242 @@ a{
     text-transform: uppercase;
     font-weight: 900;
 
+}
+
+
+.third-child {
+  width: 300px;
+  height: 300px;
+  background: lightgray;
+}
+
+.third-child p {
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: url("https://media0.giphy.com/media/TeBpzQZRaBIC4/giphy.gif?cid=ecf05e47t8reh80bpi8zmyp3fimer4l5rxah7ph69vhup4ya&rid=giphy.gif&ct=s");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  font-weight: bolder;
+  font-family: helvetica;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+.serviceSelect{
+  height: 100%;
+  border-radius: 13px;
+}
+
+.contactInput{
+  position: relative;
+  height: 70px;
+  z-index: 1;
+  padding: 0 30px;
+  width: 100%;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: "Outfit", sans-serif;
+  color: rgb(0, 0, 0);
+  border: none;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  border-radius: 13px;
+}
+
+.idea-form {
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 4.5em;
+  z-index: 1;
+  transition: background-color var(--trans-dur), color var(--trans-dur), height var(--trans-dur) var(--trans-timing2);
+}
+
+.idea-form,
+.idea-form__btn,
+.idea-form__content {
+  border-radius: 13px;
+}
+
+.idea-form,
+.idea-form__btn {
+  position: relative;
+}
+
+.idea-form__btn {
+  outline: transparent;
+  transition: background-color var(--trans-dur), box-shadow var(--trans-dur), opacity var(--trans-dur) var(--trans-timing1);
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.idea-form__textarea {
+  outline: transparent;
+  transition: background-color var(--trans-dur), box-shadow var(--trans-dur), opacity var(--trans-dur) var(--trans-timing1);
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.idea-form__btn:disabled,
+.idea-form__textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.idea-form__btn {
+  background-color: #000;
+  box-shadow: 0 0 0 0.25em rgba(145, 8, 8, 0);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  margin-inline-start: auto;
+  padding: 0.5em 1em;
+  z-index: 2;
+}
+
+.idea-form__btn--start {
+  background-color: transparent;
+  box-shadow: none;
+  color: currentColor;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0625em;
+  padding-inline-start: 5.25em;
+  width: 100%;
+  height: 4.5em;
+  text-transform: uppercase;
+  transition: opacity var(--trans-dur) var(--trans-timing1), visibility var(--trans-dur) steps(1, start);
+}
+
+.idea-form__btn:focus-visible {
+  box-shadow: 0 0 0 0.25em rgba(145, 8, 8, 1);
+}
+
+.idea-form__content {
+  opacity: 0;
+  padding: 1.5em 1em 0.75em;
+  padding-inline-start: 5.25em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: opacity var(--trans-dur) var(--trans-timing1), visibility var(--trans-dur) steps(1, end);
+}
+
+.idea-form__fill,
+.idea-form__icon,
+.idea-form__label {
+  position: absolute;
+}
+
+.idea-form__fill {
+  background-color: #f9e822;
+  border-radius: 50%;
+  top: 1.75em;
+  left: 2em;
+  width: 1em;
+  height: 1em;
+  transform: translateY(50%) scale(0);
+  transition: transform var(--trans-dur) var(--trans-timing1);
+}
+
+[dir="rtl"] .idea-form__fill {
+  right: 2em;
+  left: auto;
+}
+
+.idea-form__btn--start:focus-visible {
+  box-shadow: none;
+}
+
+.idea-form__btn--start:focus-visible+.idea-form__fill,
+.idea-form__btn--start:hover+.idea-form__fill {
+  transform: translateY(0) scale(1);
+}
+
+.idea-form__icon {
+  color: currentColor;
+  display: block;
+  top: 0.75em;
+  left: 1em;
+  width: 3em;
+  height: 3em;
+  z-index: 1;
+}
+
+[dir="rtl"] .idea-form__icon {
+  right: 1em;
+  left: auto;
+}
+
+.idea-form__label {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+.idea-form__textarea {
+  background-color: transparent;
+  color: #000;
+  display: block;
+  margin-bottom: 0.75em;
+  resize: none;
+  width: 100%;
+  height: 100%;
+  padding: 0px 10px;
+}
+
+.idea-form__textarea::placeholder {
+  color: #8c7373;
+}
+
+.idea-form[data-expanded="true"] {
+  background-color: transparent;
+  height: 260px;
+  transition-timing-function: steps(1, end), ease, var(--trans-timing2);
+}
+
+.idea-form[data-expanded="true"] .idea-form__btn--start {
+  opacity: 0;
+  pointer-events: none;
+  transition-timing-function: var(--trans-timing1), steps(1, end);
+  visibility: hidden;
+}
+
+.idea-form[data-expanded="true"] .idea-form__content {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition-timing-function: var(--trans-timing1), steps(1, start);
+  visibility: visible;
+}
+
+.idea-form[data-expanded="true"] .idea-form__fill {
+  transform: translateY(0) scale(32);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+      --bg: #1c1717;
+      --fg: #e8e3e3;
+  }
+
+  .idea-form {
+      background-color: #fff;
+      color: #000;
+  }
 }
 
 @keyframes animate {
@@ -159,3 +398,4 @@ a{
     font-size: 18px;
   }
 }
+

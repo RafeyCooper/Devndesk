@@ -7,9 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- bootstrap grid css -->
     <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- the select field in contact form is not workingwith this bootstrap so that's why linking an external cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font awesome css -->
     <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <!-- fancybox css -->
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <!-- ashley scss -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
 
@@ -17,9 +26,33 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
+    <!-- page name -->
     <title>Ashley</title>
 
 </head>
+<style>
+    .third-child {
+  width: 300px;
+  height: 300px;
+  background: lightgray;
+}
+
+.third-child p {
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: url("https://media0.giphy.com/media/TeBpzQZRaBIC4/giphy.gif?cid=ecf05e47t8reh80bpi8zmyp3fimer4l5rxah7ph69vhup4ya&rid=giphy.gif&ct=s");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  font-weight: bolder;
+  font-family: helvetica;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+line-height: 1;
+}
+</style>
 
 <body>
 
@@ -67,7 +100,89 @@
         </div>
         <!-- scrollbar progress end -->
 
-        <div id="headerPlaceholder"></div>
+        <!-- menu -->
+        <div class="mil-menu-frame">
+            <!-- frame clone -->
+            <div class="mil-frame-top">
+                <a href="index.html" class="mil-logo">A.</a>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <!-- frame clone end -->
+            <div class="container">
+                <div class="mil-menu-content">
+                    <div class="row">
+                        <div class="col-12 nav-links-center">
+
+                            <nav class="mil-main-menu" id="swupMenu">
+                                <ul>
+                                    <li class="mil-has-children">
+                                        <a href="index.html">Homepage</a>
+                                        <!-- <ul>
+                                        <li><a href="home-1.html">Landing page</a></li>
+                                        <li><a href="home-2.html">Personal</a></li>
+                                        <li><a href="portfolio-3.html">Portfolio slider</a></li>
+                                    </ul> -->
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="#.">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio-1.html">Logo</a></li>
+                                            <li><a href="#">Websites</a></li>
+                                            <li><a href="portfolio-3.html">Banners</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="services.html"> Services</a>
+                                    </li>
+
+                                    <!-- <li class="mil-has-children">
+                                    <a href="#.">Newsletter</a>
+                                    <ul>
+                                        <li><a href="blog.html">Blog List</a></li>
+                                        <li><a href="publication.html">Publication</a></li>
+                                    </ul>
+                                </li> -->
+                                    <li class="mil-active ">
+                                        <a href="contact.html">Contact Us</a>
+                                        <!-- <ul>
+                                        <li><a href="team.html">Team</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="404.html">404</a></li>
+                                    </ul> -->
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+
+        <!-- curtain -->
+        <div class="mil-curtain"></div>
+        <!-- curtain end -->
+
+        <!-- frame -->
+        <div class="mil-frame">
+            <div class="mil-frame-top">
+                <a href="index.html" class="mil-logo">A.</a>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <div class="mil-frame-bottom">
+                <div class="mil-current-page"></div>
+                <div class="mil-back-to-top">
+                    <a href="#top" class="mil-link mil-dark mil-arrow-place">
+                        <span>Back to top</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
 
         <!-- content -->
         <div class="mil-content">
@@ -105,84 +220,71 @@
             <section id="contact">
                 <div class="container">
 
-                    <div class="first-row">
-                        <div class="first-child">
-                            <input type="text" class="contactInput" placeholder="Enter Your Name" required>
+                    <form>
+                        <div class="first-row">
+                            <div class="first-child">
+                                <input type="text" placeholder="Enter Your Name" required>
+                            </div>
+                            <div class="second-child">
+                                <input type="email" placeholder="Enter Your Email" required>
+                            </div>
+                
                         </div>
-                        <div class="second-child">
-                            <input type="email" class="contactInput" placeholder="Enter Your Email" required>
-                        </div>
-
-                    </div>
-                    <div class="second-row">
-                        <div class="first-child">
-                            <input type="number" class="contactInput" id="phone-number" placeholder="Enter your phone number" required />
-                        </div>
-                        <div class="second-child">
-                            <select class="form-select serviceSelect" required>
-                                <option value="1" selected disabled> Choose Project Category</option>
-                                <option value="2">Web Development</option>
-                                <option value="3">Mobile App Development</option>
-                                <option value="4">iOS Development</option>
-                                <option value="5">Android Development</option>
-                                <option value="6">Desktop Application Development</option>
-                                <option value="">macOS Application Development</option>
-                                <option value="">Game Development</option>
-                                <option value="">Software Development</option>
-                                <option value="">API Development</option>
-                                <option value="">Database Development</option>
-                                <option value="">UI/UX Design</option>
-                                <option value="">SEO (Search Engine Optimization)</option>
-                                <option value="">Email Marketing Campaigns</option>
-                                <option value="">Web Analytics and Reporting</option>
-                                <option value="">Data Science and Machine Learning</option>
-                                <option value="">Blockchain Development</option>
-                                <option value="">IoT Application Development</option>
-                                <option value="">Graphic Design </option>
-                                <option value="">Video Editing</option>
-                                <option value="">Animations</option>
-                                <option value="">Virtual Assistant Services</option>
-                                <option value="">Email Management </option>
-                                <option value="">Social Media Management</option>
-                                <option value="">API Integration Project</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="third-row pt-3 pb-3">
-                        <div id="idea" class="idea-form">
-                            <svg class="idea-form__icon" viewBox="0 0 32 32" width="32px" height="32px"
-                                aria-hidden="true">
-                                <g fill="currentcolor">
-                                    <path
-                                        d="M16,2A10,10,0,0,0,6,12a9.19,9.19,0,0,0,3.46,7.62c1,.93,1.54,1.46,1.54,2.38h2c0-1.84-1.11-2.87-2.19-3.86A7.2,7.2,0,0,1,8,12a8,8,0,0,1,16,0,7.2,7.2,0,0,1-2.82,6.14c-1.07,1-2.18,2-2.18,3.86h2c0-.92.53-1.45,1.54-2.39A9.18,9.18,0,0,0,26,12,10,10,0,0,0,16,2Z" />
-                                    <rect x="11" y="24" width="10" height="2" />
-                                    <rect x="13" y="28" width="6" height="2" />
-                                </g>
-                            </svg>
-                            <button class="idea-form__btn idea-form__btn--start" type="button" data-toggle>Click here to write us a message</button>
-                            <div class="idea-form__fill"></div>
-                            <div class="idea-form__content">
-                                <label for="my-idea" class="idea-form__label">Idea</label>
-                                <textarea id="my-idea" class="idea-form__textarea" placeholder="My idea is…"></textarea>
+                        <div class="second-row">
+                            <div class="first-child">
+                                <input type="number" id="phone-number" placeholder="Enter your phone number" required />
+                            </div>
+                            <div class="second-child">
+                                <select class="form-select form-select-sm" required>
+                                    <option value="1" selected disabled> Choose Project Category</option>
+                                    <option value="2">Web Development</option>
+                                    <option value="3">Mobile App Development</option>
+                                    <option value="4">iOS Development</option>
+                                    <option value="5">Android Development</option>
+                                    <option value="6">Desktop Application Development</option>
+                                    <option value="">macOS Application Development</option>
+                                    <option value="">Game Development</option>
+                                    <option value="">Software Development</option>
+                                    <option value="">API Development</option>
+                                    <option value="">Database Development</option>
+                                    <option value="">UI/UX Design</option>
+                                    <option value="">SEO (Search Engine Optimization)</option>
+                                    <option value="">Email Marketing Campaigns</option>
+                                    <option value="">Web Analytics and Reporting</option>
+                                    <option value="">Data Science and Machine Learning</option>
+                                    <option value="">Blockchain Development</option>
+                                    <option value="">IoT Application Development</option>
+                                    <option value="">Graphic Design </option>
+                                    <option value="">Video Editing</option>
+                                    <option value="">Animations</option>
+                                    <option value="">Virtual Assistant Services</option>
+                                    <option value="">Email Management </option>
+                                    <option value="">Social Media Management</option>
+                                    <option value="">API Integration Project</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
+                        <div class="third-row">
 
-                    <div class="fourth-row">
-                        <div class="first-child d-flex align-items-center">
-                            <p class="m-0">
-                                We promise not to disclose
-                                your personal information to third parties.
-                            </p>
+                            <textarea placeholder="Tell us about your project"> </textarea>
                         </div>
-                        <div class="second-child send-button">
-                            <button type="button" class="button-se" id="submitButton">
-                                <span>SEND</span>
-                                <i class="fa fa-paper-plane fa-lg replace"></i>
-                                <i class="fa fa-paper-plane plane fa-lg hidden"></i>
-                            </button>
+
+                        <div class="fourth-row">
+                            <div class="first-child">
+                                <p>
+                                    We promise not to disclose
+                                    your personal information to third parties.
+                                </p>
+                            </div>
+                            <div class="second-child send-button">
+                                <button type="button" class="button-se">
+                                    <span>SEND</span>
+                                    <i class="fa fa-paper-plane fa-lg replace"></i>
+                                    <i class="fa fa-paper-plane plane fa-lg hidden"></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
 
                 </div>
             </section>
@@ -399,19 +501,29 @@
     </div>
     <!-- content -->
     </div>
+    <!-- wrapper end -->
 
-
+    <!-- jQuery js -->
     <script src="js/plugins/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <!-- swup js -->
     <script src="js/plugins/swup.min.js"></script>
+    <!-- swiper js -->
     <script src="js/plugins/swiper.min.js"></script>
+    <!-- fancybox js -->
     <script src="js/plugins/fancybox.min.js"></script>
+    <!-- gsap js -->
     <script src="js/plugins/gsap.min.js"></script>
+    <!-- scroll smoother -->
     <script src="js/plugins/smooth-scroll.js"></script>
+    <!-- scroll trigger js -->
     <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <!-- scroll to js -->
     <script src="js/plugins/ScrollTo.min.js"></script>
     <script src="js/plugins.js"></script>
 
+    <!-- ashley js -->
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
 
@@ -419,190 +531,3 @@
 </body>
 
 </html>
-<script>
-
-$(document).ready(function() {
-    $(".idea-form__btn").click(function() {
-        $(".idea-form__fill").css('width', '100%');
-    });
-});
-
-    window.addEventListener("DOMContentLoaded", () => {
-        const ideaForm = new IdeaForm("#idea")
-    })
-
-    class IdeaForm {
-        /** Timeout function for submission */
-        timeout = 0
-
-        _idea = ""
-        get idea() {
-            return this._idea
-        }
-        set idea(value) {
-            this._idea = value
-
-            const submitBtn = this.form?.querySelector("[type=submit]")
-
-            if (submitBtn) {
-                submitBtn.disabled = value.length === 0
-            }
-        }
-
-        _expanded = false
-        get expanded() {
-            return this._expanded
-        }
-        set expanded(value) {
-            this._expanded = value
-            this.form?.setAttribute("data-expanded", `${value}`)
-        }
-
-        _state = SubmitState.Default
-        get state() {
-            return this._state
-        }
-        set state(value) {
-            this._state = value
-
-            const textarea = this.form?.querySelector("#my-idea")
-            const submitBtn = this.form?.querySelector("[type=submit]")
-
-            if (textarea) {
-                textarea.disabled = value !== SubmitState.Default
-            }
-            if (submitBtn) {
-                if (value === SubmitState.Sending) {
-                    submitBtn.textContent = Label.Sending
-                    submitBtn.disabled = true
-                } else if (value === SubmitState.Done) {
-                    submitBtn.textContent = Label.Sent
-                } else {
-                    submitBtn.textContent = Label.Submit
-                }
-            }
-        }
-        /**
-         * @param el CSS selector of the form
-         */
-        constructor(el) {
-            this.form = document.querySelector(el)
-            this.form?.addEventListener("click", this.toggle.bind(this))
-            this.form?.addEventListener("input", this.ideaUpdate.bind(this))
-            this.form?.addEventListener("submit", this.ideaSubmit.bind(this))
-            document.addEventListener("click", this.outsideToCollapse.bind(this))
-            document.addEventListener("keydown", this.escToCollapse.bind(this))
-        }
-        /**
-         * Click outside the form to collapse.
-         * @param e Click event
-         * */
-        // outsideToCollapse(e) {
-        //     if (this.state !== SubmitState.Default) return
-
-        //     let parent = e.target
-
-        //     while (parent !== null) {
-        //         if (parent === this.form) {
-        //             return
-        //         }
-        //         parent = parent.parentElement
-        //     }
-        //     this.expanded = false
-        // }
-        /**
-         * Hide the form by pressing Esc.
-         * @param e Keyboard event
-         * */
-        escToCollapse(e) {
-            if (e.code === "Escape" && this.state === SubmitState.Default) {
-                this.expanded = false
-            }
-        }
-        /**
-         * Show or hide the form.
-         * @param e Click event
-         * */
-        toggle(e) {
-            const button = e.target
-
-            if (button.hasAttribute("data-toggle")) {
-                this.expanded = !this.expanded
-
-                if (this.expanded) {
-                    const textarea = this.form?.querySelector("#my-idea")
-                    textarea?.focus()
-                }
-            }
-        }
-        /**
-         * Submit the idea content.
-         * @param e Submit event
-         * */
-        async ideaSubmit(e) {
-            e.preventDefault()
-
-            if (this.state !== SubmitState.Default) return
-
-            const delaySending = 1000
-            const delayDone = 600
-            const delayReset = 300
-
-            this.state = SubmitState.Sending
-
-            return await new Promise(resolve => {
-                // send
-                clearTimeout(this.timeout)
-                this.timeout = setTimeout(() => {
-                    resolve()
-                }, delaySending)
-            })
-                .then(async () => {
-                    // submitted
-                    this.state = SubmitState.Done
-
-                    return await new Promise(resolve => {
-                        clearTimeout(this.timeout)
-                        this.timeout = setTimeout(() => {
-                            resolve()
-                        }, delayDone)
-                    })
-                })
-                .then(() => {
-                    // collapse and reset
-                    this.expanded = false
-
-                    clearTimeout(this.timeout)
-                    this.timeout = setTimeout(() => {
-                        this.form?.reset()
-                        this.idea = ""
-                        this.state = SubmitState.Default
-                    }, delayReset)
-                })
-        }
-        /**
-         * Update the idea content internally.
-         * @param e Input event
-         * */
-        ideaUpdate(e) {
-            const textarea = e.target
-            this.idea = textarea.value
-        }
-    }
-    var Label
-
-        ; (function (Label) {
-            Label["Sending"] = "Sending…"
-            Label["Sent"] = "Sent"
-            Label["Submit"] = "Submit"
-        })(Label || (Label = {}))
-
-    var SubmitState
-
-        ; (function (SubmitState) {
-            SubmitState[(SubmitState["Default"] = 0)] = "Default"
-            SubmitState[(SubmitState["Sending"] = 1)] = "Sending"
-            SubmitState[(SubmitState["Done"] = 2)] = "Done"
-        })(SubmitState || (SubmitState = {}))
-
-</script>

@@ -53,11 +53,38 @@ p.s. I am available for Freelance hire (UI design, web development). email: mill
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css);
 @import url("../css/icofont.min.css");
 
-/* -------------------------------------------
+:root {
+	
+	/* #ba024a in decimal RGB */
+	--main-color: rgb(186,2,74);
+	--main-color-rgb:186,2,74;
+	
+	/* #540045 in decimal RGB */
+	--color-two: rgb(84,0,69);
+	--color-two-rgb:84,0,69;
+	
+	/* #120c12 in decimal RGB */
+	--color-three: rgb(18,12,18);
+	--color-three-rgb:18,12,18;
+	
+	/* #0f0f0f in decimal RGB */
+	--color-four: rgb(15,15,15);
+	--color-four-rgb:15,15,15;
+	
 
-main
 
-------------------------------------------- */
+
+    /* #ffffff in decimal RGB */
+	--white-color:rgb(255,255,255);
+	--white-color-rgb:255,255,255;
+
+	/* #000000 in decimal RGB */
+	--black-color:rgb(0,0,0);
+	--black-color-rgb:0,0,0;
+
+}
+
+
 *,
 *:before,
 *:after {
@@ -2705,6 +2732,8 @@ social icons
 }
 .fa.fa-twitter{
 	font-family:sans-serif;
+  font-size: 38px;
+  margin-top: 14px;
 }
 .fa.fa-twitter::before{
 	content:"𝕏";
@@ -5159,3 +5188,153 @@ html.is-animating .mil-menu-frame {
 }
 
 /* =============================LOAD END =========================*/
+
+
+/* ====================================================================
+	Gallery One
+==================================================================== */
+
+.gallery-one{
+	position:relative;
+	padding:100px 0px 70px;
+	background-color: var(--color-four);
+}
+
+.gallery-block_one{
+	position:relative;
+	margin-bottom:30px;
+}
+
+.gallery-block_one-inner{
+	position:relative;
+}
+
+.gallery-block_one-content{
+	position:relative;
+	padding:25px 25px;
+	border: 1px solid rgba(var(--white-color-rgb), 0.20);
+}
+
+.gallery-block_one-content:before{
+	position:absolute;
+	content:'';
+	left:-1px;
+	top:-1px;
+	right:-1px;
+	bottom:-1px;
+	opacity:0;
+	transform:scale(0.2,1);
+	-webkit-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+	background: var(--main-color);
+    background: linear-gradient(to top, var(--main-color) 0%, var(--color-two) 100%);
+}
+
+.gallery-block_one-inner:hover .gallery-block_one-content:before{
+	opacity:1;
+	transform:scale(1,1);
+}
+
+.gallery-block_one-image{
+	position:relative;
+	overflow:hidden;
+	margin-bottom:25px;
+}
+
+.gallery-block_one-inner:hover .gallery-block_one-image:before{
+	-webkit-animation: shine 1s;
+	animation: shine 1s;
+}
+
+.gallery-block_one-image:before{
+	position: absolute;
+	top: 0;
+	left: -85%;
+	z-index: 99;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .7) 100%);
+	background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .7)));
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .7) 100%);
+	-webkit-transform: skewX(-25deg);
+	-ms-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+
+.service-block_one-more {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.gallery-block_one-inner:hover .service-block_one-more {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-block_one-image img{
+	position:relative;
+	width:100%;
+	display:block;
+}
+
+.gallery-block_one-title{
+	position:relative;
+	font-size:18px;
+	text-transform:capitalize;
+	color:rgba(var(--white-color-rgb), 0.50);
+}
+
+.gallery-block_one-heading{
+	position:relative;
+	font-weight: 600;
+	margin-top:10px;
+	text-transform:uppercase;
+}
+
+.gallery-block_one-heading a{
+	position:relative;
+	color:rgba(var(--white-color-rgb), 1);
+}
+
+.gallery-block_one-heading a:hover{
+	color: rgb(255 255 255);
+}
+
+.service-block_one-more{
+	position:relative;
+	margin-left:25px;
+  opacity: 0;
+}
+
+.service-block_one-more .view-more{
+	position:relative;
+	font-size:16px;
+	line-height:1em;
+	display:inline-block;
+	padding:9px 45px 9px 10px;
+	color:var(--color-four);
+	text-transform:uppercase;
+	background-color:var(--white-color);
+}
+
+.service-block_one-more .view-more i{
+	position:absolute;
+	right:1px;
+	top:1px;
+	bottom:1px;
+	width:35px;
+	font-size:18px;
+	line-height:33px;
+	color:var(--white-color);
+	background-color:var(--color-four);
+}
+
+/*** 

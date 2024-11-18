@@ -9,6 +9,10 @@ p.s. I am available for Freelance hire (UI design, web development). email: mill
 
 ------------------------------------------- */
 
+// $(function () {
+//     $("#headerPlaceholder").load("./components/header.html");
+// });
+
 $(function () {
 
     "use strict";
@@ -31,7 +35,44 @@ $(function () {
     register gsap plugins
 
     ***************************/
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    $("#headerPlaceholder").load("./components/header.html", function () {
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        $('.mil-menu-btn').on("click", function () {
+            console.log("button clicked");
+            $('.mil-menu-btn').toggleClass('mil-active');
+            $('.mil-menu').toggleClass('mil-active');
+            $('.mil-menu-frame').toggleClass('mil-active');
+        });
+
+        $('.mil-has-children a').on('click', function () {
+            $('.mil-has-children ul').removeClass('mil-active');
+            $('.mil-has-children a').removeClass('mil-active');
+            $(this).toggleClass('mil-active');
+            $(this).next().toggleClass('mil-active');
+        });
+
+        const currentPage = window.location.pathname.split("/").pop();
+        const mainMenuItems = document.querySelectorAll(".mil-main-menu > ul > li");
+
+        mainMenuItems.forEach(mainItem => {
+            const mainLink = mainItem.querySelector("a");
+            const subLinks = mainItem.querySelectorAll("ul li a");
+
+            let isActive = false;
+
+            subLinks.forEach(subLink => {
+                if (subLink.getAttribute("href") === currentPage) {
+                    isActive = true;
+                }
+            });
+
+            if (isActive || mainLink.getAttribute("href") === currentPage) {
+                mainItem.classList.add("mil-active");
+            }
+        });
+
+    });
     /***************************
 
     color variables
@@ -48,72 +89,72 @@ $(function () {
     
     ***************************/
 
-    var timeline = gsap.timeline();
+    // var timeline = gsap.timeline();
 
-    timeline.to(".mil-preloader-animation", {
-        opacity: 1,
-    });
+    // timeline.to(".mil-preloader-animation", {
+    //     opacity: 1,
+    // });
 
-    timeline.fromTo(
-        ".mil-animation-1 .mil-h3", {
-            y: "30px",
-            opacity: 0
-        }, {
-            y: "0px",
-            opacity: 1,
-            stagger: 0.4
-        },
-    );
+    // timeline.fromTo(
+    //     ".mil-animation-1 .mil-h3", {
+    //         y: "30px",
+    //         opacity: 0
+    //     }, {
+    //         y: "0px",
+    //         opacity: 1,
+    //         stagger: 0.4
+    //     },
+    // );
 
-    timeline.to(".mil-animation-1 .mil-h3", {
-        opacity: 0,
-        y: '-30',
-    }, "+=.3");
+    // timeline.to(".mil-animation-1 .mil-h3", {
+    //     opacity: 0,
+    //     y: '-30',
+    // }, "+=.3");
 
-    timeline.fromTo(".mil-reveal-box", 0.1, {
-        opacity: 0,
-    }, {
-        opacity: 1,
-        x: '-30',
-    });
+    // timeline.fromTo(".mil-reveal-box", 0.1, {
+    //     opacity: 0,
+    // }, {
+    //     opacity: 1,
+    //     x: '-30',
+    // });
 
-    timeline.to(".mil-reveal-box", 0.45, {
-        width: "100%",
-        x: 0,
-    }, "+=.1");
-    timeline.to(".mil-reveal-box", {
-        right: "0"
-    });
-    timeline.to(".mil-reveal-box", 0.3, {
-        width: "0%"
-    });
-    timeline.fromTo(".mil-animation-2 .mil-h3", {
-        opacity: 0,
-    }, {
-        opacity: 1,
-    }, "-=.5");
-    timeline.to(".mil-animation-2 .mil-h3", 0.6, {
-        opacity: 0,
-        y: '-30'
-    }, "+=.5");
-    timeline.to(".mil-preloader", 0.8, {
-        opacity: 0,
-        ease: 'sine',
-    }, "+=.2");
-    timeline.fromTo(".mil-up", 0.8, {
-        opacity: 0,
-        y: 40,
-        scale: .98,
-        ease: 'sine',
+    // timeline.to(".mil-reveal-box", 0.45, {
+    //     width: "100%",
+    //     x: 0,
+    // }, "+=.1");
+    // timeline.to(".mil-reveal-box", {
+    //     right: "0"
+    // });
+    // timeline.to(".mil-reveal-box", 0.3, {
+    //     width: "0%"
+    // });
+    // timeline.fromTo(".mil-animation-2 .mil-h3", {
+    //     opacity: 0,
+    // }, {
+    //     opacity: 1,
+    // }, "-=.5");
+    // timeline.to(".mil-animation-2 .mil-h3", 0.6, {
+    //     opacity: 0,
+    //     y: '-30'
+    // }, "+=.5");
+    // timeline.to(".mil-preloader", 0.8, {
+    //     opacity: 0,
+    //     ease: 'sine',
+    // }, "+=.2");
+    // timeline.fromTo(".mil-up", 0.8, {
+    //     opacity: 0,
+    //     y: 40,
+    //     scale: .98,
+    //     ease: 'sine',
 
-    }, {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        onComplete: function () {
-            $('.mil-preloader').addClass("mil-hidden");
-        },
-    }, "-=1");
+    // }, {
+    //     y: 0,
+    //     opacity: 1,
+    //     scale: 1,
+    //     onComplete: function () {
+    //         $('.mil-preloader').addClass("mil-hidden");
+    //     },
+    // }, "-=1");
     /***************************
 
     anchor scroll
@@ -364,22 +405,13 @@ $(function () {
      menu
 
     ***************************/
-    $('.mil-menu-btn').on("click", function () {
-        $('.mil-menu-btn').toggleClass('mil-active');
-        $('.mil-menu').toggleClass('mil-active');
-        $('.mil-menu-frame').toggleClass('mil-active');
-    });
+   
     /***************************
 
     main menu
 
     ***************************/
-    $('.mil-has-children a').on('click', function () {
-        $('.mil-has-children ul').removeClass('mil-active');
-        $('.mil-has-children a').removeClass('mil-active');
-        $(this).toggleClass('mil-active');
-        $(this).next().toggleClass('mil-active');
-    });
+   
     /***************************
 
     progressbar
@@ -1159,6 +1191,9 @@ $(function () {
             preloader.style.display = "none";  // Change display to none after the fade-out completes
         }, 3000);  // Wait 5 seconds for the fade-out effect to complete (same as the transition duration)
     });
+    
+
+
     
     
  
