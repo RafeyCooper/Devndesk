@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+.contactSubBody{
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
+}
+
+.my_wave {
+  background: radial-gradient(ellipse at bottom, #314256 0%, #0d101e 100%);
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+}
+
 :root {
   --hue: 53;
   --bg: #e8e3e3;
@@ -6,6 +22,191 @@
   --trans-dur: 0.3s;
   --trans-timing1: cubic-bezier(0.65, 0, 0.35, 1);
   --trans-timing2: cubic-bezier(0.65, 0, 0.35, 1.35);
+}
+
+.mil-menu-btn span, .mil-menu-btn span:after, .mil-menu-btn span:before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2.5px;
+  background: rgb(255, 255, 255);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+
+.mil-frame-top .mil-logo {
+  pointer-events: all;
+  color: rgb(255, 255, 255);
+}
+
+.mil-breadcrumbs:before {
+  content: "";
+  position: absolute;
+  right: calc(100% + 30px);
+  top: 10px;
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mil-breadcrumbs li:after {
+  content: "/";
+  margin: 0 15px;
+  color: rgb(255, 255, 255);
+}
+
+.mil-breadcrumbs li a {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 12px;
+  white-space: nowrap;
+  -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+  transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+}
+
+/* Star layer 1 (small stars) */
+#stars,
+#stars:after {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+        872px 1989px #FFF, 1715px 1801px #FFF, 1423px 447px #FFF, 1084px 346px #FFF, 
+        448px 127px #FFF, 37px 1779px #FFF, 1667px 665px #FFF, 1848px 815px #FFF, 
+        730px 1082px #FFF, 82px 1393px #FFF, 500px 800px #FFF, 400px 1500px #FFF, 
+        600px 1200px #FFF, 700px 1300px #FFF, 900px 900px #FFF, 1100px 1700px #FFF, 
+        950px 1450px #FFF, 1200px 400px #FFF, 1600px 600px #FFF, 200px 500px #FFF, 
+        300px 700px #FFF, 1500px 800px #FFF, 1700px 1000px #FFF, 1800px 1800px #FFF, 
+        1900px 1600px #FFF, 2000px 200px #FFF, 1800px 300px #FFF, 1400px 500px #FFF, 
+        600px 600px #FFF, 1200px 1200px #FFF, 100px 100px #FFF, 200px 800px #FFF, 
+        1300px 900px #FFF, 500px 1200px #FFF, 900px 1600px #FFF, 400px 600px #FFF, 
+        800px 400px #FFF, 1100px 800px #FFF, 900px 900px #FFF, 100px 1300px #FFF, 
+        600px 700px #FFF, 1500px 300px #FFF, 1400px 2000px #FFF, 1100px 1100px #FFF, 
+        800px 1200px #FFF, 400px 1600px #FFF, 1000px 400px #FFF, 1300px 1400px #FFF, 
+        100px 700px #FFF, 200px 2000px #FFF, 1600px 1000px #FFF,
+        3000px 3000px #FFF, 2500px 2800px #FFF, 4000px 1200px #FFF, 4200px 1500px #FFF,
+        872px 1989px #FFF, 1715px 1801px #FFF, 1423px 447px #FFF, 1084px 346px #FFF, 
+        448px 127px #FFF, 37px 1779px #FFF, 1667px 665px #FFF, 1848px 815px #FFF, 
+        730px 1082px #FFF, 82px 1393px #FFF, 500px 800px #FFF, 400px 1500px #FFF, 
+        600px 1200px #FFF, 700px 1300px #FFF, 900px 900px #FFF, 1100px 1700px #FFF, 
+        950px 1450px #FFF, 1200px 400px #FFF, 1600px 600px #FFF, 200px 500px #FFF, 
+        300px 700px #FFF, 1500px 800px #FFF, 1700px 1000px #FFF, 1800px 1800px #FFF, 
+        1900px 1600px #FFF, 2000px 200px #FFF, 1800px 300px #FFF, 1400px 500px #FFF, 
+        600px 600px #FFF, 1200px 1200px #FFF, 100px 100px #FFF, 200px 800px #FFF;
+
+    animation: animStar 50s linear infinite;
+    position: absolute;
+}
+
+#stars:after {
+    content: " ";
+    top: 2000px;
+}
+
+/* Star layer 2 (medium stars) */
+#stars2,
+#stars2:after {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 
+        1039px 759px #FFF, 341px 476px #FFF, 1907px 1119px #FFF, 1459px 358px #FFF, 
+        1160px 1639px #FFF, 937px 1427px #FFF, 850px 1200px #FFF, 400px 800px #FFF, 
+        1200px 1000px #FFF, 900px 500px #FFF, 1300px 1600px #FFF, 400px 1100px #FFF, 
+        1450px 600px #FFF, 1400px 1700px #FFF, 1300px 1500px #FFF, 900px 1200px #FFF, 
+        1600px 1300px #FFF, 600px 1100px #FFF, 1700px 1800px #FFF, 1200px 400px #FFF, 
+        1600px 700px #FFF, 1900px 1200px #FFF, 1100px 1300px #FFF, 900px 1500px #FFF,
+        2500px 900px #FFF, 2700px 800px #FFF, 3500px 1800px #FFF, 4000px 1400px #FFF,
+        1039px 759px #FFF, 341px 476px #FFF, 1907px 1119px #FFF, 1459px 358px #FFF, 
+        1160px 1639px #FFF, 937px 1427px #FFF, 850px 1200px #FFF, 400px 800px #FFF, 
+        1200px 1000px #FFF, 900px 500px #FFF, 1300px 1600px #FFF, 400px 1100px #FFF, 
+        1450px 600px #FFF, 1400px 1700px #FFF, 1300px 1500px #FFF, 900px 1200px #FFF, 
+        1600px 1300px #FFF, 600px 1100px #FFF, 1700px 1800px #FFF, 1200px 400px #FFF, 
+        1600px 700px #FFF, 1900px 1200px #FFF, 1100px 1300px #FFF, 900px 1500px #FFF;
+    animation: animStar 100s linear infinite;
+    position: absolute;
+}
+
+#stars2:after {
+    content: " ";
+    top: 2000px;
+}
+
+/* Star layer 3 (large stars) */
+#stars3,
+#stars3:after {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 
+        707px 145px #FFF, 1680px 1238px #FFF, 1127px 1077px #FFF, 1423px 1990px #FFF, 
+        1100px 500px #FFF, 1500px 1200px #FFF, 800px 900px #FFF, 600px 1500px #FFF, 
+        1300px 700px #FFF, 500px 1700px #FFF, 1400px 400px #FFF, 900px 1600px #FFF, 
+        1500px 800px #FFF, 1800px 500px #FFF, 1300px 1200px #FFF, 1100px 600px #FFF, 
+        900px 900px #FFF, 1700px 1100px #FFF, 1200px 1600px #FFF, 1400px 700px #FFF, 
+        700px 1300px #FFF, 1800px 1700px #FFF, 1600px 1500px #FFF,
+        3000px 900px #FFF, 3500px 1200px #FFF, 4000px 1500px #FFF
+        707px 145px #FFF, 1680px 1238px #FFF, 1127px 1077px #FFF, 1423px 1990px #FFF, 
+        1100px 500px #FFF, 1500px 1200px #FFF, 800px 900px #FFF, 600px 1500px #FFF, 
+        1300px 700px #FFF, 500px 1700px #FFF, 1400px 400px #FFF, 900px 1600px #FFF, 
+        1500px 800px #FFF, 1800px 500px #FFF, 1300px 1200px #FFF, 1100px 600px #FFF, 
+        900px 900px #FFF, 1700px 1100px #FFF, 1200px 1600px #FFF, 1400px 700px #FFF;
+        
+    animation: animStar 150s linear infinite;
+    position: absolute;
+}
+
+#stars3:after {
+    content: " ";
+    top: 2000px;
+}
+
+/* Animation for stars */
+@keyframes animStar {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-2000px);
+    }
+}
+
+
+#title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-top: -60px;
+    padding-left: 10px;
+}
+
+#title span {
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-2000px);
+    }
 }
 
 #contact{

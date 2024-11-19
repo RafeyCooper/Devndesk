@@ -71,8 +71,8 @@ $(function () {
                 mainItem.classList.add("mil-active");
             }
         });
-
     });
+
     /***************************
 
     color variables
