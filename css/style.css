@@ -868,6 +868,27 @@ backgrounds
   pointer-events: all;
 }
 
+.mil-dark-bgService {
+  position: relative;
+}
+.mil-dark-bgService:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+.mil-dark-bgService .mi-invert-fix {
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: 3;
+}
+.mil-dark-bgService .mi-invert-fix .container {
+  pointer-events: all;
+}
+
 .mil-soft-bg {
   background-color: rgb(242, 242, 242);
 }
