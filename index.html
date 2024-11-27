@@ -91,17 +91,21 @@
             }
 
             .canvaMainHeading {
-    position: relative;
-    z-index: 2;
-    font-size: 100px;
-    font-weight: 700;
-    color: white; /* Or any color of your choice */
-    text-shadow: 0 0 35px rgba(0, 0, 0, 0.8),  /* Inner black glow */
-                 0 0 20px rgba(0, 0, 0, 0.6),  /* Medium black glow */
-                 0 0 30px rgba(0, 0, 0, 0.4),  /* Stronger black glow */
-                 0 0 40px rgba(0, 0, 0, 0.2);  /* Outer black glow */
-}
-
+                position: relative;
+                z-index: 2;
+                font-size: 100px;
+                font-weight: 700;
+                color: white;
+                /* Or any color of your choice */
+                text-shadow: 0 0 35px rgba(0, 0, 0, 0.8),
+                    /* Inner black glow */
+                    0 0 20px rgba(0, 0, 0, 0.6),
+                    /* Medium black glow */
+                    0 0 30px rgba(0, 0, 0, 0.4),
+                    /* Stronger black glow */
+                    0 0 40px rgba(0, 0, 0, 0.2);
+                /* Outer black glow */
+            }
         </style>
 
 
@@ -111,6 +115,7 @@
                     <h1 class="canvaMainHeading">DEV N DESK</h1>
                     <h2>Packing</h2>
                 </div>
+                <button id="colors-btn">random color</button>
                 <canvas id="webgl-canvas"></canvas>
             </div>
         </section>
