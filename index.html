@@ -58,6 +58,64 @@
         <div id="headerPlaceholder"></div>
 
 
+        <style>
+            #app {
+                margin: 0;
+                width: 100vw;
+                height: 100vh;
+                background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 200%);
+            }
+
+            #app {
+                position: relative;
+                height: 100%;
+                font-family: "Montserrat", serif;
+            }
+
+            .hero {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #webgl-canvas {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                overflow: hidden;
+                z-index: 1;
+            }
+
+            .canvaMainHeading {
+    position: relative;
+    z-index: 2;
+    font-size: 100px;
+    font-weight: 700;
+    color: white; /* Or any color of your choice */
+    text-shadow: 0 0 35px rgba(0, 0, 0, 0.8),  /* Inner black glow */
+                 0 0 20px rgba(0, 0, 0, 0.6),  /* Medium black glow */
+                 0 0 30px rgba(0, 0, 0, 0.4),  /* Stronger black glow */
+                 0 0 40px rgba(0, 0, 0, 0.2);  /* Outer black glow */
+}
+
+        </style>
+
+
+        <section class="mil-banner mil-dark-bgService">
+            <div id="app">
+                <div class="hero">
+                    <h1 class="canvaMainHeading">DEV N DESK</h1>
+                    <h2>Packing</h2>
+                </div>
+                <canvas id="webgl-canvas"></canvas>
+            </div>
+        </section>
+
+
 
 
         <div class="remove-padding transition-none" id="home">
@@ -915,7 +973,8 @@
                                                 <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
 
                                                 <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
-                                                    <span class="mil-no-wrap">+51 174 705 812</span></p>
+                                                    <span class="mil-no-wrap">+51 174 705 812</span>
+                                                </p>
 
 
                                                 <h6 class="mil-muted mil-up mil-mb-30 cus">Germany</h6>
@@ -1070,6 +1129,7 @@
     <!-- wrapper end -->
 
 </body>
+
 </html>
 
 <script src="js/plugins/jquery.min.js"></script>
@@ -1090,3 +1150,4 @@
 <script src="js/revolution.extension.layeranimation.min.js"></script>
 <script src="js/revolution.extension.parallax.min.js"></script>
 <script src="js/revolution.extension.slideanims.min.js"></script>
+<script type="module" src="testscript.js"></script>
