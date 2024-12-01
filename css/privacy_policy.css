@@ -43,27 +43,34 @@
     text-decoration: none;
     color: #000000;
     font-size: 13px;
+    font-weight: 500;
 }
 
 .toc-list a:hover {
     text-decoration: underline;
 }
-
+.paragraph p {
+    color: black;
+}
 .heading h1{
     font-size: 20px;
 }
 .content-section{
     padding: 10px 0px;
+    color: black;
 }
 .list-box ul li{
     font-weight: bold;
+    color: black;
 }
 
 .list-box ul li span{
     font-weight: normal;
+    color: black;
 }
 .contactDetails span {
     font-weight: bold;
+    color: black;
 }
 
 @media only screen and (max-width: 500px){
