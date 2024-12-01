@@ -48,3 +48,20 @@
 .toc-list a:hover {
     text-decoration: underline;
 }
+
+.heading h1{
+    font-size: 20px;
+}
+.content-section{
+    padding: 10px 0px;
+}
+.list-box ul li{
+    font-weight: bold;
+}
+
+.list-box ul li span{
+    font-weight: normal;
+}
+.contactDetails span {
+    font-weight: bold;
+}
