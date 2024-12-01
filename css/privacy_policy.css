@@ -1,43 +1,50 @@
-/* #app {
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.toc-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 500px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toc-header h2{
+    font-size: 16px;
+}
+
+.toc-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toc-list {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
-} */
-
-#app {
-    height: 2000px;
-    position: relative;
-    overflow: hidden;
-    touch-action: pan-up;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    border: 1px solid black;
-    text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+    max-height: 500px; /* Initially hidden */
+    overflow: hidden; /* Hide the content when max-height is 0 */
+    transition: max-height 0.4s ease; /* Add a smooth transition */
 }
 
-#app h1 {
-    font-size: 60px;
-    line-height: 80px;
-    width: auto;
-    text-transform: uppercase;
+.toc-list.show {
+    max-height: 0px; /* Adjust based on content height */
 }
 
-#app a {
-    margin-top: 10px;
-    display: inline-block;
+.toc-list li {
+    margin: 2px 0;
+}
+
+.toc-list a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
+    font-size: 13px;
 }
 
-#app canvas {
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-}
-
-.privacy_text{
-    text-align: start;
-    padding: 50px;
+.toc-list a:hover {
+    text-decoration: underline;
 }

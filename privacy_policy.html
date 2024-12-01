@@ -87,13 +87,28 @@
                     </div>
                 </div>
 
-                <div id="app">
-                    <div id="hero">
-                      <h1>NEON<br/>CURSOR</h1>
-                      <a target="_blank" href="https://github.com/klevron/threejs-toys">github/threejs-toys</a>
-                      <p class="privacy_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi quibusdam perferendis consectetur quae unde, atque, dolore nostrum corrupti labore excepturi temporibus eaque blanditiis impedit, dolorum quis quos aliquid minima laudantium optio error repellat totam. Magnam voluptates obcaecati nisi necessitatibus ullam. Ab esse, facere praesentium dolorem corporis, quae harum non et ipsum ullam distinctio assumenda ut? Doloribus, consectetur itaque molestias doloremque alias fugit reiciendis voluptatum, hic est cum at reprehenderit laboriosam numquam voluptatibus optio ut ea cumque voluptate? Adipisci quisquam laboriosam molestiae illum. Facere ad ducimus id autem pariatur iusto eligendi quia eos illo, quaerat, consequuntur saepe non. Eligendi, beatae?</p>
+                <div class="container-fluid px-3">
+                    <div class="toc-container">
+                        <div class="toc-header">
+                            <h2>Table of Contents</h2>
+                            <button onclick="toggleTOC()" class="toc-toggle">
+                                <i class="fas fa-bars"></i> <!-- This is for the icon -->
+                            </button>
+                        </div>
+                        <ul class="toc-list" id="toc-list">
+                            <li><a href="#section1">1. WELCOME TO IVAN INFOTECH PVT. LTD.</a></li>
+                            <li><a href="#section2">2. READ CAREFULLY</a></li>
+                            <li><a href="#section3">3. PREAMBLE</a></li>
+                            <li><a href="#section4">4. SOLE DISCRETION</a></li>
+                            <li><a href="#section5">5. CONTENTS, COPYRIGHTS & TRADEMARKS</a></li>
+                            <li><a href="#section6">6. WARRANTIES & LIABILITIES</a></li>
+                            <li><a href="#section7">7. USE & ACCESSIBILITY</a></li>
+                            <li><a href="#section8">8. CANCELLATION AND REFUND POLICY</a></li>
+                            <li><a href="#section10">10. FILING A CLAIM</a></li>
+                        </ul>
                     </div>
-                  </div>                  
+                </div>
+
 
             </div>
             <!-- banner end -->
@@ -207,3 +222,14 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script type="module" src="js/privacy_policy.js"></script>
+<script>
+    function toggleTOC() {
+        var tocList = document.getElementById("toc-list");
+        if (tocList.classList.contains("show")) {
+            tocList.classList.remove("show");
+        } else {
+            tocList.classList.add("show");
+        }
+    }
+
+</script>
