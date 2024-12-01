@@ -2,7 +2,7 @@
 .toc-container {
     border: 1px solid #ddd;
     padding: 15px;
-    width: 500px;
+    max-width: 500px;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -64,4 +64,13 @@
 }
 .contactDetails span {
     font-weight: bold;
+}
+
+@media only screen and (max-width: 500px){
+    #table_of_content {
+        padding: 0px 10px !important;
+    }
+    #contents_container{
+        padding: 25px 10px !important;
+    }
 }
