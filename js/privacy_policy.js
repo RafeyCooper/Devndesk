@@ -1,5 +1,6 @@
 $.fn.commentCards = function () {
     return this.each(function () {
+        console.log(this);
         var $this = $(this),
             $cards = $this.find('.card'),
             $current = $cards.filter('.card--current'),
@@ -7,25 +8,35 @@ $.fn.commentCards = function () {
 
         let startY = 0;
         let endY = 0;
-        const threshold = -10; // Threshold to detect a significant drag
+        const threshold = 100; // Threshold to detect a significant drag
 
         // Function to handle card transitions
         function goToNextCard() {
+            // Ensure the next card is always correctly calculated
             $cards.removeClass('card--current card--out card--next');
             $current.addClass('card--out');
-            $current = $current.next().length ? $current.next() : $cards.first();
+            $current = $current.next().length ? $current.next() : $cards.first(); // Get the next card
             $current.addClass('card--current');
-            $next = $current.next().length ? $current.next() : $cards.first();
+            $next = $current.next().length ? $current.next() : $cards.first(); // Ensure next card is correctly updated
             $next.addClass('card--next');
         }
 
         function handleVerticalSwipe() {
+            console.log(startY - endY);
             if (startY - endY > threshold) {
                 // Drag up (or swipe up)
-                console.log(startY - endY);
+                
+                console.log("Swipe detected");
                 goToNextCard();
             }
+            else{
+                console.log("Touch detected")
+                goToNextCard()
+            }
         }
+
+        // Detect if the device supports touch
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
         // Mouse and Touch events
         function startDrag(event) {
@@ -41,7 +52,7 @@ $.fn.commentCards = function () {
         function dragMove(event) {
             if (event.type === 'touchmove') {
                 endY = event.originalEvent.touches[0].clientY;
-                event.preventDefault();
+                event.preventDefault(); // Prevent scrolling during touch drag
             } else if (event.type === 'mousemove') {
                 endY = event.clientY;
             }
@@ -57,15 +68,26 @@ $.fn.commentCards = function () {
             }
         }
 
-        // Check if the device supports touch events (Mobile/Tablet)
-        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        // Attach events for touch and mouse only based on device type
+        if (isTouchDevice) {
+            console.log("Touch device");
+            $cards.on('click', function () {
+                console.log("Card clicked");
+                goToNextCard()
+            });
 
-        // If it's not a touch device, enable drag events
-        if (!isTouchDevice) {
-            // Attach events for mouse and drag (only on non-touch devices)
-            $this.on('mousedown', startDrag);
-            $this.on('mousemove', dragMove);
-            $this.on('mouseup', endDrag);
+        } else {
+
+            // console.log("Not Touch device");
+            // $this.on('mousedown', startDrag);
+            // $this.on('mousemove', dragMove);
+            // $this.on('mouseup', endDrag);
+
+            $cards.on('click', function () {
+                // console.log("Card clicked");
+                handleVerticalSwipe()
+            });
+
         }
 
         // If no card is marked as current, set the first card as current
@@ -80,9 +102,10 @@ $.fn.commentCards = function () {
     });
 };
 
-
 // Initialize the card carousel
 $('.cards').commentCards();
+
+
 
 
 document.querySelectorAll('.toc-list a').forEach(anchor => {
