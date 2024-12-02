@@ -57,31 +57,16 @@ $.fn.commentCards = function () {
             }
         }
 
-        // Attach events for touch and mouse
-        $this.on('touchstart mousedown', startDrag);
-        $this.on('touchmove mousemove', dragMove);
-        $this.on('touchend mouseup', endDrag);
+        // Check if the device supports touch events (Mobile/Tablet)
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-        
-        
-
-        // Handle click events on cards (for manual navigation)
-        // Handle click events on cards (for manual navigation)
-        // $cards.on('click', function () {
-        //     console.log(this);
-        //     console.log($current[0]);
-        
-        //     // Check if the clicked card is not the current card
-        //     if ($current[0] !== this) {
-        //         console.log("click event trigger");
-        //         // Remove classes from all cards
-        //         $cards.removeClass('card--current card--out card--next');
-        //         $current.addClass('card--out');
-        //         $current = $(this).addClass('card--current');
-        //         $next = $current.next().length ? $current.next() : $cards.first();
-        //         $next.addClass('card--next');
-        //     }
-        // });
+        // If it's not a touch device, enable drag events
+        if (!isTouchDevice) {
+            // Attach events for mouse and drag (only on non-touch devices)
+            $this.on('mousedown', startDrag);
+            $this.on('mousemove', dragMove);
+            $this.on('mouseup', endDrag);
+        }
 
         // If no card is marked as current, set the first card as current
         if (!$current.length) {
@@ -94,6 +79,7 @@ $.fn.commentCards = function () {
         $this.addClass('cards--active');
     });
 };
+
 
 // Initialize the card carousel
 $('.cards').commentCards();
