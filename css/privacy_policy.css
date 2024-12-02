@@ -1,9 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: #282828 !important;
+}
+.mil-breadcrumbs:before {
+    content: "";
+    position: absolute;
+    right: calc(100% + 30px);
+    top: 10px;
+    width: 100vw;
+    height: 1px;
+    background-color: rgb(255 255 255 / 10%) !important;
+}
+
+.mil-frame-top .mil-logo {
+    pointer-events: all;
+    color: rgb(255, 255, 255) !important;
+}
+
+.mil-menu-btn span, .mil-menu-btn span:after, .mil-menu-btn span:before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 2.5px;
+    background: rgb(255 255 255) !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: inherit;
+    transition: inherit;
+}
+
 .toc-container {
     border: 1px solid #ddd;
     padding: 15px;
     max-width: 500px;
     font-family: "Montserrat", sans-serif;
+    background-color: white;
 }
 
 .toc-header {
@@ -61,18 +92,123 @@
     padding: 10px 0px;
     color: black;
 }
-.list-box ul li{
+.my_wave {
+    background-color: #282828 !important;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+}
+
+
+
+
+.main-card-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 135px;
+}
+
+.cards {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 90%;
+    height: 600px;
+    /* Ensure no overflow of cards */
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* All cards are initially behind the current card */
+    background: #ccc;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 0 20px #00000086;
+    transform: translateY(0) rotate(4deg) translateX(25px) scale(0.95);
+    /* Initial transform to stack them */
+    transform-origin: 0 0;
+    transition: transform 0.6s cubic-bezier(.8, .2, .1, 0.8) 0.1s, background 0.4s linear;
+    cursor: pointer;
+    user-select: none;
+    width: 95%;
+    height: 500px;
+}
+
+.card--next {
+    z-index: 2;
+    /* Next card appears above the current card */
+    transform: translateY(-25px) rotate(4deg) translateX(25px) scale(1);
+    /* Slightly above the current card */
+}
+
+.card--out {
+    z-index: 0;
+    /* The card that goes out is placed behind */
+    animation: card-out 0.6s cubic-bezier(.8, .2, .1, 0.8);
+    transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95);
+    background: #bbb;
+}
+
+@keyframes card-out {
+    0% {
+        z-index: 10;
+        transform: translateY(0px) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(-120%) rotate(-5deg) translateX(-40px);
+    }
+
+    80% {
+        z-index: 0;
+    }
+
+    100% {
+        transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95);
+    }
+}
+
+.card--current {
+    z-index: 3;
+    /* Current card appears above the rest */
+    opacity: 1;
+    background: #EEE;
+    transform: rotate(-1deg) translateX(0%) scale(1);
+    /* Keep the current card centered */
+}
+
+.card ul li{
+    font-size: 22px !important;
     font-weight: bold;
     color: black;
 }
 
-.list-box ul li span{
+.card ul li span{
+    font-size: 22px !important;
     font-weight: normal;
     color: black;
 }
-.contactDetails span {
+.card span {
     font-weight: bold;
     color: black;
+}
+.card h1{
+    font-size: 65px !important;
+    color: black;
+    font-weight: 600;
+}
+
+.card P{
+    font-size: 22px !important;
+    color: black;
+    margin: 16px 0px;
 }
 
 @media only screen and (max-width: 500px){
@@ -81,5 +217,55 @@
     }
     #contents_container{
         padding: 25px 10px !important;
+    }
+}
+
+
+@media only screen and (max-width: 1750px){
+    .card h1{
+        font-size: 45px !important;
+    }
+    
+    .card P{
+        font-size: 22px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .card h1{
+        font-size: 25px !important;
+    }
+    
+    .card P{
+        font-size: 18px !important;
+    }
+
+    .card ul li{
+        font-size: 18px !important;
+    }
+    
+    .card ul li span{
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .card h1{
+        font-size: 16px !important;
+    }
+    
+    .card P{
+        font-size: 13px !important;
+    }
+    .card ul li{
+        font-size: 13px !important;
+    }
+    
+    .card ul li span{
+        font-size: 13px !important;
+    }
+    .card{
+        padding: 25px !important;
+        height: 486px !important;
     }
 }

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="css/privacy_policy.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ashley</title>
+
+</head>
+
+
+<body>
+
+
+
+    <!-- wrapper -->
+    <div class="mil-wrapper">
+
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+
+        <!-- cursor -->
+        <div class='cursor' id="cursor"></div>
+        <div class='cursor2' id="cursor2"></div>
+        <div class='cursor3' id="cursor3"></div>
+        <!-- cursor end -->
+
+        <!-- preloader -->
+        <div class="loader-wrap" id="loader">
+            <div class="preloader">
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="main-loaderBox">
+                        <div class='tetrominos'>
+                            <div class='tetromino box1'></div>
+                            <div class='tetromino box2'></div>
+                            <div class='tetromino box3'></div>
+                            <div class='tetromino box4'></div>
+                        </div>
+                        <div id="container">
+                            <div class="divider" aria-hidden="true"></div>
+                            <p class="loading-text" aria-label="Loading">
+                                <span class="letter" aria-hidden="true">L</span>
+                                <span class="letter" aria-hidden="true">o</span>
+                                <span class="letter" aria-hidden="true">a</span>
+                                <span class="letter" aria-hidden="true">d</span>
+                                <span class="letter" aria-hidden="true">i</span>
+                                <span class="letter" aria-hidden="true">n</span>
+                                <span class="letter" aria-hidden="true">g</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+        <!-- scrollbar progress -->
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
+        </div>
+        <!-- scrollbar progress end -->
+
+        <div id="headerPlaceholder"></div>
+
+        <!-- content -->
+        <div class="mil-content" id="top">
+            <div id="swupMain" class="mil-main-transition">
+                <!-- banner -->
+                <div class="mil-inner-banner mil-p-0-20">
+                    <div class="mil-banner-content mil-center mil-up">
+                        <div class="container">
+                            <ul class="mil-breadcrumbs mil-center mil-mb-60">
+                                <li><a href="index.html" class="text-white">Homepage</a></li>
+                                <li><a href="privacy_policy.html" class="text-white">Privay Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid px-5" id="table_of_content">
+                    <div class="toc-container">
+                        <div class="toc-header">
+                            <h2>Table of Contents</h2>
+                            <button id="toggleBtn" class="toc-toggle">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                        <ul class="toc-list" id="toc-list">
+                            <li><a href="#" data-target="COMMITMENT_TO_PROTECTING_YOUR_PRIVACY">1. COMMITMENT TO PROTECTING YOUR PRIVACY</a></li>
+                            <li><a href="#" data-target="OUR_STRICT_PRIVACY_STANDARDS">2. OUR STRICT PRIVACY STANDARDS</a></li>
+                            <li><a href="#" data-target="INFORMATION_SHARING_AND_THIRD_PARTIES">3. INFORMATION SHARING AND THIRD PARTIES</a></li>
+                            <li><a href="#" data-target="HOW_WE_KEEP_YOUR_DATA_SECURE">4. HOW WE KEEP YOUR DATA SECURE</a></li>
+                            <li><a href="#" data-target="PURPOSE_OF_COLLECTING_INFORMATION">5. PURPOSE OF COLLECTING INFORMATION</a></li>
+                            <li><a href="#" data-target="METHODS_OF_DATA_COLLECTION">6. METHODS OF DATA COLLECTION</a></li>
+                            <li><a href="#" data-target="COOKIES_AND_USER_PREFERENCES">7. COOKIES AND USER PREFERENCES</a></li>
+                            <li><a href="#" data-target="OBJECTIVE_AND_POLICY_DETAILS">8. OBJECTIVE AND POLICY DETAILS</a></li>
+                            <li><a href="#" data-target="IMPORTANT_NOTICE">9. IMPORTANT NOTICE</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+
+
+                <style>
+                    
+                </style>
+
+                <div class="main-card-box">
+                    <ul class="cards">
+                        <li class="card" id="COMMITMENT_TO_PROTECTING_YOUR_PRIVACY">
+                            <h1>COMMITMENT TO PROTECTING YOUR PRIVACY :</h1>
+                            <p>
+                                DevnDesk is deeply committed to safeguarding your personal information. This Privacy
+                                Policy outlines the measures we take to protect any data collected through our website,
+                                software, social media platforms, or other communication channels. Please review this
+                                document carefully to understand how we collect, use, and share your information.
+                            </p>
+                        </li>
+                        <li class="card" id="OUR_STRICT_PRIVACY_STANDARDS">
+                            <h1>OUR STRICT PRIVACY STANDARDS :</h1>
+                            <p>
+                                We respect your trust and take your privacy seriously. This policy ensures transparency
+                                regarding how we manage and protect your personal information, including contact
+                                details, transaction data, and digital footprints generated through our platforms. Any
+                                information shared with DevnDesk will remain confidential and used responsibly.
+                            </p>
+                        </li>
+                        <li class="card" id="INFORMATION_SHARING_AND_THIRD_PARTIES">
+                            <h1>INFORMATION SHARING AND THIRD PARTIES :</h1>
+                            <p>
+                                DevnDesk is meticulous in handling data and strives to limit its exposure to third
+                                parties. However, our website or services may include links to external websites or
+                                tools. We do not control these third-party platforms and encourage you to review their
+                                respective privacy policies. While you can choose to limit data sharing through your
+                                browser or system settings, opting out of certain information sharing may affect the
+                                functionality of our services.
+                            </p>
+                        </li>
+                        <li class="card" id="HOW_WE_KEEP_YOUR_DATA_SECURE">
+                            <h1>HOW WE KEEP YOUR DATA SECURE :</h1>
+                            <p>
+                                We use advanced security measures to safeguard the information collected from you,
+                                whether through interactions, analytics, or system usage. The types of data we may
+                                collect include but are not limited to:
+                            </p>
+                            <ul>
+                                <li>Names, email addresses, and phone numbers</li>
+                                <li>Usage behavior and demographic details</li>
+                                <li>Transaction history</li>
+                                <li>IP addresses and other technical identifiers</li>
+                            </ul>
+                            <p>
+                                We are not liable for any inaccuracies or unauthorized data provided by users. We
+                                recommend that you provide accurate information and update it regularly to maintain a
+                                smooth relationship.
+                            </p>
+                        </li>
+                        <li class="card" id="PURPOSE_OF_COLLECTING_INFORMATION">
+                            <h1>PURPOSE OF COLLECTING INFORMATION :</h1>
+                            <p>
+                                The information we collect is vital to improving our services and ensuring your needs
+                                are met. Key purposes include:
+                            </p>
+                            <ul>
+                                <li>Maintaining internal records</li>
+                                <li>Enhancing our offerings and customer experience</li>
+                                <li>Informing you about relevant updates or promotions</li>
+                                <li>Conducting market research</li>
+                                <li>Customizing our website to better suit your preferences</li>
+                            </ul>
+                        </li>
+                        <li class="card" id="METHODS_OF_DATA_COLLECTION">
+                            <h1>METHODS OF DATA COLLECTION :</h1>
+                            <p>We gather data through several sources, including:</p>
+                            <ul>
+                                <li>Direct Interactions: <span>Information you provide when using our website or communicating with us.</span></li>
+                                <li>Third-Party Sources: <span>Data from partners, affiliates, or publicly available platforms.</span></li>
+                                <li>Automated Technologies: <span>Data collected through cookies, embedded links, and similar tools.</span></li>
+                            </ul>
+                            <p>Our methods may evolve as technology advances, and we will update this policy accordingly.</p>
+                        </li>
+                        <li class="card" id="COOKIES_AND_USER_PREFERENCES">
+                            <h1>COOKIES AND USER PREFERENCES :</h1>
+                            <p>
+                                Cookies are small data files stored on your device to enhance your browsing experience.
+                                They allow us to recognize your preferences and optimize our website's functionality.
+                                You have the option to manage or delete cookies through your browser settings. These may
+                                include:
+                            </p>
+                            <ul>
+                                <li>General usage statistics</li>
+                                <li>Embedded URLs and tracking codes</li>
+                                <li>Location-based data</li>
+                            </ul>
+                        </li>
+                        <li class="card" id="OBJECTIVE_AND_POLICY_DETAILS">
+                            <h1>OBJECTIVE AND POLICY DETAILS :</h1>
+                            <p>
+                                DevnDesk is dedicated to maintaining the integrity and security of your personal
+                                information. We collect and process data only with your consent and in compliance with
+                                legal requirements. You may review or update your information upon request.
+                            </p>
+                            <p>
+                                We will never disclose, sell, or share your personal data without your explicit
+                                permission unless required by law or in cases of fraud detection, threat prevention, or
+                                other legitimate circumstances.
+                            </p>
+                        </li>
+                        <li class="card" id="IMPORTANT_NOTICE">
+                            <h1>IMPORTANT NOTICE :</h1>
+                            <p>
+                                This privacy policy is subject to updates based on evolving business needs and legal
+                                standards. We will notify you of any changes and ensure your rights are protected.
+                            </p>
+                            <p>
+                                For any questions or concerns regarding this policy, please contact us at:
+                                <br><span>Phone:</span> [-]
+                                <br><span>Email:</span> <a href="mailto:contact@devndesk.com">contact@devndesk.com</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+
+                <!-- 
+                <div class="container-fluid px-5 pt-5" id="contents_container">
+
+                    <div class="content-section" id="COMMITMENT_TO_PROTECTING_YOUR_PRIVACY">
+                        <div class="heading">
+                            <h1>COMMITMENT TO PROTECTING YOUR PRIVACY :</h1>
+                        </div>
+                        <div class="paragraph">
+                            <p>DevnDesk is deeply committed to safeguarding your personal information. This Privacy
+                                Policy outlines the measures we take to protect any data collected through our website,
+                                software, social media platforms, or other communication channels. Please review this
+                                document carefully to understand how we collect, use, and share your information.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="OUR_STRICT_PRIVACY_STANDARDS">
+                        <div class="heading">
+                            <h1>OUR STRICT PRIVACY STANDARDS :</h1>
+                        </div>
+                        <div class="paragraph">
+                            <p>We respect your trust and take your privacy seriously. This policy ensures transparency
+                                regarding how we manage and protect your personal information, including contact
+                                details, transaction data, and digital footprints generated through our platforms. Any
+                                information shared with DevnDesk will remain confidential and used responsibly.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="INFORMATION_SHARING_AND_THIRD_PARTIES">
+                        <div class="heading">
+                            <h1>INFORMATION SHARING AND THIRD PARTIES :</h1>
+                        </div>
+                        <div class="paragraph">
+                            <p>DevnDesk is meticulous in handling data and strives to limit its exposure to third
+                                parties. However, our website or services may include links to external websites or
+                                tools. We do not control these third-party platforms and encourage you to review their
+                                respective privacy policies. While you can choose to limit data sharing through your
+                                browser or system settings, opting out of certain information sharing may affect the
+                                functionality of our services. </p>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="HOW_WE_KEEP_YOUR_DATA_SECURE">
+                        <div class="heading">
+                            <h1>HOW WE KEEP YOUR DATA SECURE :</h1>
+                        </div>
+                        <div class="paragraph">
+                            <p>We use advanced security measures to safeguard the information collected from you,
+                                whether through interactions, analytics, or system usage. The types of data we may
+                                collect include but are not limited to: </p>
+                        </div>
+                        <div class="list-box">
+                            <ul>
+                                <li>Names, email addresses, and phone numbers</li>
+                                <li>Usage behavior and demographic details</li>
+                                <li>Transaction history</li>
+                                <li>IP addresses and other technical identifiers</li>
+                            </ul>
+                        </div>
+                        <div class="paragraph">
+                            <p>We are not liable for any inaccuracies or unauthorized data provided by users. We
+                                recommend that you provide accurate information and update it regularly to maintain a
+                                smooth relationship.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="PURPOSE_OF_COLLECTING_INFORMATION">
+                        <div class="heading">
+                            <h1>PURPOSE OF COLLECTING INFORMATION :</h1>
+                        </div>
+                        <div class="paragraph">
+                            <p>The information we collect is vital to improving our services and ensuring your needs are
+                                met. Key purposes include:</p>
+                        </div>
+                        <div class="list-box">
+                            <ul>
+                                <li>Maintaining internal records</li>
+                                <li>Enhancing our offerings and customer experience </li>
+                                <li>Informing you about relevant updates or promotions</li>
+                                <li>Conducting market research</li>
+                                <li>Customizing our website to better suit your preferences</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="METHODS_OF_DATA_COLLECTION">
+                        <div class="heading">
+                            <h1>METHODS OF DATA COLLECTION :</h1>
+                        </div>
+                        <div class="paragraph">
+                            <p>We gather data through several sources, including:</p>
+                        </div>
+                        <div class="list-box">
+                            <ul>
+                                <li>Direct Interactions : <span>Information you provide when using our website or
+                                        communicating with us.</span></li>
+                                <li>Third-Party Sources : <span>Data from partners, affiliates, or publicly available
+                                        platforms.</span></li>
+                                <li>Automated Technologies : <span>Data collected through cookies, embedded links, and
+                                        similar tools.</span></li>
+                            </ul>
+                        </div>
+                        <div class="paragraph">
+                            <p>Our methods may evolve as technology advances, and we will update this policy
+                                accordingly.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="COOKIES_AND_USER_PREFERENCESY">
+                        <div class="heading">
+                            <h1>COOKIES AND USER PREFERENCES :</h1>
+                        </div>
+                        <div class="paragraph">
+                            <p>Cookies are small data files stored on your device to enhance your browsing experience.
+                                They allow us to recognize your preferences and optimize our website's functionality.
+                                You have the option to manage or delete cookies through your browser settings. These may
+                                include:</p>
+                        </div>
+                        <div class="list-box">
+                            <ul>
+                                <li>General usage statistics</li>
+                                <li>Embedded URLs and tracking codes</li>
+                                <li>Location-based data</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="OBJECTIVE_AND_POLICY_DETAILS">
+                        <div class="heading">
+                            <h1>OBJECTIVE AND POLICY DETAILS :</h1>
+                        </div>
+                        <div class="paragraph">
+                            <p>DevnDesk is dedicated to maintaining the integrity and security of your personal
+                                information. We collect and process data only with your consent and in compliance with
+                                legal requirements. You may review or update your information upon request. We will
+                                never disclose, sell, or share your personal data without your explicit permission
+                                unless required by law or in cases of fraud detection, threat prevention, or other
+                                legitimate circumstances.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="IMPORTANT_NOTICE">
+                        <div class="heading">
+                            <h1>IMPORTANT NOTICE :</h1>
+                        </div>
+                        <div class="paragraph">
+                            <p>This privacy policy is subject to updates based on evolving business needs and legal
+                                standards. We will notify you of any changes and ensure your rights are protected. </p>
+                        </div>
+                        <div class="paragraph">
+                            <p>For any questions or concerns regarding this policy, please contact us at: </p>
+                        </div>
+                        <p class="contactDetails"><span>Phone: </span>-</p>
+                        <p class="contactDetails"><span>Email: </span>[contact@devndesk.com](mail
+                            to:contact@devndesk.com)</p>
+                    </div>
+
+                </div> -->
+
+
+            </div>
+            <!-- banner end -->
+
+
+
+
+
+
+
+            <!-- footer -->
+            <footer>
+                <div class="grax_tm_section mil-dark">
+                    <div class="grax_tm_copyright ">
+                        <div class="my_wave">
+                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <defs></defs>
+                                <path id="wave_img" data-color="#000"
+                                    d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
+                                    fill="#fff"></path>
+                            </svg>
+                        </div>
+                        <div class="container mil-p-120-60">
+                            <div class="row justify-content-between">
+                                <div class="col-md-4 col-lg-4 mil-mb-60">
+
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30">DEV N DESK.</div>
+                                    <div class="mil-vert-between">
+                                        <div class="mil-mb-30">
+                                            <ul class="mil-social-icons mil-up">
+                                                <li><a href="#." target="_blank" class="social-icon"> <i
+                                                            class="fab fa-instagram footer-icons"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i
+                                                            class="fab fa-linkedin footer-icons"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i
+                                                            class="fa fa-twitter footer-icons"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i
+                                                            class="fab fa-facebook footer-icons"></i></a></li>
+
+                                            </ul>
+                                        </div>
+                                        <p class="mil-light-soft mil-up">© Copyright 2024 - DEVNDESK. All Rights
+                                            Reserved.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-lg-6">
+                                    <div class="row justify-content-end">
+                                        <div class="col-md-6 col-lg-7">
+
+                                            <nav class="mil-footer-menu mil-mb-60">
+                                                <ul>
+                                                    <li class="mil-up ">
+                                                        <a href="index.html">Home</a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a href="portfolio-1.html">Portfolio</a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a href="services.html">Services</a>
+                                                    </li>
+                                                    <li class="mil-up mil-active">
+                                                        <a href="contact.html">Contact</a>
+                                                    </li>
+
+                                                </ul>
+                                            </nav>
+
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-5">
+
+                                            <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
+
+                                            <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
+                                                <span class="mil-no-wrap">+51 174 705 812</span>
+                                            </p>
+
+
+                                            <h6 class="mil-muted mil-up mil-mb-30 cus">Germany</h6>
+
+                                            <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier,
+                                                Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+        </div>
+    </div>
+    <!-- content -->
+    </div>
+
+</body>
+
+</html>
+
+<script src="js/plugins/jquery.min.js"></script>
+<script src="js/plugins/swup.min.js"></script>
+<script src="js/plugins/fancybox.min.js"></script>
+<script src="js/plugins/gsap.min.js"></script>
+<script src="js/plugins/swiper.min.js"></script>
+<script src="js/plugins/smooth-scroll.js"></script>
+<script src="js/plugins/ScrollTrigger.min.js"></script>
+<script src="js/plugins/ScrollTo.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script type="module" src="js/privacy_policy.js"></script>
