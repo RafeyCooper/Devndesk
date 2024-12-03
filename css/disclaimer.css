@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: #282828 !important;
+}
+.mil-breadcrumbs:before {
+    content: "";
+    position: absolute;
+    right: calc(100% + 30px);
+    top: 10px;
+    width: 100vw;
+    height: 1px;
+    background-color: rgb(255 255 255 / 10%) !important;
+}
+
+.mil-frame-top .mil-logo {
+    pointer-events: all;
+    color: rgb(255, 255, 255) !important;
+}
+
+.mil-menu-btn span, .mil-menu-btn span:after, .mil-menu-btn span:before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 2.5px;
+    background: rgb(255 255 255) !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: inherit;
+    transition: inherit;
+}
+
+.toc-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 500px;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+}
+
+.toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toc-header h2{
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.toc-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toc-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 500px; /* Initially hidden */
+    overflow: hidden; /* Hide the content when max-height is 0 */
+    transition: max-height 0.4s ease; /* Add a smooth transition */
+}
+
+.toc-list.show {
+    max-height: 0px; /* Adjust based on content height */
+}
+
+.toc-list li {
+    margin: 2px 0;
+}
+
+.toc-list a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.toc-list a:hover {
+    text-decoration: underline;
+}
+.paragraph p {
+    color: black;
+}
+.heading h1{
+    font-size: 20px;
+    font-weight: 800;
+}
+.content-section{
+    padding: 10px 0px;
+    color: black;
+}
+.my_wave {
+    background-color: #282828 !important;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+}
+
+.main-card-box {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100%;           /* Full viewport height for vertical centering */
+    margin: 0;               /* Remove any extra margins */
+}
+
+.cards {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;              /* Remove margins to ensure full centering */
+    width: 90%;
+}
+
+.card {
+    position: relative;
+    background: #ccc;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 0 20px #00000086;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;             /* Full width of the container */
+    height: auto;
+    width: 100%;        /* Set a max width for better centering */
+    text-align: start;      /* Center text inside the card */
+    z-index: 1;              /* Stack the card on top */
+    transform-origin: center; /* Ensure transform affects the center */
+    transition: transform 0.6s cubic-bezier(.8, .2, .1, 0.8) 0.1s, background 0.4s linear;
+}
+
+
+
+.card ul li{
+    font-size: 22px !important;
+    font-weight: 600;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    margin: 20px;
+}
+
+.card ol li{
+    font-size: 22px !important;
+    font-weight: 600;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card ul li span{
+    font-size: 22px !important;
+    font-weight: normal;
+    color: black;
+}
+.card ol li span{
+    font-size: 22px !important;
+    font-weight: normal;
+    color: black;
+}
+.card span {
+    font-weight: bold;
+    color: black;
+}
+.card h1{
+    font-size: 55px !important;
+    color: black;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card h2{
+    font-size: 25px !important;
+    color: black;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+b{
+    font-weight: bold;
+}
+.card P{
+    font-size: 22px !important;
+    color: black;
+    margin: 16px 0px;
+    font-family: "Montserrat", sans-serif;
+}
+
+@media only screen and (max-width: 500px){
+    #table_of_content {
+        padding: 0px 10px !important;
+    }
+    #contents_container{
+        padding: 25px 10px !important;
+    }
+}
+
+
+@media only screen and (max-width: 1750px){
+    .card h1{
+        font-size: 45px !important;
+    }
+    
+    .card P{
+        font-size: 22px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .card h1{
+        font-size: 25px !important;
+    }
+    
+    .card P{
+        font-size: 18px !important;
+    }
+
+    .card ul li{
+        font-size: 18px !important;
+    }
+
+    .card ol li{
+        font-size: 18px !important;
+    }
+    
+    .card ul li span{
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .card h1{
+        font-size: 16px !important;
+    }
+    
+    .card P{
+        font-size: 13px !important;
+    }
+    .card ul li{
+        font-size: 13px !important;
+    }
+
+    .card ol li{
+        font-size: 18px !important;
+    }
+    
+    .card ul li span{
+        font-size: 13px !important;
+    }
+    .card{
+        padding: 25px !important;
+    }
+}

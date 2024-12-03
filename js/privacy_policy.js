@@ -132,7 +132,8 @@ document.querySelectorAll('.toc-list a').forEach(anchor => {
             $previous.addClass('card--out');
         }
         else {
-            $("#IMPORTANT_NOTICE").addClass('card--out');
+            const lastCard = document.querySelector('.cards').lastElementChild;
+            lastCard.classList.add('card--out');
         }
 
         targetCard.classList.add('card--current');
@@ -142,7 +143,8 @@ document.querySelectorAll('.toc-list a').forEach(anchor => {
             $next.addClass('card--next');
         }
         else {
-            $("#COMMITMENT_TO_PROTECTING_YOUR_PRIVACY").addClass('card--next');
+            const firstCard = document.querySelector('.cards').firstElementChild;
+            firstCard.classList.add('card--next');
         }
         $('.cards').commentCards();
     });
