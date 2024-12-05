@@ -3250,6 +3250,8 @@ footer
 	float: left;
 	background-color: #000;
 	padding: 130px 0px 100px 0px;
+  -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
 	position: relative;
   padding: 0px;
 }
