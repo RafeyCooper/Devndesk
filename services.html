@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/plugins/fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/holo-effect-card.css">
     <!-- page name -->
 
     <title>Ashley</title>
@@ -31,7 +32,8 @@
         z-index: -1;
         /* Ensure canvas is behind the content */
     }
-    #webgl-canvas{
+
+    #webgl-canvas {
         position: absolute;
         top: 0;
         left: 0;
@@ -125,10 +127,12 @@
                                     </ul>
 
 
-                                    <h1 class="mil-muted mil-mb-60 mainServicePageHeading">This is <span class="mil-thin">what</span><br> we do
+                                    <h1 class="mil-muted mil-mb-60 mainServicePageHeading">This is <span
+                                            class="mil-thin">what</span><br> we do
                                         <span class="mil-thin">best</span>
                                     </h1>
-                                    <a href="#services" class="mil-link mil-accent mil-arrow-place mil-down-arrow ourServices">
+                                    <a href="#services"
+                                        class="mil-link mil-accent mil-arrow-place mil-down-arrow ourServices">
                                         <span>Our services</span>
                                     </a>
 
@@ -139,13 +143,25 @@
                     </div>
 
                     <!-- banner end -->
-
+                    <div class="container-fluid mil-p-120-60 ">
+                        <div class="row gap-2">
+                            <section class="cards">
+                                <div class="card charizard animated"></div>
+                                <div class="card pika animated"></div>
+                                <div class="card eevee animated"></div>
+                                <div class="card mewtwo animated"></div>
+                            </section>
+        
+                        </div>
+                    </div>
+                    
                     <!-- services -->
                     <section id="services">
                         <div class="mi-invert-fix">
-                            <div class="container mil-p-120-60 ">
+                            <div class="container-fluid mil-p-120-60 ">
                                 <div class="row gap-2">
-                                    <div class="col-12">
+
+                                    <!-- <div class="col-12">
                                         <div class="row">
                                             <div class="col-md-6 col-lg-6">
                                                 <a href="service.html" class="mil-service-card-lg mil-more mil-accent-cursor mil-offset serviceCard">
@@ -230,7 +246,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -252,9 +268,9 @@
                         <div class="mil-center">
                             <h2 class="mil-up mil-mb-60">Let’s make an <span class="mil-thin">impact</span><br>
                                 together. Ready <span class="mil-thin">when you are</span></h2>
-                            <a href="services.html" class="mil-button mil-arrow-place mil-btn-space">
+                            <!-- <a href="services.html" class="mil-button mil-arrow-place mil-btn-space">
                                 <span>What we do</span>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </section>
@@ -275,77 +291,99 @@
                             <div class="container mil-p-120-60">
                                 <div class="row justify-content-between">
                                     <div class="col-md-4 col-lg-4 mil-mb-60">
-
-                                        <div class="mil-muted mil-logo mil-up mil-mb-30">DEV N DESK.</div>
-                                        <div class="mil-vert-between">
-                                            <div class="mil-mb-30">
-                                                <ul class="mil-social-icons mil-up">
-                                                    <li><a href="#." target="_blank" class="social-icon"> <i
-                                                                class="fab fa-instagram footer-icons"></i></a></li>
-                                                    <li><a href="#." target="_blank" class="social-icon"> <i
-                                                                class="fab fa-linkedin footer-icons"></i></a></li>
-                                                    <li><a href="#." target="_blank" class="social-icon"> <i
-                                                                class="fa fa-twitter footer-icons"></i></a></li>
-                                                    <li><a href="#." target="_blank" class="social-icon"> <i
-                                                                class="fab fa-facebook footer-icons"></i></a></li>
-
-                                                </ul>
-                                            </div>
-                                            <p class="mil-light-soft mil-up">© Copyright 2024 - DEVNDESK. All Rights
-                                                Reserved.</p>
-                                        </div>
+    
+                                        <div class="mil-muted mil-logo mil-up mil-mb-30">Ashley.</div>
+    
+                                        <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
+    
+                                        <form class="mil-subscribe-form mil-up">
+                                            <input type="text" placeholder="Enter our email">
+                                            <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                        </form>
+    
                                     </div>
                                     <div class="col-md-7 col-lg-6">
                                         <div class="row justify-content-end">
                                             <div class="col-md-6 col-lg-7">
-
+    
                                                 <nav class="mil-footer-menu mil-mb-60">
                                                     <ul>
-                                                        <li class="mil-up ">
-                                                            <a href="index.html">Home</a>
+                                                        <li class="mil-up mil-active">
+                                                            <a href="home-1.html">Home</a>
                                                         </li>
                                                         <li class="mil-up">
                                                             <a href="portfolio-1.html">Portfolio</a>
                                                         </li>
-                                                        <li class="mil-up mil-active">
+                                                        <li class="mil-up">
                                                             <a href="services.html">Services</a>
                                                         </li>
-                                                        <li class="mil-up ">
+                                                        <li class="mil-up">
                                                             <a href="contact.html">Contact</a>
                                                         </li>
-                                                        <!-- <li class="mil-up">
+                                                        <li class="mil-up">
                                                             <a href="blog.html">Blog</a>
-                                                        </li> -->
+                                                        </li>
                                                     </ul>
                                                 </nav>
-
+    
                                             </div>
-
                                             <div class="col-md-6 col-lg-5">
-
-                                                <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
-
-                                                <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
-                                                    <span class="mil-no-wrap">+51 174 705 812</span>
-                                                </p>
-
-
-                                                <h6 class="mil-muted mil-up mil-mb-30 cus">Germany</h6>
-
-                                                <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier,
-                                                    Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
+    
+                                                <ul class="mil-menu-list mil-up mil-mb-60">
+                                                    <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
+                                                    <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
+                                                    <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
+                                                    <li><a href="#." class="mil-light-soft">Careers</a></li>
+                                                </ul>
+    
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
-
-
+    
+                                <div class="row justify-content-between flex-sm-row-reverse">
+                                    <div class="col-md-7 col-lg-6">
+    
+                                        <div class="row justify-content-between">
+    
+                                            <div class="col-md-6 col-lg-5 mil-mb-60">
+    
+                                                <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
+    
+                                                <p class="mil-light-soft mil-up">71 South Los Carneros Road, California <span class="mil-no-wrap">+51 174 705 812</span></p>
+    
+                                            </div>
+                                            <div class="col-md-6 col-lg-5 mil-mb-60">
+    
+                                                <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
+    
+                                                <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier, Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
+    
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                    <div class="col-md-4 col-lg-6 mil-mb-60">
+    
+                                        <div class="mil-vert-between">
+                                            <div class="mil-mb-30">
+                                                <ul class="mil-social-icons mil-up">
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights Reserved.</p>
+                                        </div>
+    
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </footer>
-                
+
             </div>
         </div>
     </div>
@@ -364,69 +402,70 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script type="module" src="js/serviceStars.js"></script>
-<!-- 
 <script>
-    function rand(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-    let canvas = document.getElementById("canvas"),
-        ctx = canvas.getContext("2d"),
-        width = (canvas.width = window.innerWidth),
-        height = (canvas.height = window.innerHeight),
-        cX = width / 2,
-        cY = height / 2;
+    /*
 
-    let fl = 3,
-        shapes = [],
-        numShapes = 1000;
+  using 
+    - an animated gif of sparkles.
+    - an animated gradient as a holo effect.
+    - color-dodge mix blend mode
+  
+*/
+    var x;
+    var $cards = $(".card");
+    var $style = $(".hover");
 
-    for (let i = 0; i < numShapes; i++) {
-        shapes[i] = {
-            x: rand(-1000, 1000),
-            y: rand(-1000, 1000),
-            z: rand(0, 10000)
-        }
-    }
-
-    ctx.translate(cX, cY);
-
-    function resetFrame() {
-        //ctx.clearRect(-cX, -cY, width, height);
-        ctx.fillStyle = "rgba(255,255,255,.5)";
-        ctx.fillRect(-cX, -cY, width, height);
-    }
-
-    function draw() {
-        resetFrame();
-    }
-    function update() {
-        ctx.fillStyle = "purple";
-        for (let i = 0; i < numShapes; i++) {
-            let shape = shapes[i],
-                perspective = fl / (fl + shape.z);
-
-            ctx.save();
-            ctx.translate(shape.x * perspective, shape.y * perspective);
-            ctx.scale(perspective, perspective);
-            ctx.fillRect(-3, -3, 6, 6);
-            ctx.restore();
-
-            shape.z += 50;
-            if (shape.z > 10000) {
-                shape.z = 0;
+    $cards
+        .on("mousemove touchmove", function (e) {
+            // normalise touch/mouse
+            var pos = [e.offsetX, e.offsetY];
+            e.preventDefault();
+            if (e.type === "touchmove") {
+                pos = [e.touches[0].clientX, e.touches[0].clientY];
             }
-            fl += .01;
-            if (fl > 5000) {
-                fl = 3;
+            var $card = $(this);
+            // math for mouse position
+            var l = pos[0];
+            var t = pos[1];
+            var h = $card.height();
+            var w = $card.width();
+            var px = Math.abs(Math.floor(100 / w * l) - 100);
+            var py = Math.abs(Math.floor(100 / h * t) - 100);
+            var pa = (50 - px) + (50 - py);
+            // math for gradient / background positions
+            var lp = (50 + (px - 50) / 1.5);
+            var tp = (50 + (py - 50) / 1.5);
+            var px_spark = (50 + (px - 50) / 7);
+            var py_spark = (50 + (py - 50) / 7);
+            var p_opc = 20 + (Math.abs(pa) * 1.5);
+            var ty = ((tp - 50) / 2) * -1;
+            var tx = ((lp - 50) / 1.5) * .5;
+            // css to apply for active card
+            var grad_pos = `background-position: ${lp}% ${tp}%;`
+            var sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`
+            var opc = `opacity: ${p_opc / 100};`
+            var tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg)`
+            // need to use a <style> tag for psuedo elements
+            var style = `
+      .card:hover:before { ${grad_pos} }  /* gradient */
+      .card:hover:after { ${sprk_pos} ${opc} }   /* sparkles */ 
+    `
+            // set / apply css class and style
+            $cards.removeClass("active");
+            $card.removeClass("animated");
+            $card.attr("style", tf);
+            $style.html(style);
+            if (e.type === "touchmove") {
+                return false;
             }
-        }
-    }
-
-    function loop() {
-        draw();
-        update();
-        window.requestAnimationFrame(loop);
-    }
-
-    loop();
-</script> -->
+            clearTimeout(x);
+        }).on("mouseout touchend touchcancel", function () {
+            // remove css, apply custom animation on end
+            var $card = $(this);
+            $style.html("");
+            $card.removeAttr("style");
+            x = setTimeout(function () {
+                $card.addClass("animated");
+            }, 2500);
+        });
+</script>
