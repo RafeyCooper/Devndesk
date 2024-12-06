@@ -169,7 +169,7 @@ $cards
     var py_spark = (50 + (py - 50) / 7);
     var p_opc = 20 + (Math.abs(pa) * 1.5);
     var ty = ((tp - 50) / 2) * -1;
-    var tx = ((lp - 50) / 1.5) * .7;
+    var tx = ((lp - 50) / 1.5) * .5;
 
     // CSS styles for active card
     var grad_pos = `background-position: ${lp}% ${tp}%;`;
