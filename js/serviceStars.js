@@ -168,8 +168,8 @@ $cards
     var px_spark = (50 + (px - 50) / 7);
     var py_spark = (50 + (py - 50) / 7);
     var p_opc = 20 + (Math.abs(pa) * 1.5);
-    var ty = ((tp - 50) / 1.2) * -1;  // more tilt effect
-    var tx = ((lp - 50) / 1.2) * .9;  // more tilt effect
+    var ty = ((tp - 50) / 2) * -1;
+    var tx = ((lp - 50) / 1.5) * .7;
 
     // CSS styles for active card
     var grad_pos = `background-position: ${lp}% ${tp}%;`;
