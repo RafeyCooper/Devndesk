@@ -31,7 +31,7 @@
         position: relative;
         inset: 0;
         width: 100%;
-        /* height: 100%; */
+        min-height: 500px;
         background-color: white;
     }
 </style>
@@ -95,7 +95,7 @@
                             <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6"
                                 data-value-2="1.4"></div>
                         </div>
-                        <div class="container">
+                        <div class="container-fluid">
                             <!-- <ul class="mil-breadcrumbs mil-mb-60">
                                 <li><a href="home-1.html">Homepage</a></li>
                                 <li><a href="portfolio-1.html">Portfolio</a></li>
@@ -104,7 +104,7 @@
                             <!-- <a href="#portfolio" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
                                 <span>Our works</span>
                             </a> -->
-                            <div>
+                            <div class="">
                                 <canvas></canvas>
                             </div>
                         </div>
@@ -480,7 +480,10 @@
     const gl = canvas.getContext("webgl");
 
     canvas.width = window.innerWidth;
-    canvas.height = 500;
+    canvas.height = window.innerHeight;
+
+    console.log(canvas.height)
+
     gl.viewport(0, 0, canvas.width, canvas.height);
 
     // Configurable parameters
@@ -595,53 +598,56 @@
     const hues = new Float32Array(config.particleCount);
     const saturations = new Float32Array(config.particleCount);
 
+
     function getTextCoordinates(text) {
-    const ctx = document.createElement("canvas").getContext("2d");
-    ctx.canvas.width = canvas.width;
-    ctx.canvas.height = canvas.height;
+        const ctx = document.createElement("canvas").getContext("2d");
+        ctx.canvas.width = canvas.width;
+        ctx.canvas.height = canvas.height;
 
-    // Set the font size based on canvas dimensions
-    const fontSize = Math.min(window.innerWidth / 12);
+        // Set the font size based on canvas dimensions
+        const fontSize = Math.min(window.innerWidth / 15);
 
-    console.log(fontSize)
+        ctx.font = `900 ${fontSize}px Arial`;
+        ctx.fillStyle = "white";
 
-    ctx.font = `900 ${fontSize}px Arial`;
-    ctx.fillStyle = "white";
+        // Set horizontal alignment to center
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle"; // Vertically center the text
 
-    // Left align the text
-    ctx.textAlign = "left"; // Text starts from the left side
-    ctx.textBaseline = "middle"; // Vertically center the text
+        // Split the text into multiple lines (using '\n' as the delimiter)
+        const lines = text.split('\n');
+        const lineHeight = fontSize * 1.2; // Adjust line height if needed
 
-    // Split the text into multiple lines (using '\n' as the delimiter)
-    const lines = text.split('\n');
-    const lineHeight = fontSize * 1.2; // Adjust line height if needed
+        // Calculate the total height to vertically center the lines
+        const totalTextHeight = lineHeight * lines.length;
+        const startingY = (canvas.height - totalTextHeight) / 2;
 
-    // Draw each line of text, adjusting the y position
-    lines.forEach((line, index) => {
-        const yOffset = (index - (lines.length - 1) / 2) * lineHeight;
-        // Text starts from a small x-offset (e.g., 10 pixels) from the left edge
-        ctx.fillText(line, 10, (canvas.height / 2) + yOffset);
-    });
+        // Draw each line of text, adjusting the y position
+        lines.forEach((line, index) => {
+            const yOffset = startingY + (index * lineHeight);
+            ctx.fillText(line, canvas.width / 2, yOffset); // Center horizontally
+        });
 
-    // Get image data and calculate coordinates
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-    const coordinates = [];
+        // Get image data and calculate coordinates
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+        const coordinates = [];
 
-    // Iterate through image data to find non-transparent pixels
-    for (let y = 0; y < canvas.height; y += 4) {
-        for (let x = 0; x < canvas.width; x += 4) {
-            const index = (y * canvas.width + x) * 4;
-            if (imageData[index + 3] > 128) { // Check for non-transparent pixels
-                coordinates.push({
-                    x: (x / canvas.width) * 2 - 1,
-                    y: (y / canvas.height) * -2 + 1
-                });
+        // Iterate through image data to find non-transparent pixels
+        for (let y = 0; y < canvas.height; y += 4) {
+            for (let x = 0; x < canvas.width; x += 4) {
+                const index = (y * canvas.width + x) * 4;
+                if (imageData[index + 3] > 128) { // Check for non-transparent pixels
+                    coordinates.push({
+                        x: (x / canvas.width) * 2 - 1,
+                        y: (y / canvas.height) * -2 + 1
+                    });
+                }
             }
         }
+
+        return coordinates;
     }
 
-    return coordinates;
-}
 
 
 
