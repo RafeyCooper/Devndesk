@@ -28,14 +28,14 @@
 </head>
 <style>
     canvas {
-	position: relative;
-	inset: 0;
-	width: 100%;
-	height: 100%;
-    background-color: white;
-}
-
+        position: relative;
+        inset: 0;
+        width: 100%;
+        /* height: 100%; */
+        background-color: white;
+    }
 </style>
+
 <body>
 
     <!-- wrapper -->
@@ -85,7 +85,7 @@
         <div id="headerPlaceholder"></div>
 
         <!-- content -->
-        <div class="mil-content">
+        <div class="mil-content" style="background-color: black;">
             <div id="swupMain" class="mil-main-transition">
 
                 <!-- banner -->
@@ -96,11 +96,11 @@
                                 data-value-2="1.4"></div>
                         </div>
                         <div class="container">
-                            <ul class="mil-breadcrumbs mil-mb-60">
+                            <!-- <ul class="mil-breadcrumbs mil-mb-60">
                                 <li><a href="home-1.html">Homepage</a></li>
                                 <li><a href="portfolio-1.html">Portfolio</a></li>
-                            </ul>
-                            <h1 class="mil-mb-60">Designing a <br> Better <span class="mil-thin">World Today</span></h1>
+                            </ul> -->
+                            <!-- <h1 class="mil-mb-60">Designing a <br> Better <span class="mil-thin">World Today</span></h1> -->
                             <!-- <a href="#portfolio" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
                                 <span>Our works</span>
                             </a> -->
@@ -116,8 +116,7 @@
 
                         <div class="col-12 col-md-6 card border-left-behind">
                             <div class="shadow" id="shadow_img_1"></div>
-                            <div class="image background" id="bg-img-1"
-                                style="--url: url('https://i.ibb.co/JpJVJxq/Background.png')">
+                            <div class="image background" id="bg-img-1">
                             </div>
                             <div class="image cutout" id="cutout_img_1"></div>
                             <div class="content">
@@ -127,7 +126,7 @@
                         </div>
 
                         <div class="col-12 col-md-6 card border-right-behind border-bottom-behind">
-                            <div class="shadow" style="--url: url('https://i.ibb.co/DC0MbxS/m-full.png')"></div>
+                            <div class="shadow" id="shadow_img_1"></div>
                             <div class="image background"
                                 style="--url: url('https://i.ibb.co/ZdGBm4K/m-background.png')">
                             </div>
@@ -159,13 +158,13 @@
                 <!-- footer -->
                 <footer>
                     <div class="grax_tm_section mil-dark">
-                        <div class="grax_tm_copyright">
+                        <div class="grax_tm_copyright" style="background: white !important;">
                             <div class="home_wave">
                                 <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                     <defs></defs>
-                                    <path id="wave_img" data-color="#000"
+                                    <path id="wave_img" data-color="#ffff"
                                         d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
-                                        fill="#fff"></path>
+                                        fill="#ffff"></path>
                                 </svg>
                             </div>
 
@@ -481,13 +480,13 @@
     const gl = canvas.getContext("webgl");
 
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = 500;
     gl.viewport(0, 0, canvas.width, canvas.height);
 
     // Configurable parameters
     const config = {
-        particleCount: 5000,
-        textArray: ["Design.", "Code.", "Coffee."],
+        particleCount: 20000,
+        textArray: ["Designing a\nBetter World Today", "Don't Design\na Better World"],  // Two lines for each text
         mouseRadius: 0.1,
         particleSize: 2,
         forceMultiplier: 0.001,
@@ -498,6 +497,7 @@
         textChangeInterval: 10000,
         rotationForceMultiplier: 0.5
     };
+
 
     let currentTextIndex = 0;
     let nextTextTimeout;
@@ -596,30 +596,54 @@
     const saturations = new Float32Array(config.particleCount);
 
     function getTextCoordinates(text) {
-        const ctx = document.createElement("canvas").getContext("2d");
-        ctx.canvas.width = canvas.width;
-        ctx.canvas.height = canvas.height;
-        const fontSize = Math.min(canvas.width / 6, canvas.height / 6);
-        ctx.font = `900 ${fontSize}px Arial`;
-        ctx.fillStyle = "white";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText(text, canvas.width / 2, canvas.height / 2);
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-        const coordinates = [];
-        for (let y = 0; y < canvas.height; y += 4) {
-            for (let x = 0; x < canvas.width; x += 4) {
-                const index = (y * canvas.width + x) * 4;
-                if (imageData[index + 3] > 128) {
-                    coordinates.push({
-                        x: (x / canvas.width) * 2 - 1,
-                        y: (y / canvas.height) * -2 + 1
-                    });
-                }
+    const ctx = document.createElement("canvas").getContext("2d");
+    ctx.canvas.width = canvas.width;
+    ctx.canvas.height = canvas.height;
+
+    // Set the font size based on canvas dimensions
+    const fontSize = Math.min(window.innerWidth / 12);
+
+    console.log(fontSize)
+
+    ctx.font = `900 ${fontSize}px Arial`;
+    ctx.fillStyle = "white";
+
+    // Left align the text
+    ctx.textAlign = "left"; // Text starts from the left side
+    ctx.textBaseline = "middle"; // Vertically center the text
+
+    // Split the text into multiple lines (using '\n' as the delimiter)
+    const lines = text.split('\n');
+    const lineHeight = fontSize * 1.2; // Adjust line height if needed
+
+    // Draw each line of text, adjusting the y position
+    lines.forEach((line, index) => {
+        const yOffset = (index - (lines.length - 1) / 2) * lineHeight;
+        // Text starts from a small x-offset (e.g., 10 pixels) from the left edge
+        ctx.fillText(line, 10, (canvas.height / 2) + yOffset);
+    });
+
+    // Get image data and calculate coordinates
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    const coordinates = [];
+
+    // Iterate through image data to find non-transparent pixels
+    for (let y = 0; y < canvas.height; y += 4) {
+        for (let x = 0; x < canvas.width; x += 4) {
+            const index = (y * canvas.width + x) * 4;
+            if (imageData[index + 3] > 128) { // Check for non-transparent pixels
+                coordinates.push({
+                    x: (x / canvas.width) * 2 - 1,
+                    y: (y / canvas.height) * -2 + 1
+                });
             }
         }
-        return coordinates;
     }
+
+    return coordinates;
+}
+
+
 
     function createParticles() {
         textCoordinates = getTextCoordinates(config.textArray[currentTextIndex]);

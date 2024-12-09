@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+    }
+
+    #stars-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div id="stars-container"></div>
+
+  <script>
+    function generateStar(container) {
+      const star = document.createElement('div');
+      const size = Math.random() * 3 + 1; // Random size for stars (1px to 4px)
+      star.classList.add('star');
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+
+      const x = Math.random() * window.innerWidth;  // Random X position
+      const startY = window.innerHeight;            // Start at bottom
+      const endY = -size;                           // End at top
+
+      star.style.left = `${x}px`;
+      star.style.top = `${startY}px`;
+
+      container.appendChild(star);
+
+      // Animate the star
+      const duration = Math.random() * 5 + 3; // Random speed (3s to 8s)
+      star.style.transition = `top ${duration}s linear`;
+
+      // Move the star upwards
+      setTimeout(() => {
+        star.style.top = `${endY}px`;
+      }, 10); // Small delay to ensure transition is applied
+
+      // Remove the star once it reaches the top
+      setTimeout(() => {
+        container.removeChild(star);
+      }, duration * 1000);
+    }
+
+    function generateStars(container, starCount) {
+      for (let i = 0; i < starCount; i++) {
+        generateStar(container);
+      }
+    }
+
+    // Continuously generate stars
+    function startStarGeneration() {
+      const container = document.getElementById('stars-container');
+      setInterval(() => {
+        generateStars(container, 100);  // Generate 10 new stars every 200ms
+      }, 200);
+    }
+
+      startStarGeneration();  // Start generating stars when page loads
+  </script>
+</body>
+</html>

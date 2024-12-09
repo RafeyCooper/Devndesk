@@ -68,8 +68,7 @@
   transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
 }
 
-/* Star layer 1 (small stars) */
-#stars,
+/* #stars,
 #stars:after {
     width: 1px;
     height: 1px;
@@ -98,7 +97,7 @@
         1900px 1600px #FFF, 2000px 200px #FFF, 1800px 300px #FFF, 1400px 500px #FFF, 
         600px 600px #FFF, 1200px 1200px #FFF, 100px 100px #FFF, 200px 800px #FFF;
 
-    animation: animStar 50s linear infinite;
+        animation: animStar 50s linear infinite;
     position: absolute;
 }
 
@@ -107,7 +106,6 @@
     top: 2000px;
 }
 
-/* Star layer 2 (medium stars) */
 #stars2,
 #stars2:after {
     width: 2px;
@@ -127,7 +125,7 @@
         1450px 600px #FFF, 1400px 1700px #FFF, 1300px 1500px #FFF, 900px 1200px #FFF, 
         1600px 1300px #FFF, 600px 1100px #FFF, 1700px 1800px #FFF, 1200px 400px #FFF, 
         1600px 700px #FFF, 1900px 1200px #FFF, 1100px 1300px #FFF, 900px 1500px #FFF;
-    animation: animStar 100s linear infinite;
+        animation: animStar 50s linear infinite;
     position: absolute;
 }
 
@@ -136,7 +134,6 @@
     top: 2000px;
 }
 
-/* Star layer 3 (large stars) */
 #stars3,
 #stars3:after {
     width: 3px;
@@ -156,24 +153,59 @@
         1500px 800px #FFF, 1800px 500px #FFF, 1300px 1200px #FFF, 1100px 600px #FFF, 
         900px 900px #FFF, 1700px 1100px #FFF, 1200px 1600px #FFF, 1400px 700px #FFF;
         
-    animation: animStar 150s linear infinite;
+        animation: animStar 50s linear infinite;
     position: absolute;
 }
 
 #stars3:after {
     content: " ";
     top: 2000px;
+} */
+
+#stars, #stars:after, 
+#stars2, #stars2:after, 
+#stars3, #stars3:after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    top: 2000px;
+    position: absolute;
+    animation: animStar 5s linear infinite;
 }
 
-/* Animation for stars */
 @keyframes animStar {
-    0% {
-        transform: translateY(0px);
-    }
-    100% {
-        transform: translateY(-2000px);
-    }
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(-2000px);
+  }
 }
+
+
+#stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+
+/* Optional: Add more smoothness by adjusting timing functions
+#stars, #stars2, #stars3 {
+  animation-timing-function: ease-in-out;
+} */
 
 
 #title {
@@ -197,17 +229,6 @@
     -webkit-text-fill-color: transparent;
 }
 
-
-
-@keyframes animStar {
-    from {
-        transform: translateY(0px);
-    }
-
-    to {
-        transform: translateY(-2000px);
-    }
-}
 
 #contact{
     margin-bottom: 60px;
