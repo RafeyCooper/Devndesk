@@ -300,11 +300,28 @@
 
                                         <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
 
-                                        <form class="mil-subscribe-form mil-up">
-                                            <input type="text" placeholder="Enter our email">
-                                            <button type="submit"
-                                                class="mil-button mil-icon-button-sm mil-arrow-place"></button>
-                                        </form>
+                                        <div class="tear-strip" id="tearStrip">
+                                            <div class="tear-strip__content" aria-hidden="true" aria-live="off">
+                                                <p><input type="text" name="" id="emailInput"
+                                                        placeholder="Enter your email" disabled></p>
+                                            </div>
+                                            <span class="tear-strip__shadow"></span>
+                                            <div class="tear-strip__strip">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                                                </svg>
+                                                <div class="tear-strip__back">
+                                                    <div class="tear-strip__back-shadow"></div>
+                                                    <div class="tear-strip__backing"></div>
+                                                </div>
+                                                <span class="strip-text"><span>Tear</span><span>&nbsp;open</span></span>
+                                            </div>
+                                            <div class="tear-strip__handle handle"></div>
+                                            <input type="range" min="0" max="100" step="1" value="0" id="tearRange">
+                                        </div>
+
 
                                     </div>
                                     <div class="col-md-7 col-lg-6">

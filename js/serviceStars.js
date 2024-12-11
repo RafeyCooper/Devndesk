@@ -205,3 +205,32 @@ $cards
       $card.addClass("animated");
     }, 2500); // Apply animation delay
   });
+
+
+
+  if (!CSS.supports('animation-timeline: scroll()')) {
+    const input = document.querySelector('input');
+    
+    const update = () => {
+      document.documentElement.style.setProperty('--value', input.value);
+    };
+  
+    input.addEventListener('input', update);
+  }
+  
+
+  document.getElementById('tearRange').addEventListener('input', function() {
+    var rangeValue = this.value;
+    
+    // When range reaches its maximum value (100)
+    if (rangeValue == 100) {
+      // Remove the tear strip elements
+      document.getElementById('tearStrip').classList.add('hide-tear-strip');
+      
+      // Enable the email input field and make sure it's clickable
+      var emailInput = document.getElementById('emailInput');
+      emailInput.disabled = false;
+      emailInput.style.pointerEvents = 'auto'; // Ensure the input is clickable
+    }
+  });
+  

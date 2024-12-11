@@ -1,102 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      background: black;
-      overflow: hidden;
-    }
-
-    #stars-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .star {
-      position: absolute;
-      background-color: white;
-      border-radius: 50%;
-      opacity: 0.8;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body>
-  <div id="stars-container"></div>
-
-  <script>
-    let stars = [];
-
-    // Function to create individual star elements
-    function createStar(container) {
-      const star = document.createElement('div');
-      const size = Math.random() * 3 + 1; // Random size for stars (1px to 4px)
-      star.classList.add('star');
-      star.style.width = `${size}px`;
-      star.style.height = `${size}px`;
-
-      const x = Math.random() * window.innerWidth;  // Random X position
-      const startY = window.innerHeight;            // Start at bottom
-      const endY = -size;                           // End at top
-
-      star.style.left = `${x}px`;
-      star.style.top = `${startY}px`;
-
-      container.appendChild(star);
-
-      // Store the star properties in an array
-      stars.push({ element: star, startY, endY, size, x });
+<style>
+    .peeler-wrapper {
+        position: relative;
+        width: 300px;
+        height: 70px;
     }
 
-    // Function to animate stars
-    function animateStars() {
-      stars.forEach((star, index) => {
-        const top = parseFloat(star.element.style.top);
-        if (top <= star.endY) {
-          // Reset star position once it goes off-screen
-          resetStar(star.element);
-        } else {
-          star.element.style.top = `${top - 1}px`; // Move star upwards
+    .peeler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f0f0f0;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #000;
+        cursor: pointer;
+        transition: opacity 0.5s ease;
+    }
+
+    .input-field {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        font-size: 16px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+    }
+
+    .peeler-peeled {
+        animation: peelOff 1s forwards;
+        /* Animation for peeling off */
+    }
+
+    @keyframes peelOff {
+        from {
+            transform: translateY(0);
         }
-      });
 
-      requestAnimationFrame(animateStars);  // Continue animation on next frame
+        to {
+            transform: translateY(-100%);
+            /* Moves the peeler off the input */
+        }
     }
+</style>
 
-    // Reset star position to the bottom of the screen
-    function resetStar(star) {
-      const size = Math.random() * 3 + 1;
-      const x = Math.random() * window.innerWidth;
-      const startY = window.innerHeight;
+<body>
+    <div class="peeler-wrapper">
+        <div class="peeler" id="peeler">Peel me off</div>
+        <input type="email" class="input-field" id="emailInput" placeholder="Enter your email" style="display: none;">
+    </div>
 
-      star.style.width = `${size}px`;
-      star.style.height = `${size}px`;
-      star.style.left = `${x}px`;
-      star.style.top = `${startY}px`;
-    }
-
-    // Function to start generating stars and continuously animate them
-    function startStarGeneration() {
-      const container = document.getElementById('stars-container');
-      for (let i = 0; i < 10; i++) {
-        createStar(container);  // Generate 10 new stars initially
-      }
-      animateStars();  // Start the animation
-    }
-
-    // Start generating stars when the page loads
-    window.onload = startStarGeneration;
-
-    // Recreate stars on window resize to ensure proper positioning
-    window.onresize = () => {
-      stars.forEach(star => resetStar(star.element));
-    };
-  </script>
 </body>
+
 </html>
+<script>
+    document.getElementById('peeler').addEventListener('click', function () {
+        const peeler = document.getElementById('peeler');
+        const emailInput = document.getElementById('emailInput');
+
+        // Apply the "peeled" animation to move it off
+        peeler.classList.add('peeler-peeled');
+
+        // After the animation is done, show the email input
+        setTimeout(function () {
+            peeler.style.display = 'none'; // Hide the peeler completely
+            emailInput.style.display = 'block'; // Show the input field
+        }, 1000); // Matches the duration of the peeling animation
+    });
+
+</script>
