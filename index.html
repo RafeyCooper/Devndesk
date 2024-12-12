@@ -21,8 +21,53 @@
     <link rel="stylesheet" type="text/css" href="css/settings.css">
     <link rel='stylesheet' href='css/revolution.addon.particles.css?ver=1.0.3' type='text/css' media='all' />
     <link rel='stylesheet' href='css/revolution.addon.beforeafter.css?ver=1.0.0' type='text/css' media='all' />
+    <link rel="stylesheet" href="css/floating_languages.css">
 
 </head>
+<style>
+    #app {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 200%);
+    }
+
+    #app {
+        position: relative;
+        height: 100%;
+        font-family: "Montserrat", serif;
+    }
+
+    .hero {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #webgl-canvas {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .canvaMainHeading {
+        position: relative;
+        z-index: 2;
+        font-size: 100px;
+        font-weight: 700;
+        color: white;
+        text-shadow: 0 0 35px rgba(0, 0, 0, 0.8),
+            0 0 20px rgba(0, 0, 0, 0.6),
+            0 0 30px rgba(0, 0, 0, 0.4),
+            0 0 40px rgba(0, 0, 0, 0.2);
+    }
+</style>
 
 <body>
 
@@ -58,58 +103,10 @@
         <div id="headerPlaceholder"></div>
 
 
-        <style>
-            #app {
-                margin: 0;
-                width: 100vw;
-                height: 100vh;
-                background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 200%);
-            }
-
-            #app {
-                position: relative;
-                height: 100%;
-                font-family: "Montserrat", serif;
-            }
-
-            .hero {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #webgl-canvas {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                overflow: hidden;
-                z-index: 1;
-            }
-
-            .canvaMainHeading {
-                position: relative;
-                z-index: 2;
-                font-size: 100px;
-                font-weight: 700;
-                color: white;
-                /* Or any color of your choice */
-                text-shadow: 0 0 35px rgba(0, 0, 0, 0.8),
-                    /* Inner black glow */
-                    0 0 20px rgba(0, 0, 0, 0.6),
-                    /* Medium black glow */
-                    0 0 30px rgba(0, 0, 0, 0.4),
-                    /* Stronger black glow */
-                    0 0 40px rgba(0, 0, 0, 0.2);
-                /* Outer black glow */
-            }
-        </style>
 
 
-        <section class="mil-banner mil-dark-bgService">
+        <!-- Ball following mouse section -->
+        <!-- <section class="mil-banner mil-dark-bgService">
             <div id="app">
                 <div class="hero">
                     <h1 class="canvaMainHeading">DEV N DESK</h1>
@@ -117,7 +114,7 @@
                 </div>
                 <canvas id="webgl-canvas"></canvas>
             </div>
-        </section>
+        </section> -->
 
 
 
@@ -425,6 +422,26 @@
                 </section>
                 <!-- banner end -->
 
+                    <div class="codesmooth">
+                        <div class="window glassbox"></div>
+                        <div class="codename" id="rotXY">
+                            <span class="codearea"></span>
+                            <span id="python">
+                                <p><b class="nuberings">&nbsp;1 </b><span class="greencode">#About me</span></p>
+                                <p><b class="nuberings">&nbsp;2 </b><span class="bluecode">name</span> = <span class="orangecode">"Hugo Valladolid"</span></p>
+                                <p><b class="nuberings">&nbsp;3 </b><span class="bluecode">job</span> = <span class="orangecode">"Game Developer student"</span></p>
+                                <p><b class="nuberings">&nbsp;4 </b><span class="bluecode">hobby</span> = <span class="orangecode">"Programming"</span></p>
+                                <p><b class="nuberings">&nbsp;5 </b><span class="bluecode">fav_lang</span> = <span class="orangecode">"C#"</span></p>
+                                <p><b class="nuberings">&nbsp;6 </b></p>
+                                <p><b class="nuberings">&nbsp;7 </b><span class="yellowcodeL">print</span><span class="yellowcode">(</span><span class="bluecodeD">f</span><span class="orangecode">"Hi there ! I'm </span><span class="pinkcode">{<span class="bluecode">name</span>}</span><span class="orangecode">.</span><span class="orangecode"> I'm a </span></p>
+                                <p><b class="nuberings">&nbsp;8 </b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="pinkcode">{<span class="bluecode">job</span>}</span><span class="orangecode"> who </span><span class="pinkcode">{<span class="bluecode">hobby</span>} </span><span class="orangecode">as a hobby</span></p>
+                                <p><b class="nuberings">&nbsp;9 </b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="orangecode">with my favourite language</p>
+                                <p><b class="nuberings">10 </b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</span><span class="pinkcode">{<span class="bluecode">fav_lang</span>}</span><span class="orangecode">"</span><span class="yellowcode">)</span></p>
+                                <p><b class="nuberings">11 </b></p>
+                                <p><b class="currnum">12 </b><b id="blinkcur">|</b></p>
+                            </span>
+                        </div>
+                    </div>
 
                 <!-- services -->
                 <section class="mil-dark-bg">
@@ -512,6 +529,8 @@
                     </div>
                 </section>
                 <!-- services end -->
+
+                
 
                 <!-- reviews -->
                 <section class="mil-soft-bg">
@@ -686,21 +705,22 @@
                             <div class="container mil-p-120-60">
                                 <div class="row justify-content-between">
                                     <div class="col-md-4 col-lg-4 mil-mb-60">
-    
+
                                         <div class="mil-muted mil-logo mil-up mil-mb-30">Ashley.</div>
-    
+
                                         <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
-    
+
                                         <form class="mil-subscribe-form mil-up">
                                             <input type="text" placeholder="Enter our email">
-                                            <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                            <button type="submit"
+                                                class="mil-button mil-icon-button-sm mil-arrow-place"></button>
                                         </form>
-    
+
                                     </div>
                                     <div class="col-md-7 col-lg-6">
                                         <div class="row justify-content-end">
                                             <div class="col-md-6 col-lg-7">
-    
+
                                                 <nav class="mil-footer-menu mil-mb-60">
                                                     <ul>
                                                         <li class="mil-up mil-active">
@@ -720,58 +740,66 @@
                                                         </li>
                                                     </ul>
                                                 </nav>
-    
+
                                             </div>
                                             <div class="col-md-6 col-lg-5">
-    
+
                                                 <ul class="mil-menu-list mil-up mil-mb-60">
                                                     <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
-                                                    <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
+                                                    <li><a href="#." class="mil-light-soft">Terms and conditions</a>
+                                                    </li>
                                                     <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
                                                     <li><a href="#." class="mil-light-soft">Careers</a></li>
                                                 </ul>
-    
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="row justify-content-between flex-sm-row-reverse">
                                     <div class="col-md-7 col-lg-6">
-    
+
                                         <div class="row justify-content-between">
-    
+
                                             <div class="col-md-6 col-lg-5 mil-mb-60">
-    
+
                                                 <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
-    
-                                                <p class="mil-light-soft mil-up">71 South Los Carneros Road, California <span class="mil-no-wrap">+51 174 705 812</span></p>
-    
+
+                                                <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
+                                                    <span class="mil-no-wrap">+51 174 705 812</span></p>
+
                                             </div>
                                             <div class="col-md-6 col-lg-5 mil-mb-60">
-    
+
                                                 <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
-    
-                                                <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier, Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
-    
+
+                                                <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier,
+                                                    Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
+
                                             </div>
                                         </div>
-    
+
                                     </div>
                                     <div class="col-md-4 col-lg-6 mil-mb-60">
-    
+
                                         <div class="mil-vert-between">
                                             <div class="mil-mb-30">
                                                 <ul class="mil-social-icons mil-up">
-                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i
+                                                                class="far fa-circle"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i
+                                                                class="far fa-circle"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i
+                                                                class="far fa-circle"></i></a></li>
+                                                    <li><a href="#." target="_blank" class="social-icon"> <i
+                                                                class="far fa-circle"></i></a></li>
                                                 </ul>
                                             </div>
-                                            <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights Reserved.</p>
+                                            <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights
+                                                Reserved.</p>
                                         </div>
-    
+
                                     </div>
                                 </div>
                             </div>
@@ -908,9 +936,7 @@
             </div>
         </div>
         <!-- content -->
-        <div class='cursor' id="cursor"></div>
-        <div class='cursor2' id="cursor2"></div>
-        <div class='cursor3' id="cursor3"></div>
+       
     </div>
     <!-- wrapper end -->
 
@@ -937,3 +963,4 @@
 <script src="js/revolution.extension.parallax.min.js"></script>
 <script src="js/revolution.extension.slideanims.min.js"></script>
 <script type="module" src="js/bubble_cursor_follow.js"></script>
+<script src="js/float_element.js"></script>
