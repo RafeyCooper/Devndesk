@@ -115,11 +115,91 @@
 }
 
 
+.codesmooth .glsqu {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    animation: glanim 10s linear infinite;
+    animation-delay: calc(-1s * var(--gl));
+}
+
+@keyframes glanim {
+    0%, 100% {
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(40px);
+    }
+    
+}
+
+.codesmooth .glsqu:nth-child(1) {
+    top: 10%;
+    right: 20%;
+}
+
+.codesmooth .glsqu:nth-child(2) {
+    top: 30%;
+    left: 61%;
+    z-index: 2;
+}
+
+.codesmooth .glsqu:nth-child(3) {
+    bottom: 12%;
+    right: 20%;
+}
+
+.codesmooth .glsqu:nth-child(4) {
+    bottom: 40%;
+    right: 6%;
+}
+
+.codesmooth .glsqu:nth-child(5) {
+    top: 40%;
+    left: 3%;
+}
+
+.codesmooth .glsqu:nth-child(6) {
+    top: 7%;
+    right: 79%;
+}
+
+.codesmooth .glsqu:nth-child(7) {
+    top: 49%;
+    left: 20%;
+    z-index: 2;
+}
+
+.codesmooth .glsqu:nth-child(8) {
+    bottom: 17%;
+    right: 66%;
+}
+
+.codesmooth .glsqu:nth-child(9) {
+    bottom: 11%;
+    right: 42%;
+}
+
+.codesmooth .glsqu:nth-child(10) {
+    bottom: 6%;
+    right: 6%;
+}
+
+
 /*About code*/
 
 .codesmooth {
     position: relative;
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,6 +274,11 @@
     margin-left: .6rem;
     text-align: justify;
     transition: all 50ms ease-in-out; 
+}
+
+#python p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
 }
 
 #python .nuberings {
@@ -676,66 +761,7 @@
     transition: all 250ms ease-in-out; 
 }
 
-.glbox .glsqu {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-    animation: glanim 10s linear infinite;
-    animation-delay: calc(-1s * var(--gl));
-}
-
-@keyframes glanim {
-    0%, 100% {
-        transform: translateY(-40px);
-    }
-    50% {
-        transform: translateY(40px);
-    }
-    
-}
-
-.glbox .glsqu:nth-child(1) {
-    top: -50px;
-    right: -60px;
-    width: 100px;
-    height: 100px;
-}
-
-.glbox .glsqu:nth-child(2) {
-    top: 150px;
-    left: -100px;
-    width: 120px;
-    height: 120px;
-    z-index: 2;
-}
-
-.glbox .glsqu:nth-child(3) {
-    bottom: 50px;
-    right: -60px;
-    width: 80px;
-    height: 80px;
-    z-index: 2;
-}
-
-.glbox .glsqu:nth-child(4) {
-    bottom: -80px;
-    right: 100px;
-    width: 50px;
-    height: 50px;
-}
-
-.glbox .glsqu:nth-child(5) {
-    top: -80px;
-    left: 140px;
-    width: 60px;
-    height: 60px;
-}
 
 
 /*Projects*/
