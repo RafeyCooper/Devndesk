@@ -56,7 +56,7 @@ tpj(document).ready(function () {
                     }
                 }
             },
-            responsiveLevels: [1240, 1240, 1240, 480],
+            responsiveLevels: [1240, 1240, 768, 480],
             visibilityLevels: [1240, 1240, 1240, 480],
             gridwidth: [1200, 1200, 1200, 480],
             gridheight: [800, 800, 800, 700],
