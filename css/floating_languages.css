@@ -108,8 +108,9 @@
     color: #fff;
     font-size: 30px;
     padding: 0 10px;
-    font-weight: 600; 
-    transition: all 250ms ease-in-out; 
+    text-align: center;
+    font-weight: 600;
+    transition: all 250ms ease-in-out;
 }
 
 .subHeading {
@@ -117,12 +118,12 @@
     font-size: 27px;
     padding: 0 10px;
     margin-top: 20px;
-    font-weight: 400; 
+    font-weight: 400;
     text-align: center;
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
-#names span{
+#names span {
     position: relative;
     color: rgba(255, 255, 255, 0.1);
     animation: displaytext 9s infinite;
@@ -133,7 +134,9 @@
     0% {
         display: inline-block;
     }
-    33.33%, 100% {
+
+    33.33%,
+    100% {
         display: none;
     }
 }
@@ -153,13 +156,18 @@
 }
 
 @keyframes indicator {
-    0%, 10%, 100% {
+
+    0%,
+    10%,
+    100% {
         width: 0;
     }
-    70%, 90% {
+
+    70%,
+    90% {
         width: 100%;
     }
-    
+
 }
 
 
@@ -446,6 +454,377 @@
 
 #blinkcur {
     animation: blinking .8s infinite;
+}
+.react-native-text {
+    font-size: 13px;
+}
+
+
+@media only screen and (max-width : 1500px) {
+    .codesmooth .glsqu {
+        border-radius: 10px;
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
+
+    .codesmooth .glsqu img {
+        width: 30px;
+    }
+
+    .codesmooth .glsqu:nth-child(2) {
+        top: 30%;
+        left: 72%;
+        z-index: 2;
+    }
+
+    .codesmooth .glsqu:nth-child(16) {
+        top: 29%;
+        left: 23%;
+    }
+}
+
+
+@media only screen and (max-width : 1200px) {
+    .codesmooth .glsqu {
+        border-radius: 10px;
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
+
+    .codesmooth .glsqu img {
+        width: 30px;
+    }
+
+    #names {
+        font-size: 19px;
+    }
+
+    .subHeading {
+        font-size: 19px;
+    }
+
+    .codesmooth {
+        height: 150vh;
+    }
+
+    .codesmooth .glsqu:nth-child(1) {
+        top: 24%;
+        right: 47%;
+    }
+
+    .codesmooth .glsqu:nth-child(19) {
+        top: 17%;
+        left: 8%;
+    }
+
+    .codesmooth .glsqu:nth-child(7) {
+        top: 51%;
+        left: 2%;
+        z-index: 2;
+    }
+
+    .codesmooth .glsqu:nth-child(11) {
+        bottom: 25%;
+        right: 14%;
+    }
+
+    .codesmooth .glsqu:nth-child(4) {
+        bottom: 40%;
+        right: 4%;
+    }
+
+    .codesmooth .glsqu:nth-child(13) {
+        bottom: 54%;
+        right: 3%;
+    }
+
+    .codesmooth .glsqu:nth-child(9) {
+        bottom: 21%;
+        right: 42%;
+    }
+
+    .codesmooth .glsqu:nth-child(3) {
+        bottom: 15%;
+        right: 20%;
+    }
+
+    .codesmooth .glsqu:nth-child(2) {
+        top: 21%;
+        left: 61%;
+        z-index: 2;
+    }
+
+
+}
+
+
+@media only screen and (max-width : 768px) {
+    .codesmooth .glsqu {
+        position: absolute;
+    }
+
+    #mytext {
+        position: absolute;
+        top: 3%;
+        font-size: 22px;
+    }
+
+    .codesmooth {
+        height: 1500px;
+    }
+
+    .codesmooth .glsqu:nth-child(1) {
+        top: 14%;
+        right: 14%;
+    }
+
+    .codesmooth .glsqu:nth-child(2) {
+        top: 17%;
+        left: 41%;
+        z-index: 2;
+    }
+
+    .codesmooth .glsqu:nth-child(3) {
+        bottom: 18%;
+        right: 20%;
+    }
+
+    .codesmooth .glsqu:nth-child(4) {
+        bottom: 65%;
+        right: 6%;
+    }
+
+    .codesmooth .glsqu:nth-child(5) {
+        top: 23%;
+        left: 22%;
+    }
+
+    .codesmooth .glsqu:nth-child(6) {
+        top: 28%;
+        right: 79%;
+    }
+
+    .codesmooth .glsqu:nth-child(7) {
+        top: 74%;
+        left: 2%;
+        z-index: 2;
+    }
+
+    .codesmooth .glsqu:nth-child(8) {
+        bottom: 17%;
+        right: 60%;
+    }
+
+    .codesmooth .glsqu:nth-child(9) {
+        bottom: 11%;
+        right: 42%;
+    }
+
+    .codesmooth .glsqu:nth-child(10) {
+        bottom: 28%;
+        right: 4%;
+    }
+
+    .codesmooth .glsqu:nth-child(11) {
+        bottom: 29%;
+        right: 26%;
+    }
+
+    .codesmooth .glsqu:nth-child(12) {
+        bottom: 4%;
+        right: 29%;
+    }
+
+    .codesmooth .glsqu:nth-child(13) {
+        bottom: 68%;
+        right: 25%;
+    }
+
+    .codesmooth .glsqu:nth-child(14) {
+        bottom: 9%;
+        left: 2%;
+    }
+
+    .codesmooth .glsqu:nth-child(15) {
+        bottom: 29%;
+        left: 12%;
+    }
+
+    .codesmooth .glsqu:nth-child(16) {
+        top: 29%;
+        left: 35%;
+    }
+
+    .codesmooth .glsqu:nth-child(17) {
+        bottom: 3%;
+        left: 20%;
+    }
+
+    .codesmooth .glsqu:nth-child(18) {
+        bottom: 26%;
+        left: 40%;
+    }
+
+    .codesmooth .glsqu:nth-child(19) {
+        top: 14%;
+        left: 8%;
+    }
+
+    .codesmooth .glsqu:nth-child(20) {
+        bottom: 6%;
+        right: 6%;
+    }
+}
+
+
+@media only screen and (max-width : 500px) {
+    .codesmooth .glsqu {
+        position: absolute;
+    }
+
+    .codename {
+        width: 325px;
+    }
+
+    .react-native-text {
+        font-size: 8px !important;
+    }
+
+    .codesmooth .glsqu {
+        border-radius: 10px;
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+        gap: 0;
+    }
+
+    .codesmooth .glsqu p {
+        color: white;
+        font-size: 10px;
+    }
+
+    .codesmooth .glsqu img {
+        width: 20px;
+    }
+
+    #python p {
+        font-size: 13px !important;
+        line-height: 1.77 !important;
+    }
+
+    #mytext {
+        position: absolute;
+        top: 3%;
+        font-size: 22px;
+    }
+
+    .codesmooth {
+        height: 1500px;
+    }
+
+    .codesmooth .glsqu:nth-child(1) {
+        top: 14%;
+        right: 14%;
+    }
+
+    .codesmooth .glsqu:nth-child(2) {
+        top: 17%;
+        left: 41%;
+        z-index: 2;
+    }
+
+    .codesmooth .glsqu:nth-child(3) {
+        bottom: 18%;
+        right: 20%;
+    }
+
+    .codesmooth .glsqu:nth-child(4) {
+        bottom: 65%;
+        right: 6%;
+    }
+
+    .codesmooth .glsqu:nth-child(5) {
+        top: 23%;
+        left: 22%;
+    }
+
+    .codesmooth .glsqu:nth-child(6) {
+        top: 28%;
+        right: 79%;
+    }
+
+    .codesmooth .glsqu:nth-child(7) {
+        top: 74%;
+        left: 2%;
+        z-index: 2;
+    }
+
+    .codesmooth .glsqu:nth-child(8) {
+        bottom: 17%;
+        right: 60%;
+    }
+
+    .codesmooth .glsqu:nth-child(9) {
+        bottom: 11%;
+        right: 42%;
+    }
+
+    .codesmooth .glsqu:nth-child(10) {
+        bottom: 28%;
+        right: 4%;
+    }
+
+    .codesmooth .glsqu:nth-child(11) {
+        bottom: 29%;
+        right: 26%;
+    }
+
+    .codesmooth .glsqu:nth-child(12) {
+        bottom: 4%;
+        right: 29%;
+    }
+
+    .codesmooth .glsqu:nth-child(13) {
+        bottom: 68%;
+        right: 25%;
+    }
+
+    .codesmooth .glsqu:nth-child(14) {
+        bottom: 9%;
+        left: 2%;
+    }
+
+    .codesmooth .glsqu:nth-child(15) {
+        bottom: 29%;
+        left: 12%;
+    }
+
+    .codesmooth .glsqu:nth-child(16) {
+        top: 29%;
+        left: 35%;
+    }
+
+    .codesmooth .glsqu:nth-child(17) {
+        bottom: 3%;
+        left: 20%;
+    }
+
+    .codesmooth .glsqu:nth-child(18) {
+        bottom: 26%;
+        left: 40%;
+    }
+
+    .codesmooth .glsqu:nth-child(19) {
+        top: 14%;
+        left: 8%;
+    }
+
+    .codesmooth .glsqu:nth-child(20) {
+        bottom: 6%;
+        right: 6%;
+    }
 }
 
 /*About paragraph*/
