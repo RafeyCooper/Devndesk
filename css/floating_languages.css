@@ -468,6 +468,10 @@
         padding: 10px;
     }
 
+    .react-native-text {
+        font-size: 10px !important;
+    }
+
     .codesmooth .glsqu img {
         width: 30px;
     }
