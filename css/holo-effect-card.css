@@ -286,7 +286,7 @@
 
 #app-pokemon-cards {
   position: relative;
-  height: 600px;
+  height: 100%;
 }
 
 .demo,
@@ -353,4 +353,16 @@
   to {
     transform: scale3d(1, 1, 1);
   }
-}/*# sourceMappingURL=holo-effect-card.css.map */
+}
+
+.pokemon-card-box {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width : 599px) {
+  .pokemon-card-box {
+    align-items: center;
+    flex-direction: column;
+  }  
+}
