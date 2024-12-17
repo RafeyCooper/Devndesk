@@ -220,11 +220,10 @@
 }
 
 .codesmooth .glsqu:nth-child(2) {
-    top: 30%;
-    left: 61%;
+    top: 27%;
+    left: 67%;
     z-index: 2;
 }
-
 .codesmooth .glsqu:nth-child(3) {
     bottom: 12%;
     right: 20%;
@@ -293,7 +292,7 @@
 
 .codesmooth .glsqu:nth-child(16) {
     top: 29%;
-    left: 29%;
+    left: 26%;
 }
 
 .codesmooth .glsqu:nth-child(17) {
