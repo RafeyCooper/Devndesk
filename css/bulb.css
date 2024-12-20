@@ -4,6 +4,7 @@
 @layer normalize, base, demo, transition;
 
 @layer transition {
+
   [data-theme='dark']::view-transition-new(root),
   [data-theme='dark']::view-transition-old(root) {
     animation-duration: 0s;
@@ -17,16 +18,15 @@
 
 
 :root {
-    accent-color: red;
-    --cord: color-mix(in lch, canvas, canvasText 75%);
-    --stroke: color-mix(in lch, canvas, canvasText 75%);
-    --shine: hsl(210 20% 80% / 0.75);
-    --cap: color-mix(in lch, canvas, canvasText);
-    --filament: light-dark(orange, color-mix(in lch, canvas, canvasText 25%));
-    --bulb: transparent;
-    --width: 48px;
-    --flicker: linear(
-      0 0%,
+  accent-color: red;
+  --cord: color-mix(in lch, canvas, canvasText 75%);
+  --stroke: color-mix(in lch, canvas, canvasText 75%);
+  --shine: hsl(210 20% 80% / 0.75);
+  --cap: color-mix(in lch, canvas, canvasText);
+  --filament: light-dark(orange, color-mix(in lch, canvas, canvasText 25%));
+  --bulb: transparent;
+  --width: 48px;
+  --flicker: linear(0 0%,
       0.1864 6.17%,
       0.0001 14.41%,
       0.5244 20.97%,
@@ -37,141 +37,189 @@
       0.5032 70.42%,
       0.9077 96.96%,
       0.6736 98.74%,
-      1 100%
-    );
-  }
-  
+      1 100%);
+}
 
-  .bulb-form {
-    position: fixed;
-    width: var(--width);
-    aspect-ratio: 1;
-    top: 1rem;
-    right: 7rem;
-    border: 1px solid rgb(255, 255, 255);
-    pointer-events: all;
+
+.bulb-form {
+  position: fixed;
+  width: var(--width);
+  aspect-ratio: 1;
+  top: 1rem;
+  right: 7rem;
+  pointer-events: all;
+}
+
+.bulb-form button {
+  width: 100%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer !important;
+}
+
+.grab-handle {
+  width: 48px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: calc((48px * (0.35 / 2)) + ((48px * 0.65) * (125 / 48)));
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 9;
+}
+
+:root:has(#handle:checked) .grab-handle {
+  outline: 4px dashed canvasText;
+  background: hsl(10 100% 50% / 0.2);
+}
+
+.arrow {
+  width: 150%;
+  position: absolute;
+  right: 150%;
+  top: 250%;
+}
+
+.arrow label {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  right: 110%;
+}
+
+.arrow svg {
+  width: 100%;
+}
+
+.toggle-scene {
+  overflow: visible !important;
+  position: absolute;
+  width: 65%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.toggle-scene__cord {
+  stroke: var(--cord);
+  stroke-width: 10;
+  cursor: move;
+}
+
+.toggle-scene__cord:nth-of-type(1) {
+  display: none;
+}
+
+.toggle-scene__cord:nth-of-type(2),
+.toggle-scene__cord:nth-of-type(3),
+.toggle-scene__cord:nth-of-type(4),
+.toggle-scene__cord:nth-of-type(5) {
+  display: none;
+}
+
+.toggle-scene__cord-end {
+  stroke: var(--cord);
+  fill: var(--cord);
+}
+
+.toggle-scene__dummy-cord {
+  stroke-width: 10;
+  stroke: var(--cord);
+}
+
+.bulb__filament {
+  stroke: var(--filament);
+  stroke-width: 8;
+}
+
+[data-theme='light'] .bulb__filament {
+  stroke-width: 12;
+}
+
+.bulb__shine {
+  stroke: var(--shine);
+}
+
+.bulb__bulb {
+  stroke: var(--stroke);
+  fill: var(--bulb);
+  stroke-width: 10;
+}
+
+.bulb__cap {
+  fill: var(--cap);
+}
+
+.bulb__cap-shine {
+  fill: var(--shine);
+}
+
+.bulb__cap-outline {
+  stroke-width: 10;
+  stroke: var(--stroke);
+}
+
+.center {
+  position: relative;
+}
+
+.controls {
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+  right: 0;
+  top: 100%;
+}
+
+
+
+
+
+@layer base {
+
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
   }
 
-  .bulb-form button {
-    width: 100%;
-    aspect-ratio: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    background: red;
-    border: 0;
-    padding: 0;
-    display: grid;
-    place-items: center;
-    cursor: pointer !important;
-    pointer-events: all;
+  :root {
+    --font-size-min: 16;
+    --font-size-max: 20;
+    --font-ratio-min: 1.2;
+    --font-ratio-max: 1.33;
+    --font-width-min: 375;
+    --font-width-max: 1500;
   }
 
-  .grab-handle {
-    width: 48px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    position: absolute;
-    top: calc((48px * (0.35 / 2)) + ((48px * 0.65) * (125 / 48)));
-    left: 50%;
-    translate: -50% -50%;
-    z-index: 999999;
-    pointer-events: all;
+  :where(.fluid) {
+    --fluid-min: calc(var(--font-size-min) * pow(var(--font-ratio-min), var(--font-level, 0)));
+    --fluid-max: calc(var(--font-size-max) * pow(var(--font-ratio-max), var(--font-level, 0)));
+    --fluid-preferred: calc((var(--fluid-max) - var(--fluid-min)) / (var(--font-width-max) - var(--font-width-min)));
+    --fluid-type: clamp((var(--fluid-min) / 16) * 1rem,
+        ((var(--fluid-min) / 16) * 1rem) - (((var(--fluid-preferred) * var(--font-width-min)) / 16) * 1rem) + (var(--fluid-preferred) * var(--variable-unit, 100vi)),
+        (var(--fluid-max) / 16) * 1rem);
+    font-size: var(--fluid-type);
   }
 
-  :root:has(#handle:checked) .grab-handle {
-    outline: 4px dashed canvasText;
-    background: hsl(10 100% 50% / 0.2);
+  html {
+    color-scheme: dark only;
   }
 
-  .arrow {
-    width: 150%;
-    position: absolute;
-    right: 150%;
-    top: 250%;
-    pointer-events: all;
+  [data-theme='dark'] {
+    color-scheme: dark only;
   }
 
-  .arrow label {
-    white-space: nowrap;
-    position: absolute;
-    top: 50%;
-    right: 110%;
+  [data-theme='light'] {
+    color-scheme: light only;
   }
-
-  .arrow svg {
-    width: 100%;
-  }
-
-  .toggle-scene {
-    overflow: visible !important;
-    position: absolute;
-    width: 65%;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-  }
-  
-  .toggle-scene__cord {
-    stroke: var(--cord);
-    stroke-width: 10;
-    cursor: move;
-    pointer-events: all;
-  }
-  .toggle-scene__cord:nth-of-type(1) {
-    display: none;
-  }
-  .toggle-scene__cord:nth-of-type(2),
-  .toggle-scene__cord:nth-of-type(3),
-  .toggle-scene__cord:nth-of-type(4),
-  .toggle-scene__cord:nth-of-type(5) {
-    display: none;
-  }
-  .toggle-scene__cord-end {
-    stroke: var(--cord);
-    fill: var(--cord);
-  }
-  .toggle-scene__dummy-cord {
-    stroke-width: 10;
-    stroke: var(--cord);
-  }
-  .bulb__filament {
-    stroke: var(--filament);
-    stroke-width: 8;
-  }
-  [data-theme='light'] .bulb__filament {
-    stroke-width: 12;
-  }
-  .bulb__shine {
-    stroke: var(--shine);
-  }
-  .bulb__bulb {
-    stroke: var(--stroke);
-    fill: var(--bulb);
-    stroke-width: 10;
-  }
-  .bulb__cap {
-    fill: var(--cap);
-  }
-  .bulb__cap-shine {
-    fill: var(--shine);
-  }
-  .bulb__cap-outline {
-    stroke-width: 10;
-    stroke: var(--stroke);
-  }
-
-  .center {
-    position: relative;
-  }
-
-  .controls {
-    position: absolute;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.5rem 1rem;
-    right: 0;
-    top: 100%;
-    pointer-events: all;
-  }
+}
