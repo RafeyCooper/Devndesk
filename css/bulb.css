@@ -186,12 +186,6 @@
 
 @layer base {
 
-  *,
-  *:after,
-  *:before {
-    box-sizing: border-box;
-  }
-
   :root {
     --font-size-min: 16;
     --font-size-max: 20;
