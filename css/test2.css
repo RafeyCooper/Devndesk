@@ -52,7 +52,7 @@
 }
 
 .card {
-    width: 320px;
+    /* width: 320px; */
     aspect-ratio: var(--ar);
     border-radius: var(--br);
     display: grid;
@@ -178,10 +178,32 @@ body {
 
 #app {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    gap: 40px;
 }
+
+.card {
+    flex: 1 1 calc(100% - 40px); /* Default for small screens (1 card per row) */
+    max-width: 320px;
+}
+
+@media (min-width: 600px) {
+    .card {
+        flex: 1 1 calc(50% - 40px); /* 2 cards per row on medium screens */
+        max-width: 320px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        flex: 1 1 calc(25% - 40px); /* 4 cards per row on large screens */
+        max-width: 320px;
+    }
+}
+
 
 .inside h2 {
     font-size: 32px;
