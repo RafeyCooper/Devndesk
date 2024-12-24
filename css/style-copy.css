@@ -5391,4 +5391,15 @@ html.is-animating .mil-menu-frame {
 	background-color:var(--color-four);
 }
 
+@media only screen and (max-width: 1200px){
+  .toggle-scene {
+    width: 50% !important;
+  }
+
+  .bulb-form {
+    top: 0 !important;
+    right: 5rem !important;
+  }
+}
+
 /*** 
