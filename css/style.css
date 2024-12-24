@@ -1256,8 +1256,18 @@ frame
   font-weight: 600;
   line-height: 100%;
 }
+
+.mil-logo-front {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 100%;
+}
 @media screen and (max-width: 992px) {
   .mil-logo {
+    font-size: 30px;
+  }
+
+  .mil-logo-front {
     font-size: 30px;
   }
 }
@@ -1302,6 +1312,9 @@ frame
             backdrop-filter: blur(8px);
   }
   .mil-frame .mil-frame-top .mil-logo {
+    color: rgb(255, 255, 255);
+  }
+  .mil-frame .mil-frame-top .mil-logo-front {
     color: rgb(255, 255, 255);
   }
   .mil-frame .mil-frame-top .mil-menu-btn span, .mil-frame .mil-frame-top .mil-menu-btn span:after, .mil-frame .mil-frame-top .mil-menu-btn span:before {
@@ -1359,6 +1372,10 @@ frame
   color: rgb(0, 0, 0);
 }
 
+.mil-frame-top .mil-logo-front {
+  pointer-events: all;
+  color: rgb(0, 0, 0);
+}
 /* -------------------------------------------
 
 menu button
@@ -1457,6 +1474,9 @@ menu
   }
 }
 .mil-menu-frame .mil-frame-top .mil-logo {
+  color: rgb(255, 255, 255);
+}
+.mil-menu-frame .mil-frame-top .mil-logo-front {
   color: rgb(255, 255, 255);
 }
 .mil-menu-frame .mil-frame-top .mil-menu-btn span, .mil-menu-frame .mil-frame-top .mil-menu-btn span:after, .mil-menu-frame .mil-frame-top .mil-menu-btn span:before {

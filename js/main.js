@@ -1081,19 +1081,35 @@ $(function () {
 
     });
 
-    function grax_tm_wavefy(){
+    function grax_tm_wavefy(color) {
         "use strict";
-            
+        
         jQuery('#wave_img').wavify({
             height: 17,
             bones: 3,
-            amplitude: 45,
-            color: $('#wave_img').data('color'),
+            amplitude: 30,
+            color: color,
             speed: 0.25
         });
     }
+    
+    function updateWaveFill() {
+        const theme = document.documentElement.getAttribute('data-theme');
+    
+        if (theme === 'dark') {
+            grax_tm_wavefy('#fff');
+        } else {
+            grax_tm_wavefy('#000');
+        }
+    }
+    
+    // Use 'load' event to ensure everything, including images, is fully loaded
+    window.addEventListener('load', updateWaveFill);
+    
+    const observer = new MutationObserver(updateWaveFill);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    
 
-    grax_tm_wavefy();
 });
 
 
