@@ -1,3 +1,47 @@
+[data-theme='dark']:root {
+    --hue: 53;
+    --bg: #e8e3e3;
+    --fg: #1c1717;
+    --primary: #f20d0d;
+    --trans-dur: 0.3s;
+    --trans-timing1: cubic-bezier(0.65, 0, 0.35, 1);
+    --trans-timing2: cubic-bezier(0.65, 0, 0.35, 1.35);
+    --logo-color: white;
+    --logo-mobile-color: rgb(0, 0, 0);
+    --nav-bg-color: rgba(255, 255, 255, 0.95);
+    --text-color: rgb(255, 255, 255);
+    --breadcrumbs-line: rgba(255, 255, 255, 0.1);
+    --mil-muted: rgba(0, 0, 0, 0.9);
+    --mil-soft: rgba(0, 0, 0, 0.4);
+    --footer-bg: rgb(255, 255, 255);
+    --footer-link-color: rgba(0, 0, 0, 0.9);
+    --subscribe-input-bg-color: rgba(0, 0, 0, 0.1);
+    --social-icon-color: rgb(0, 0, 0);
+    --footer-wave: rgb(0, 0, 0);
+}
+
+[data-theme='light']:root {
+    --hue: 53;
+    --bg: #e8e3e3;
+    --fg: #1c1717;
+    --primary: #f20d0d;
+    --trans-dur: 0.3s;
+    --trans-timing1: cubic-bezier(0.65, 0, 0.35, 1);
+    --trans-timing2: cubic-bezier(0.65, 0, 0.35, 1.35);
+    --logo-color: rgb(0, 0, 0);
+    --logo-mobile-color: white;
+    --nav-bg-color: rgba(0, 0, 0, 0.95);
+    --text-color: rgb(0, 0, 0);
+    --breadcrumbs-line: rgba(0, 0, 0, 0.1);
+    --mil-muted: rgb(255 255 255 / 90%);
+    --mil-soft: rgba(255, 255, 255, 0.4);
+    --footer-bg: rgb(0, 0, 0);
+    --footer-link-color: rgba(255, 255, 255, 0.9);
+    --subscribe-input-bg-color: rgba(255, 255, 255, 0.1);
+    --social-icon-color: rgb(255, 255, 255);
+    --footer-wave: white;
+}
+
 #webgl-canvas {
     position: relative;
     top: 0;
@@ -20,3 +64,43 @@
     height: 100%;
     font-family: "Montserrat", serif;
 }
+
+.mil-breadcrumbs li:after {
+    color: var(--text-color) !important;
+}
+
+.mil-breadcrumbs li a {
+    color: var(--text-color) !important;
+}
+
+.mil-breadcrumbs:before {
+    background-color: var(--breadcrumbs-line) !important;
+}
+
+.mil-muted {
+    color: var(--mil-muted) !important;
+}
+
+.mil-light-soft {
+    color: var(--mil-soft) !important;
+}
+
+.grax_tm_copyright {
+    background-color: var(--footer-bg) !important;
+}
+
+.mil-footer-menu ul li a {
+    color: var(--footer-link-color) !important;
+}
+
+.mil-subscribe-form input {
+    background-color: var(--subscribe-input-bg-color) !important;
+}
+
+.mil-social-icons li a {
+    color: var(--social-icon-color);
+}
+
+.my_wave {
+    background-color: var(--footer-wave);
+  }

@@ -205,13 +205,13 @@
     font-size: var(--fluid-type);
   }
 
-  html {
+  /* html {
     color-scheme: dark only;
-  }
+  } */
 
-  [data-theme='dark'] {
+  /* [data-theme='dark'] {
     color-scheme: dark only;
-  }
+  } */
 
   [data-theme='light'] {
     color-scheme: light only;
