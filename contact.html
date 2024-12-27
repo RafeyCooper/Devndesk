@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/bulb.css">
+    <link rel="stylesheet" href="css/man_moving.css">
     <title>Ashley</title>
 
 </head>
@@ -271,6 +272,9 @@
                             <div class="code-container">
                                 <h1 class="mil-mb-60 ">Get in touch!</h1>
                             </div>
+                            <div id="man_moving_box">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -491,7 +495,14 @@
     <!-- content -->
     </div>
 
-
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+          }
+        }
+      </script>
     <script src="js/plugins/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="js/plugins/swup.min.js"></script>
@@ -506,10 +517,12 @@
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
     <script type="module" src="./js/bulb.js"></script>
+    <script type="module" src="js/man_moving.js"></script>
+
 </body>
 
 </html>
-<script>
+<!-- <script>
 
     function generateStar(container) {
         const star = document.createElement('div');
@@ -773,4 +786,4 @@
             SubmitState[(SubmitState["Done"] = 2)] = "Done"
         })(SubmitState || (SubmitState = {}))
 
-</script>
+</script> -->
