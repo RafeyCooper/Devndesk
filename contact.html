@@ -16,11 +16,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/bulb.css">
-    <link rel="stylesheet" href="css/man_moving.css">
     <title>Ashley</title>
 
 </head>
 
+<style>
+    #hexagonal_app {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        font-family: "Montserrat", serif;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .hexagonal_app_inside {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    #webgl-canvas {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+    }
+</style>
 
 <body>
 
@@ -257,6 +282,23 @@
         </div>
         <!-- frame end -->
 
+
+        <div id="hexagonal_app">
+            <div class="hexagonal_app_inside">
+                <canvas id="webgl-canvas"></canvas>
+                <div class="hero">
+                    <h1>Hexagonal</h1>
+                    <h2>Grid</h2>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="colors-btn">
+                        Random colors
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
         <!-- content -->
         <div class="mil-content">
             <div id="swupMain" class="mil-main-transition">
@@ -272,9 +314,10 @@
                             <div class="code-container">
                                 <h1 class="mil-mb-60 ">Get in touch!</h1>
                             </div>
-                            <div id="man_moving_box">
 
-                            </div>
+                            
+
+
                         </div>
                     </div>
                 </div>
@@ -495,14 +538,6 @@
     <!-- content -->
     </div>
 
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
-            "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
-          }
-        }
-      </script>
     <script src="js/plugins/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="js/plugins/swup.min.js"></script>
@@ -517,89 +552,88 @@
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
     <script type="module" src="./js/bulb.js"></script>
-    <script type="module" src="js/man_moving.js"></script>
-
+    <script type="module" src="js/hexagonal_grid.js"></script>
 </body>
 
 </html>
-<!-- <script>
+<script>
 
-    function generateStar(container) {
-        const star = document.createElement('div');
-        const size = Math.random() * 3 + 1; // Random size for stars (1px to 4px)
-        star.classList.add('star');
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
+    // function generateStar(container) {
+    //     const star = document.createElement('div');
+    //     const size = Math.random() * 3 + 1; // Random size for stars (1px to 4px)
+    //     star.classList.add('star');
+    //     star.style.width = `${size}px`;
+    //     star.style.height = `${size}px`;
 
-        const x = Math.random() * window.innerWidth;  // Random X position
-        const startY = window.innerHeight;            // Start at bottom
-        const endY = -size;                           // End at top
+    //     const x = Math.random() * window.innerWidth;  // Random X position
+    //     const startY = window.innerHeight;            // Start at bottom
+    //     const endY = -size;                           // End at top
 
-        star.style.left = `${x}px`;
-        star.style.top = `${startY}px`;
+    //     star.style.left = `${x}px`;
+    //     star.style.top = `${startY}px`;
 
-        container.appendChild(star);
+    //     container.appendChild(star);
 
-        // Animate the star
-        const duration = Math.random() * 5 + 9; // Random speed (3s to 8s)
-        star.style.transition = `top ${duration}s linear`;
+    //     // Animate the star
+    //     const duration = Math.random() * 5 + 9; // Random speed (3s to 8s)
+    //     star.style.transition = `top ${duration}s linear`;
 
-        // Move the star upwards
-        setTimeout(() => {
-            star.style.top = `${endY}px`;
-        }, 10); // Small delay to ensure transition is applied
+    //     // Move the star upwards
+    //     setTimeout(() => {
+    //         star.style.top = `${endY}px`;
+    //     }, 10); // Small delay to ensure transition is applied
 
-        // Remove the star once it reaches the top
-        setTimeout(() => {
-            container.removeChild(star);
-        }, duration * 1000);
-    }
-
-    function generateStars(container, starCount) {
-        for (let i = 0; i < starCount; i++) {
-            generateStar(container);
-        }
-    }
-
-    // Continuously generate stars
-    function startStarGeneration() {
-        const container = document.getElementById('stars-container');
-        setInterval(() => {
-            generateStars(container, 10);  // Generate 10 new stars every 200ms
-        }, 200);
-    }
-
-    startStarGeneration();  // Start generating stars when page loads
-
-    // function generateStars(container, starCount, maxWidth, maxHeight) {
-    //     let stars = '';
-    //     for (let i = 0; i < starCount; i++) {
-    //         const x = Math.random() * maxWidth;
-    //         const y = Math.random() * maxHeight;
-    //         stars += `${x}px ${y}px #FFF, `;
-    //     }
-    //     // Apply box-shadow with smooth fade effect
-    //     console.log(stars)
-    //     container.style.boxShadow = stars.slice(0, -2);
+    //     // Remove the star once it reaches the top
+    //     setTimeout(() => {
+    //         container.removeChild(star);
+    //     }, duration * 1000);
     // }
 
-    // const maxWidth = window.innerWidth * 2;  // Ensure stars cover a large area
-    // const maxHeight = window.innerHeight * 2;
+    // function generateStars(container, starCount) {
+    //     for (let i = 0; i < starCount; i++) {
+    //         generateStar(container);
+    //     }
+    // }
 
-    // // Generate stars for each layer
-    // generateStars(document.getElementById('stars'), 1000, maxWidth, maxHeight);  // Small stars
-    // generateStars(document.getElementById('stars2'), 500, maxWidth, maxHeight);  // Medium stars
-    // generateStars(document.getElementById('stars3'), 250, maxWidth, maxHeight);  // Large stars
+    // // Continuously generate stars
+    // function startStarGeneration() {
+    //     const container = document.getElementById('stars-container');
+    //     setInterval(() => {
+    //         generateStars(container, 10);  // Generate 10 new stars every 200ms
+    //     }, 200);
+    // }
 
-    // // Optional: Add an event listener to regenerate stars smoothly during resizing
-    // window.addEventListener('resize', function () {
-    //     const maxWidth = window.innerWidth * 2;
-    //     const maxHeight = window.innerHeight * 2;
+    // startStarGeneration();  // Start generating stars when page loads
 
-    //     generateStars(document.getElementById('stars'), 1000, maxWidth, maxHeight);
-    //     generateStars(document.getElementById('stars2'), 500, maxWidth, maxHeight);
-    //     generateStars(document.getElementById('stars3'), 250, maxWidth, maxHeight);
-    // });
+    // // function generateStars(container, starCount, maxWidth, maxHeight) {
+    // //     let stars = '';
+    // //     for (let i = 0; i < starCount; i++) {
+    // //         const x = Math.random() * maxWidth;
+    // //         const y = Math.random() * maxHeight;
+    // //         stars += `${x}px ${y}px #FFF, `;
+    // //     }
+    // //     // Apply box-shadow with smooth fade effect
+    // //     console.log(stars)
+    // //     container.style.boxShadow = stars.slice(0, -2);
+    // // }
+
+    // // const maxWidth = window.innerWidth * 2;  // Ensure stars cover a large area
+    // // const maxHeight = window.innerHeight * 2;
+
+    // // // Generate stars for each layer
+    // // generateStars(document.getElementById('stars'), 1000, maxWidth, maxHeight);  // Small stars
+    // // generateStars(document.getElementById('stars2'), 500, maxWidth, maxHeight);  // Medium stars
+    // // generateStars(document.getElementById('stars3'), 250, maxWidth, maxHeight);  // Large stars
+
+    // // // Optional: Add an event listener to regenerate stars smoothly during resizing
+    // // window.addEventListener('resize', function () {
+    // //     const maxWidth = window.innerWidth * 2;
+    // //     const maxHeight = window.innerHeight * 2;
+
+    // //     generateStars(document.getElementById('stars'), 1000, maxWidth, maxHeight);
+    // //     generateStars(document.getElementById('stars2'), 500, maxWidth, maxHeight);
+    // //     generateStars(document.getElementById('stars3'), 250, maxWidth, maxHeight);
+    // // });
 
 
     $(document).ready(function () {
@@ -786,4 +820,4 @@
             SubmitState[(SubmitState["Done"] = 2)] = "Done"
         })(SubmitState || (SubmitState = {}))
 
-</script> -->
+</script>
