@@ -99,7 +99,7 @@
 }
 
 [data-theme='dark'] .contactSubBody {
-  background-color: #000000;
+  background-color: cadetblue;
 }
 
 [data-theme='light'] .contactSubBody {
@@ -304,7 +304,7 @@
 
 .star {
   position: absolute;
-  background-color: white;
+  background-color: rgb(223,195,37);
   border-radius: 50%;
   opacity: 0.8;
 }
