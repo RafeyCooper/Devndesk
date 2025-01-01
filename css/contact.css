@@ -99,7 +99,7 @@
 }
 
 [data-theme='dark'] .contactSubBody {
-  background-color: cadetblue;
+  background-color: rgb(67, 111, 112);
 }
 
 [data-theme='light'] .contactSubBody {
