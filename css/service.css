@@ -18,6 +18,7 @@
     --subscribe-input-bg-color: rgba(0, 0, 0, 0.1);
     --social-icon-color: rgb(0, 0, 0);
     --footer-wave: rgb(0, 0, 0);
+    --footer-text-soft: rgba(0, 0, 0, 0.4);
 }
 
 [data-theme='light']:root {
@@ -40,6 +41,15 @@
     --subscribe-input-bg-color: rgba(255, 255, 255, 0.1);
     --social-icon-color: rgb(255, 255, 255);
     --footer-wave: white;
+    --footer-text-soft: rgba(255, 255, 255, 0.4);
+}
+
+.footer-text {
+    color: var(--footer-wave) !important;
+}
+
+.footer-text-soft {
+    color: var(--footer-text-soft) !important;
 }
 
 #webgl-canvas {
@@ -65,12 +75,12 @@
     font-family: "Montserrat", serif;
 }
 
-.mil-breadcrumbs li:after {
+/* .mil-breadcrumbs li:after {
     color: var(--text-color) !important;
-}
+} */
 
 .mil-breadcrumbs li a {
-    color: var(--text-color) !important;
+    color: black;
 }
 
 .mil-breadcrumbs:before {
@@ -78,11 +88,11 @@
 }
 
 .mil-muted {
-    color: var(--mil-muted) !important;
+    color: rgb(0, 0, 0);
 }
 
 .mil-light-soft {
-    color: var(--mil-soft) !important;
+    color: black;
 }
 
 .grax_tm_copyright {
@@ -103,4 +113,4 @@
 
 .my_wave {
     background-color: var(--footer-wave);
-  }
+}

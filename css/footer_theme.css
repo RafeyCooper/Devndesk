@@ -1,0 +1,45 @@
+[data-theme='dark']:root {
+    --footer-bg: rgb(255, 255, 255);
+    --footer-link-color: rgba(0, 0, 0, 0.9);
+    --subscribe-input-bg-color: rgba(0, 0, 0, 0.1);
+    --social-icon-color: rgb(0, 0, 0);
+    --footer-wave: rgb(0, 0, 0);
+    --footer-text-soft: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='light']:root {
+    --footer-bg: rgb(0, 0, 0);
+    --footer-link-color: rgba(255, 255, 255, 0.9);
+    --subscribe-input-bg-color: rgba(255, 255, 255, 0.1);
+    --social-icon-color: rgb(255, 255, 255);
+    --footer-wave: white;
+    --footer-text-soft: rgba(255, 255, 255, 0.4);
+}
+
+.footer-text {
+    color: var(--footer-wave) !important;
+}
+
+.footer-text-soft {
+    color: var(--footer-text-soft) !important;
+}
+
+.grax_tm_copyright {
+    background-color: var(--footer-bg) !important;
+}
+
+.mil-footer-menu ul li a {
+    color: var(--footer-link-color) !important;
+}
+
+.mil-subscribe-form input {
+    background-color: var(--subscribe-input-bg-color) !important;
+}
+
+.mil-social-icons li a {
+    color: var(--social-icon-color) !important;
+}
+
+.my_wave {
+    background-color: var(--footer-wave);
+}
