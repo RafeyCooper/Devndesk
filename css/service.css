@@ -17,7 +17,8 @@
     --footer-link-color: rgba(0, 0, 0, 0.9);
     --subscribe-input-bg-color: rgba(0, 0, 0, 0.1);
     --social-icon-color: rgb(0, 0, 0);
-    --footer-wave: rgb(0, 0, 0);
+    --footer-wave: #434343;
+    --text-white: rgb(0, 0, 0);
     --footer-text-soft: rgba(0, 0, 0, 0.4);
 }
 
@@ -40,12 +41,13 @@
     --footer-link-color: rgba(255, 255, 255, 0.9);
     --subscribe-input-bg-color: rgba(255, 255, 255, 0.1);
     --social-icon-color: rgb(255, 255, 255);
-    --footer-wave: white;
+    --footer-wave: #434343;
+    --text-white: white;
     --footer-text-soft: rgba(255, 255, 255, 0.4);
 }
 
 .footer-text {
-    color: var(--footer-wave) !important;
+    color: var(--text-white) !important;
 }
 
 .footer-text-soft {
@@ -113,4 +115,44 @@
 
 .my_wave {
     background-color: var(--footer-wave);
+}
+
+.color-white{
+    color: white !important;
+}
+
+.card-color-white{
+    color: white !important;
+}
+
+.mil-service-list.mil-dark li:first-child {
+    border-top: solid 1px rgba(255, 255, 255, 0.1) !important;
+}
+
+.mil-service-list.mil-dark li {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.mil-service-card-lg.mil-other-card:hover .card-color-white {
+    color: #000000 !important;
+}
+
+.mil-service-card-lg.mil-other-card:hover .mil-service-list.mil-dark li:first-child {
+    border-top: solid 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.mil-service-card-lg.mil-other-card:hover .mil-service-list.mil-dark li {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.mil-breadcrumbs li a {
+    color: #ffffff !important;
+}
+
+.mil-breadcrumbs li:after {
+    color: rgb(255 255 255) !important;
+}
+
+.mil-accordion-group {
+    border-bottom: solid 1px rgb(255 255 255 / 20%) !important;
 }

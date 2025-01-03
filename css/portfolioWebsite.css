@@ -194,3 +194,7 @@ p {
 	background-color:  rgb(211 211 211);
 	outline: inherit;
 }
+
+.mil-logo-front{
+    color: white !important;
+}

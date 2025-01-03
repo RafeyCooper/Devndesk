@@ -100,9 +100,9 @@
                                     <li class="mil-has-children">
                                         <a href="#.">Portfolio</a>
                                         <ul style="list-style: none;">
-                                            <li><a href="portfolio-1.html">Logo</a></li>
-                                            <li><a href="portfolio-website.html">Websites</a></li>
-                                            <li><a href="portfolio-3.html">Banners</a></li>
+                                            <li><a href="portfolio_logo.html">Logo</a></li>
+                                            <li><a href="portfolio_website.html">Websites</a></li>
+                                            <li><a href="portfolio_banner.html">Banners</a></li>
                                         </ul>
                                     </li>
                                     <li class="mil-has-children">
@@ -279,10 +279,6 @@
                             <div class="code-container">
                                 <h1 class="mil-mb-60 ">Get in touch!</h1>
                             </div>
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -476,14 +472,18 @@
                                     <div class="mil-vert-between">
                                         <div class="mil-mb-30">
                                             <ul class="mil-social-icons mil-up">
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon footer-text">
+                                                    <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+                                                </a></li>
+                                                <li><a href="#." target="_blank" class="social-icon footer-text">
+                                                    <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+                                                </a></li>
+                                                <li><a href="#." target="_blank" class="social-icon footer-text">
+                                                    <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                                                </a></li>
+                                                <li><a href="#." target="_blank" class="social-icon footer-text">
+                                                    <i class="fab fa-linkedin-in"></i> <!-- LinkedIn Icon -->
+                                                </a></li>
                                             </ul>
                                         </div>
                                         <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights
@@ -567,37 +567,6 @@
     }
 
     startStarGeneration();  // Start generating stars when page loads
-
-    // function generateStars(container, starCount, maxWidth, maxHeight) {
-    //     let stars = '';
-    //     for (let i = 0; i < starCount; i++) {
-    //         const x = Math.random() * maxWidth;
-    //         const y = Math.random() * maxHeight;
-    //         stars += `${x}px ${y}px #FFF, `;
-    //     }
-    //     // Apply box-shadow with smooth fade effect
-    //     console.log(stars)
-    //     container.style.boxShadow = stars.slice(0, -2);
-    // }
-
-    // const maxWidth = window.innerWidth * 2;  // Ensure stars cover a large area
-    // const maxHeight = window.innerHeight * 2;
-
-    // // Generate stars for each layer
-    // generateStars(document.getElementById('stars'), 1000, maxWidth, maxHeight);  // Small stars
-    // generateStars(document.getElementById('stars2'), 500, maxWidth, maxHeight);  // Medium stars
-    // generateStars(document.getElementById('stars3'), 250, maxWidth, maxHeight);  // Large stars
-
-    // // Optional: Add an event listener to regenerate stars smoothly during resizing
-    // window.addEventListener('resize', function () {
-    //     const maxWidth = window.innerWidth * 2;
-    //     const maxHeight = window.innerHeight * 2;
-
-    //     generateStars(document.getElementById('stars'), 1000, maxWidth, maxHeight);
-    //     generateStars(document.getElementById('stars2'), 500, maxWidth, maxHeight);
-    //     generateStars(document.getElementById('stars3'), 250, maxWidth, maxHeight);
-    // });
-
 
     $(document).ready(function () {
         $(".idea-form__btn").click(function () {

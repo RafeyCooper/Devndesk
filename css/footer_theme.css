@@ -22,6 +22,7 @@
 
 .footer-text-soft {
     color: var(--footer-text-soft) !important;
+    text-shadow: none !important;
 }
 
 .grax_tm_copyright {
