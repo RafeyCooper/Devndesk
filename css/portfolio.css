@@ -1,4 +1,52 @@
 /* ==============================================================================PORTFOLIO PAGE 1 STYLING START==================================================================== */
+
+[data-theme='dark']:root {
+  --body-bg: black;
+  --text-color: white;
+  --light-text-color: rgba(255, 255, 255, 0.5);
+  --breadcrumb-line: rgba(255, 255, 255, 0.1);
+  --pentagon-animation: rgb(255, 255, 255);
+}
+
+[data-theme='light']:root {
+  --body-bg: white;
+  --text-color: black;
+  --light-text-color: rgba(0, 0, 0, 0.5);
+  --breadcrumb-line: rgba(0, 0, 0, 0.1);
+  --pentagon-animation: rgb(0, 0, 0);
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+.mil-logo-front {
+  color: var(--text-color) !important;
+}
+
+.mil-menu-btn span, .mil-menu-btn span:after, .mil-menu-btn span:before {
+  background-color: var(--text-color) !important;
+}
+
+.mil-breadcrumbs li:after {
+  color: var(--text-color) !important;
+}
+
+.mil-breadcrumbs:before {
+  background-color: var(--breadcrumb-line) !important;
+}
+
+.text-color{
+  color: var(--text-color) !important;
+}
+.light-text-color {
+  color: var(--light-text-color);
+}
+
+.mil-position-4.mil-dark .mil-pentagon div {
+  border-top: 0.1px solid var(--pentagon-animation) !important;
+}
+
 .onovo-section-full {
   width: 100%;
   min-height: 100vh;
@@ -111,7 +159,7 @@ h2.onovo-title-2,
 }
 
 .onovo-showcase-item.hover .title a {
-  color: #000;
+  color: var(--text-color);
 }
 
 .onovo-showcase-item .image {

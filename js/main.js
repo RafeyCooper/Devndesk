@@ -35,43 +35,58 @@ $(function () {
     register gsap plugins
 
     ***************************/
-    $("#headerPlaceholder").load("./components/header.html", function () {
-        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-        $('.mil-menu-btn').on("click", function () {
-            console.log("button clicked");
-            $('.mil-menu-btn').toggleClass('mil-active');
-            $('.mil-menu').toggleClass('mil-active');
-            $('.mil-menu-frame').toggleClass('mil-active');
-        });
-
-        $('.mil-has-children a').on('click', function () {
-            $('.mil-has-children ul').removeClass('mil-active');
-            $('.mil-has-children a').removeClass('mil-active');
-            $(this).toggleClass('mil-active');
-            $(this).next().toggleClass('mil-active');
-        });
-
-        const currentPage = window.location.pathname.split("/").pop();
-        const mainMenuItems = document.querySelectorAll(".mil-main-menu > ul > li");
-
-        mainMenuItems.forEach(mainItem => {
-            const mainLink = mainItem.querySelector("a");
-            const subLinks = mainItem.querySelectorAll("ul li a");
-
-            let isActive = false;
-
-            subLinks.forEach(subLink => {
-                if (subLink.getAttribute("href") === currentPage) {
-                    isActive = true;
-                }
-            });
-
-            if (isActive || mainLink.getAttribute("href") === currentPage) {
-                mainItem.classList.add("mil-active");
-            }
-        });
+    $('.mil-menu-btn').on("click", function () {
+        console.log("button clicked");
+        $('.mil-menu-btn').toggleClass('mil-active');
+        $('.mil-menu').toggleClass('mil-active');
+        $('.mil-menu-frame').toggleClass('mil-active');
     });
+
+    $('.mil-has-children a').on('click', function () {
+        $('.mil-has-children ul').removeClass('mil-active');
+        $('.mil-has-children a').removeClass('mil-active');
+        $(this).toggleClass('mil-active');
+        $(this).next().toggleClass('mil-active');
+    });
+
+    // $("#headerPlaceholder").load("./components/header.html", function () {
+    //     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+    // $('.mil-menu-btn').on("click", function () {
+    //     console.log("button clicked");
+    //     $('.mil-menu-btn').toggleClass('mil-active');
+    //     $('.mil-menu').toggleClass('mil-active');
+    //     $('.mil-menu-frame').toggleClass('mil-active');
+    // });
+
+    //     $('.mil-has-children a').on('click', function () {
+    //         $('.mil-has-children ul').removeClass('mil-active');
+    //         $('.mil-has-children a').removeClass('mil-active');
+    //         $(this).toggleClass('mil-active');
+    //         $(this).next().toggleClass('mil-active');
+    //     });
+
+    //     const currentPage = window.location.pathname.split("/").pop();
+    //     const mainMenuItems = document.querySelectorAll(".mil-main-menu > ul > li");
+
+    //     mainMenuItems.forEach(mainItem => {
+    //         const mainLink = mainItem.querySelector("a");
+    //         const subLinks = mainItem.querySelectorAll("ul li a");
+
+    //         let isActive = false;
+
+    //         subLinks.forEach(subLink => {
+    //             if (subLink.getAttribute("href") === currentPage) {
+    //                 isActive = true;
+    //             }
+    //         });
+
+    //         if (isActive || mainLink.getAttribute("href") === currentPage) {
+    //             mainItem.classList.add("mil-active");
+    //         }
+    //     });
+    // });
 
     /***************************
 
@@ -405,13 +420,13 @@ $(function () {
      menu
 
     ***************************/
-   
+
     /***************************
 
     main menu
 
     ***************************/
-   
+
     /***************************
 
     progressbar
@@ -520,7 +535,7 @@ $(function () {
             "zoom",
             "fullScreen",
             "close"
-          ],
+        ],
         loop: false,
         protect: true
     });
@@ -957,11 +972,11 @@ $(function () {
         ***************************/
         $('[data-fancybox="gallery"]').fancybox({
             buttons: [
-            "slideShow",
-            "zoom",
-            "fullScreen",
-            "close"
-          ],
+                "slideShow",
+                "zoom",
+                "fullScreen",
+                "close"
+            ],
             loop: false,
             protect: true
         });
@@ -1083,7 +1098,7 @@ $(function () {
 
     function grax_tm_wavefy(color) {
         "use strict";
-        
+
         jQuery('#wave_img').wavify({
             height: 17,
             bones: 3,
@@ -1092,40 +1107,41 @@ $(function () {
             speed: 0.25
         });
     }
-    
+
     function updateWaveFill() {
         const theme = document.documentElement.getAttribute('data-theme');
-    
+
         if (theme === 'dark') {
             grax_tm_wavefy('#fff');
         } else {
             grax_tm_wavefy('#000');
         }
     }
-    
+
     // Use 'load' event to ensure everything, including images, is fully loaded
     window.addEventListener('load', updateWaveFill);
-    
+
     const observer = new MutationObserver(updateWaveFill);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    
+
 
 });
 
 
 // ------------------------------------------CURSOR------------------------------------
-(function($) { "use strict";
-	
-		
-	//Page cursors
+(function ($) {
+    "use strict";
 
-    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
-        t.style.left = n.clientX + "px", 
-		t.style.top = n.clientY + "px", 
-		e.style.left = n.clientX + "px", 
-		e.style.top = n.clientY + "px", 
-		i.style.left = n.clientX + "px", 
-		i.style.top = n.clientY + "px"
+
+    //Page cursors
+
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function (n) {
+        t.style.left = n.clientX + "px",
+            t.style.top = n.clientY + "px",
+            e.style.left = n.clientX + "px",
+            e.style.top = n.clientY + "px",
+            i.style.left = n.clientX + "px",
+            i.style.top = n.clientY + "px"
     });
     var t = document.getElementById("cursor"),
         e = document.getElementById("cursor2"),
@@ -1143,74 +1159,73 @@ $(function () {
     function o(t) {
         t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
     }
-		
-		
-	
-	
-
-  })(jQuery); 
-
- 
 
 
-    // ===============================LOADING LOADER===================================================
-    //Hide Loading Box (Preloader)
-	// function handlePreloader() {
-	// 	if ($('.loader-wrap').length) {
-	// 		$('.loader-wrap').delay(300).fadeOut(300);
-	// 	}
-	// }
-
-	// if ($('.preloader-close').length) {
-	// 	$('.preloader-close').on('click', function () {
-	// 		$('.loader-wrap').delay(300).fadeOut(300);
-	// 	})
-	// }
-	// //Update Header Style and Scroll to Top
-	// function headerStyle() {
-	// 	if($('.main-header').length){
-	// 		var windowpos = $(window).scrollTop();
-	// 		var siteHeader = $('.main-header');
-	// 		var scrollLink = $('.scroll-to-top');
-			
-	// 		var HeaderHight = $('.main-header').height();
-	// 		if (windowpos >= HeaderHight) {
-	// 			siteHeader.addClass('fixed-header');
-	// 			scrollLink.fadeIn(300);
-	// 		} else {
-	// 			siteHeader.removeClass('fixed-header');
-	// 			scrollLink.fadeOut(300);
-	// 		}
-			
-	// 	}
-	// }
-
-    // $(window).on('load', function() {
-	// 	handlePreloader();
-	// });	
-
-    console.log("dom is loaded");
 
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const preloader = document.querySelector('#handle-preloader');
-        
-        // Apply a smooth fade-out transition (5 seconds)
-        setTimeout(() => {
-            preloader.style.transition = "opacity 1s ease-out";
-            preloader.style.opacity = 0;
-        }, 2000);
-       
-        
-        // After the fade-out is complete (5 seconds), hide it and remove the preloader from the DOM
-        setTimeout(function() {
-            preloader.style.display = "none";  // Change display to none after the fade-out completes
-        }, 3000);  // Wait 5 seconds for the fade-out effect to complete (same as the transition duration)
-    });
-    
+
+})(jQuery);
 
 
-    
-    
- 
-	
+
+
+// ===============================LOADING LOADER===================================================
+//Hide Loading Box (Preloader)
+// function handlePreloader() {
+// 	if ($('.loader-wrap').length) {
+// 		$('.loader-wrap').delay(300).fadeOut(300);
+// 	}
+// }
+
+// if ($('.preloader-close').length) {
+// 	$('.preloader-close').on('click', function () {
+// 		$('.loader-wrap').delay(300).fadeOut(300);
+// 	})
+// }
+// //Update Header Style and Scroll to Top
+// function headerStyle() {
+// 	if($('.main-header').length){
+// 		var windowpos = $(window).scrollTop();
+// 		var siteHeader = $('.main-header');
+// 		var scrollLink = $('.scroll-to-top');
+
+// 		var HeaderHight = $('.main-header').height();
+// 		if (windowpos >= HeaderHight) {
+// 			siteHeader.addClass('fixed-header');
+// 			scrollLink.fadeIn(300);
+// 		} else {
+// 			siteHeader.removeClass('fixed-header');
+// 			scrollLink.fadeOut(300);
+// 		}
+
+// 	}
+// }
+
+// $(window).on('load', function() {
+// 	handlePreloader();
+// });	
+
+console.log("dom is loaded");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const preloader = document.querySelector('#handle-preloader');
+
+    // Apply a smooth fade-out transition (5 seconds)
+    setTimeout(() => {
+        preloader.style.transition = "opacity 1s ease-out";
+        preloader.style.opacity = 0;
+    }, 2000);
+
+
+    // After the fade-out is complete (5 seconds), hide it and remove the preloader from the DOM
+    setTimeout(function () {
+        preloader.style.display = "none";  // Change display to none after the fade-out completes
+    }, 3000);  // Wait 5 seconds for the fade-out effect to complete (same as the transition duration)
+});
+
+
+
+
+
+
