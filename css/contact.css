@@ -107,7 +107,7 @@
 }
 
 [data-theme='dark'] .my_wave {
-  background-color: #000000;
+  background: radial-gradient(ellipse at bottom, #314256 0%, #0d101e 100%);
 }
 
 [data-theme='light'] .my_wave {
