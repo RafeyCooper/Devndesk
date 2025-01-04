@@ -99,7 +99,7 @@
 }
 
 [data-theme='dark'] .contactSubBody {
-  background-color: rgb(67, 111, 112);
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }
 
 [data-theme='light'] .contactSubBody {
@@ -266,7 +266,7 @@
     top: 2000px;
 } */
 
-#stars,
+/* #stars,
 #stars:after,
 #stars2,
 #stars2:after,
@@ -290,7 +290,7 @@
   100% {
     transform: translateY(-2000px);
   }
-}
+} */
 
 
 #stars-container {
@@ -304,7 +304,7 @@
 
 .star {
   position: absolute;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   opacity: 0.8;
 }

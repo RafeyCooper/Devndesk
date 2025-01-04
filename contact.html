@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/bulb.css">
+    <link rel="stylesheet" href="css/stars.css">
     <title>Ashley</title>
 
 </head>
@@ -27,7 +28,11 @@
     <!-- wrapper -->
     <div class="mil-wrapper contactSubBody" id="top">
 
-        <div id="stars-container"></div>
+        <!-- <div id="stars-container"></div> -->
+
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
 
 
         <!-- cursor -->
@@ -473,17 +478,17 @@
                                         <div class="mil-mb-30">
                                             <ul class="mil-social-icons mil-up">
                                                 <li><a href="#." target="_blank" class="social-icon footer-text">
-                                                    <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
-                                                </a></li>
+                                                        <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+                                                    </a></li>
                                                 <li><a href="#." target="_blank" class="social-icon footer-text">
-                                                    <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
-                                                </a></li>
+                                                        <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+                                                    </a></li>
                                                 <li><a href="#." target="_blank" class="social-icon footer-text">
-                                                    <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
-                                                </a></li>
+                                                        <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                                                    </a></li>
                                                 <li><a href="#." target="_blank" class="social-icon footer-text">
-                                                    <i class="fab fa-linkedin-in"></i> <!-- LinkedIn Icon -->
-                                                </a></li>
+                                                        <i class="fab fa-linkedin-in"></i> <!-- LinkedIn Icon -->
+                                                    </a></li>
                                             </ul>
                                         </div>
                                         <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights
@@ -522,51 +527,51 @@
 </html>
 <script>
 
-    function generateStar(container) {
-        const star = document.createElement('div');
-        const size = Math.random() * 3 + 1;
-        star.classList.add('star');
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
+    // function generateStar(container) {
+    //     const star = document.createElement('div');
+    //     const size = Math.random() * 3 + 1;
+    //     star.classList.add('star');
+    //     star.style.width = `${size}px`;
+    //     star.style.height = `${size}px`;
 
-        const x = Math.random() * window.innerWidth;
-        const bodyHeight = document.body.scrollHeight;
-        const startY = bodyHeight;
-        const endY = -size;
+    //     const x = Math.random() * window.innerWidth;
+    //     const bodyHeight = document.body.scrollHeight;
+    //     const startY = bodyHeight;
+    //     const endY = -size;
 
 
-        star.style.left = `${x}px`;
-        star.style.transform = `translateY(${bodyHeight}px)`;
+    //     star.style.left = `${x}px`;
+    //     star.style.transform = `translateY(${bodyHeight}px)`;
 
-        container.appendChild(star);
+    //     container.appendChild(star);
 
-        const duration = Math.random() * 15 + 15;
-        star.style.transition = `all ${duration}s linear`;
+    //     const duration = Math.random() * 15 + 15;
+    //     star.style.transition = `all ${duration}s linear`;
 
-        setTimeout(() => {
-            star.style.transform = `translateY(-${bodyHeight}px)`;
-        }, 10);
+    //     setTimeout(() => {
+    //         star.style.transform = `translateY(-${bodyHeight}px)`;
+    //     }, 10);
 
-        setTimeout(() => {
-            container.removeChild(star);
-        }, duration * 1000);
-    }
+    //     setTimeout(() => {
+    //         container.removeChild(star);
+    //     }, duration * 1000);
+    // }
 
-    function generateStars(container, starCount) {
-        for (let i = 0; i < starCount; i++) {
-            generateStar(container);
-        }
-    }
+    // function generateStars(container, starCount) {
+    //     for (let i = 0; i < starCount; i++) {
+    //         generateStar(container);
+    //     }
+    // }
 
-    // Continuously generate stars
-    function startStarGeneration() {
-        const container = document.getElementById('stars-container');
-        setInterval(() => {
-            generateStars(container, 10);  // Generate 10 new stars every 200ms
-        }, 400);
-    }
+    // // Continuously generate stars
+    // function startStarGeneration() {
+    //     const container = document.getElementById('stars-container');
+    //     setInterval(() => {
+    //         generateStars(container, 10);  // Generate 10 new stars every 200ms
+    //     }, 400);
+    // }
 
-    startStarGeneration();  // Start generating stars when page loads
+    // startStarGeneration();  // Start generating stars when page loads
 
     $(document).ready(function () {
         $(".idea-form__btn").click(function () {
