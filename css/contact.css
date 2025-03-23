@@ -459,7 +459,7 @@ i {
 .code-container h1 {
   font-size: 130px;
   color: rgba(225, 225, 225, .1);
-  /* background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg"); */
+  background-image: url("../img/contact-heading-bg-image.jpg");
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: cover;
