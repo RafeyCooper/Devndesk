@@ -50,43 +50,43 @@ $(function () {
         $(this).next().toggleClass('mil-active');
     });
 
-    // $("#headerPlaceholder").load("./components/header.html", function () {
-    //     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    $("#headerPlaceholder").load("./components/header.html", function () {
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    // $('.mil-menu-btn').on("click", function () {
-    //     console.log("button clicked");
-    //     $('.mil-menu-btn').toggleClass('mil-active');
-    //     $('.mil-menu').toggleClass('mil-active');
-    //     $('.mil-menu-frame').toggleClass('mil-active');
-    // });
+    $('.mil-menu-btn').on("click", function () {
+        console.log("button clicked");
+        $('.mil-menu-btn').toggleClass('mil-active');
+        $('.mil-menu').toggleClass('mil-active');
+        $('.mil-menu-frame').toggleClass('mil-active');
+    });
 
-    //     $('.mil-has-children a').on('click', function () {
-    //         $('.mil-has-children ul').removeClass('mil-active');
-    //         $('.mil-has-children a').removeClass('mil-active');
-    //         $(this).toggleClass('mil-active');
-    //         $(this).next().toggleClass('mil-active');
-    //     });
+        $('.mil-has-children a').on('click', function () {
+            $('.mil-has-children ul').removeClass('mil-active');
+            $('.mil-has-children a').removeClass('mil-active');
+            $(this).toggleClass('mil-active');
+            $(this).next().toggleClass('mil-active');
+        });
 
-    //     const currentPage = window.location.pathname.split("/").pop();
-    //     const mainMenuItems = document.querySelectorAll(".mil-main-menu > ul > li");
+        const currentPage = window.location.pathname.split("/").pop();
+        const mainMenuItems = document.querySelectorAll(".mil-main-menu > ul > li");
 
-    //     mainMenuItems.forEach(mainItem => {
-    //         const mainLink = mainItem.querySelector("a");
-    //         const subLinks = mainItem.querySelectorAll("ul li a");
+        mainMenuItems.forEach(mainItem => {
+            const mainLink = mainItem.querySelector("a");
+            const subLinks = mainItem.querySelectorAll("ul li a");
 
-    //         let isActive = false;
+            let isActive = false;
 
-    //         subLinks.forEach(subLink => {
-    //             if (subLink.getAttribute("href") === currentPage) {
-    //                 isActive = true;
-    //             }
-    //         });
+            subLinks.forEach(subLink => {
+                if (subLink.getAttribute("href") === currentPage) {
+                    isActive = true;
+                }
+            });
 
-    //         if (isActive || mainLink.getAttribute("href") === currentPage) {
-    //             mainItem.classList.add("mil-active");
-    //         }
-    //     });
-    // });
+            if (isActive || mainLink.getAttribute("href") === currentPage) {
+                mainItem.classList.add("mil-active");
+            }
+        });
+    });
 
     /***************************
 
@@ -1110,10 +1110,17 @@ $(function () {
 
     function updateWaveFill() {
         const theme = document.documentElement.getAttribute('data-theme');
-
-        if (theme === 'dark') {
-            grax_tm_wavefy('#fff');
-        } else {
+        const currentUrl = window.location.href;
+    
+        // Check if the URL does not contain 'contact.html'
+        if (!currentUrl.includes('contact.html')) {
+            if (theme === 'dark') {
+                grax_tm_wavefy('#fff');
+            } else {
+                grax_tm_wavefy('#000');
+            }
+        }
+        else{
             grax_tm_wavefy('#000');
         }
     }

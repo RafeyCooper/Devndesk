@@ -35,7 +35,7 @@ $(document).ready(function() {
         $('.plane').addClass('fly');
         $('.hidden').addClass('visible');
         $('.replace').removeClass('fa-paper-plane').addClass('fa-check');
-        $('span').text('SENT').hide();
+        $('#sendSpan').text('SENT').hide();
         $(this).addClass('done');
     });
 });

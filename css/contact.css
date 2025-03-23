@@ -62,27 +62,27 @@
 }
 
 .mil-muted {
-  color: var(--mil-muted) !important;
+  color: rgb(255 255 255 / 90%) !important;
 }
 
 .mil-light-soft {
-  color: var(--mil-soft) !important;
+  color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .grax_tm_copyright{
-	background-color: var(--footer-bg) !important;
+	background-color: black !important;
 }
 
 .mil-footer-menu ul li a {
-  color: var(--footer-link-color) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .mil-subscribe-form input {
-  background-color: var(--subscribe-input-bg-color) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .mil-social-icons li a {
-  color: var(--social-icon-color);
+  color: rgb(255, 255, 255);
 }
 
 .contactSubBody {
@@ -459,7 +459,7 @@ i {
 .code-container h1 {
   font-size: 130px;
   color: rgba(225, 225, 225, .1);
-  background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
+  /* background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg"); */
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: cover;
