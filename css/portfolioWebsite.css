@@ -46,6 +46,35 @@
 	background: url('../img/only-bg-axion.png');
 }
 
+#cutout_img_2 {
+	margin-top: -114px;
+	margin-left: -154px;
+	background: url('../img/vehicle_record.png');
+}
+
+#shadow_img_2 {
+	background: url('../img/vehicle_record_full.png');
+}
+
+#bg-img-2 {
+	background: url('../img/vehicle_record_only_bg.png');
+}
+
+#cutout_img_3 {
+	margin-top: -114px;
+	margin-left: -154px;
+	background: url('../img/Empower-only-img.png');
+}
+
+#shadow_img_3 {
+	background: url('../img/Empower.png');
+}
+
+#bg-img-3 {
+	background: url('../img/Empower-only-bg.png');
+}
+
+
 .card .shadow {
 	position: absolute;
 	inset: 0;
@@ -187,14 +216,15 @@ p {
 }
 
 .mil-subscribe-form input:hover {
-	background-color:  rgb(211 211 211);
+	background-color: rgb(211 211 211);
 }
 
 .mil-subscribe-form input:focus {
-	background-color:  rgb(211 211 211);
+	background-color: rgb(211 211 211);
 	outline: inherit;
 }
 
-.mil-logo-front{
-    color: white !important;
+.mil-logo-front {
+	color: white !important;
 }
+
