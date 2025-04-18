@@ -14,6 +14,13 @@
 	padding-bottom: 60px;
 }
 
+.card-col-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
 .card {
 	position: relative;
 	height: 500PX;
@@ -32,7 +39,19 @@
 	transform-style: preserve-3d;
 }
 
-#cutout_img_1 {
+.shadow,
+.image.background,
+.image.cutout {
+  background-image: var(--url);
+}
+
+/* after everything else */
+.card > .image.background {
+	background-image: var(--url) !important;
+  }
+  
+
+/* #cutout_img_1 {
 	margin-top: -114px;
 	margin-left: -154px;
 	background: url('../img/bg-remove-axion.png');
@@ -72,7 +91,7 @@
 
 #bg-img-3 {
 	background: url('../img/Empower-only-bg.png');
-}
+} */
 
 
 .card .shadow {
@@ -103,6 +122,8 @@
 }
 
 .card .image.cutout {
+	margin-top: -114px;
+	margin-left: -154px;
 	transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 4rem) scale(0.92);
 	z-index: 3;
 }
