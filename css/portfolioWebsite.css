@@ -122,8 +122,8 @@
 }
 
 .card .image.cutout {
-	/* margin-top: -114px;
-	margin-left: -154px; */
+	margin-top: -114px;
+	margin-left: -154px;
 	transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 4rem) scale(0.92);
 	z-index: 3;
 }
